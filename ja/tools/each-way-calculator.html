@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="dns-prefetch" href="//winnersclub.com">
+  <meta name="theme-color" content="#141415">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Each-Way Calculator: Horse Racing Win and Place Returns at Stake</title>
+  <meta name="description" content="Calculate horse racing each-way bet returns for win and place parts. Choose place fraction and places paid. Free calculator at Stake, claim bonus with code NEWBONUS.">
+  <link rel="canonical" href="https://winnersclub.com/ja/tools/each-way-calculator.html">
+  <meta property="og:title" content="Each-Way Calculator: Horse Racing Win and Place Returns at Stake">
+  <meta property="og:description" content="Calculate horse racing each-way bet returns for win and place parts. Choose place fraction and places paid. Free calculator at Stake, claim bonus with code NEWBONUS.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/images/og-default.png"><link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <style id="critical">*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg:#141415;--surface:#1d1e20;--elevated:#2e3035;--blue:#0075ff;--green:#00b24b;--gold:#FFD700;--red:#f44;--purple:#9b59b6;--white:#fff;--text:#e8e8e8;--text-dim:#9a9a9f;--text-muted:#6b6b70;--border:rgba(255,255,255,0.08);--font-body:'Inter',system-ui,-apple-system,sans-serif;--font-mono:'JetBrains Mono','Fira Code',monospace;--section-pad:120px;--container:1280px;--glow-blue:0 0 30px rgba(0,117,255,0.4),0 0 60px rgba(0,117,255,0.2);--glow-green:0 0 30px rgba(0,178,75,0.4),0 0 60px rgba(0,178,75,0.2);--glow-gold:0 0 30px rgba(255,215,0,0.4),0 0 60px rgba(255,215,0,0.2);--ease:cubic-bezier(0.16,1,0.3,1)}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none}button{cursor:pointer;border:none;background:none;font-family:inherit;color:inherit}.text-gradient{background:linear-gradient(135deg,var(--blue) 0,#00d4ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.text-gradient-gold{background:linear-gradient(135deg,var(--gold) 0,#fa0 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.text-green{color:var(--green);font-weight:700}.code-highlight{font-family:var(--font-mono);color:var(--gold);font-weight:700}.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:8px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.5px;transition:all .3s var(--ease);white-space:nowrap}.btn-primary{background:var(--green);color:var(--white);box-shadow:0 4px 15px rgba(0,178,75,0.3)}.btn-primary:hover{transform:translateY(-2px) scale(1.02);box-shadow:var(--glow-green);background:#00cc56}.btn-gold{background:linear-gradient(135deg,var(--gold),#fa0);color:#1a1a1a;box-shadow:0 4px 15px rgba(255,215,0,0.3)}.btn-gold:hover{transform:translateY(-2px) scale(1.02);box-shadow:var(--glow-gold)}.btn-signup{background:var(--green);color:var(--white);padding:10px 24px;border-radius:8px;font-size:13px;box-shadow:0 4px 15px rgba(0,178,75,0.3)}.btn-signup:hover{transform:translateY(-2px);box-shadow:var(--glow-green)}.btn-outline{border:2px solid var(--blue);color:var(--blue);background:transparent}.btn-outline:hover{background:var(--blue);color:var(--white);box-shadow:var(--glow-blue);transform:translateY(-2px)}.btn-lg{padding:16px 40px;font-size:16px;border-radius:10px}.btn-xl{padding:20px 56px;font-size:18px;border-radius:12px}.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(20,20,21,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:transform .35s var(--ease)}.header-inner{max-width:var(--container);margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between;gap:32px}.header-logo svg{display:block}.header-nav{display:flex;align-items:center;gap:8px}.nav-link{padding:8px 14px;font-size:13px;font-weight:600;color:var(--text-dim);border-radius:6px;transition:all .2s;white-space:nowrap}.nav-link:hover{color:var(--white);background:rgba(255,255,255,0.06)}.header-actions{display:flex;align-items:center;gap:16px}.lang-selector{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--text-dim);cursor:pointer}.hamburger{display:none;flex-direction:column;gap:5px;width:28px;padding:4px 0}.hamburger span{display:block;height:2px;background:var(--white);border-radius:2px;transition:all .3s var(--ease)}.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}</style>
+  <link rel="stylesheet" href="/style.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/style.min.css"></noscript>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WC-PLACEHOLDER"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WC-PLACEHOLDER', {anonymize_ip: true});
+</script>
+<script src="/exit-tracker.js" defer></script>
+<script src="/lang-redirect.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Each-Way Calculator: Horse Racing Win and Place Returns at Stake",
+  "description": "Calculate horse racing each-way bet returns for win and place parts. Choose place fraction and places paid. Free calculator at Stake, claim bonus with code NEWBONUS.",
+  "url": "https://winnersclub.com/en/tools/each-way-calculator",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "winnersclub.com",
+    "url": "https://winnersclub.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://winnersclub.com/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ツール",
+      "item": "https://winnersclub.com/en/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Each-way calculator"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many places does a standard race pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "5-7 runners: 2 places. 8+ runners: 3 places. 16+ runner handicaps: 4 places. Always check bookmaker terms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the place fraction mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The place fraction reduces win odds for the place part. 1/4 fraction on 9.00 win odds gives ((9-1) x 0.25) + 1 = 3.00 place odds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is each-way betting good value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each-way offers good value for longer-priced horses. For short-priced favourites the doubled stake is rarely justified."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I place each-way bets in-play?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most bookmakers restrict in-play each-way betting. Pre-race each-way markets are always available for listed races."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if a race is shortened by non-runners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the field drops below a threshold the bookmaker may reduce places paid or alter the fraction. Check updated terms before the race."
+      }
+    }
+  ]
+}
+</script>
+
+
+  <link rel="alternate" hreflang="ar" href="https://winnersclub.com/ar/tools/each-way-calculator">
+  <link rel="alternate" hreflang="bg" href="https://winnersclub.com/bg/tools/each-way-calculator">
+  <link rel="alternate" hreflang="bn" href="https://winnersclub.com/bn/tools/each-way-calculator">
+  <link rel="alternate" hreflang="ca" href="https://winnersclub.com/ca/tools/each-way-calculator">
+  <link rel="alternate" hreflang="cs" href="https://winnersclub.com/cs/tools/each-way-calculator">
+  <link rel="alternate" hreflang="da" href="https://winnersclub.com/da/tools/each-way-calculator">
+  <link rel="alternate" hreflang="de" href="https://winnersclub.com/de/tools/each-way-calculator">
+  <link rel="alternate" hreflang="el" href="https://winnersclub.com/el/tools/each-way-calculator">
+  <link rel="alternate" hreflang="en" href="https://winnersclub.com/en/tools/each-way-calculator">
+  <link rel="alternate" hreflang="es" href="https://winnersclub.com/es/tools/each-way-calculator">
+  <link rel="alternate" hreflang="et" href="https://winnersclub.com/et/tools/each-way-calculator">
+  <link rel="alternate" hreflang="fa" href="https://winnersclub.com/fa/tools/each-way-calculator">
+  <link rel="alternate" hreflang="fi" href="https://winnersclub.com/fi/tools/each-way-calculator">
+  <link rel="alternate" hreflang="fr" href="https://winnersclub.com/fr/tools/each-way-calculator">
+  <link rel="alternate" hreflang="gl" href="https://winnersclub.com/gl/tools/each-way-calculator">
+  <link rel="alternate" hreflang="he" href="https://winnersclub.com/he/tools/each-way-calculator">
+  <link rel="alternate" hreflang="hi" href="https://winnersclub.com/hi/tools/each-way-calculator">
+  <link rel="alternate" hreflang="hr" href="https://winnersclub.com/hr/tools/each-way-calculator">
+  <link rel="alternate" hreflang="hu" href="https://winnersclub.com/hu/tools/each-way-calculator">
+  <link rel="alternate" hreflang="id" href="https://winnersclub.com/id/tools/each-way-calculator">
+  <link rel="alternate" hreflang="it" href="https://winnersclub.com/it/tools/each-way-calculator">
+  <link rel="alternate" hreflang="ja" href="https://winnersclub.com/ja/tools/each-way-calculator">
+  <link rel="alternate" hreflang="kk" href="https://winnersclub.com/kk/tools/each-way-calculator">
+  <link rel="alternate" hreflang="ko" href="https://winnersclub.com/ko/tools/each-way-calculator">
+  <link rel="alternate" hreflang="lo" href="https://winnersclub.com/lo/tools/each-way-calculator">
+  <link rel="alternate" hreflang="lt" href="https://winnersclub.com/lt/tools/each-way-calculator">
+  <link rel="alternate" hreflang="lv" href="https://winnersclub.com/lv/tools/each-way-calculator">
+  <link rel="alternate" hreflang="mn" href="https://winnersclub.com/mn/tools/each-way-calculator">
+  <link rel="alternate" hreflang="ms" href="https://winnersclub.com/ms/tools/each-way-calculator">
+  <link rel="alternate" hreflang="mt" href="https://winnersclub.com/mt/tools/each-way-calculator">
+  <link rel="alternate" hreflang="nb" href="https://winnersclub.com/nb/tools/each-way-calculator">
+  <link rel="alternate" hreflang="pl" href="https://winnersclub.com/pl/tools/each-way-calculator">
+  <link rel="alternate" hreflang="pt" href="https://winnersclub.com/pt/tools/each-way-calculator">
+  <link rel="alternate" hreflang="ro" href="https://winnersclub.com/ro/tools/each-way-calculator">
+  <link rel="alternate" hreflang="ru" href="https://winnersclub.com/ru/tools/each-way-calculator">
+  <link rel="alternate" hreflang="sk" href="https://winnersclub.com/sk/tools/each-way-calculator">
+  <link rel="alternate" hreflang="sl" href="https://winnersclub.com/sl/tools/each-way-calculator">
+  <link rel="alternate" hreflang="sq" href="https://winnersclub.com/sq/tools/each-way-calculator">
+  <link rel="alternate" hreflang="sr" href="https://winnersclub.com/sr/tools/each-way-calculator">
+  <link rel="alternate" hreflang="sv" href="https://winnersclub.com/sv/tools/each-way-calculator">
+  <link rel="alternate" hreflang="th" href="https://winnersclub.com/th/tools/each-way-calculator">
+  <link rel="alternate" hreflang="tl" href="https://winnersclub.com/tl/tools/each-way-calculator">
+  <link rel="alternate" hreflang="tr" href="https://winnersclub.com/tr/tools/each-way-calculator">
+  <link rel="alternate" hreflang="uk" href="https://winnersclub.com/uk/tools/each-way-calculator">
+  <link rel="alternate" hreflang="ur" href="https://winnersclub.com/ur/tools/each-way-calculator">
+  <link rel="alternate" hreflang="uz" href="https://winnersclub.com/uz/tools/each-way-calculator">
+  <link rel="alternate" hreflang="vi" href="https://winnersclub.com/vi/tools/each-way-calculator">
+  <link rel="alternate" hreflang="zh" href="https://winnersclub.com/zh/tools/each-way-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://winnersclub.com/en/tools/each-way-calculator">
+  </head>
+<body>
+<body>
+  <!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="./" class="header-logo" aria-label="1winホーム">
+        <svg width="100" height="48" viewBox="0 0 74 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29.1115 10.208C30.1487 10.208 31.0356 10.842 31.0959 12.6963L31.4601 21.4219L35.4465 11.6406C35.8806 10.5914 36.6194 10.208 37.7228 10.208H40.6838C42.2819 10.208 42.6501 11.6798 42.0109 13.1904L36.1096 27.7871C35.5337 29.2101 34.9846 29.9971 33.6701 29.9971L29.0451 30C27.5587 29.9999 26.7382 29.0408 26.7111 27.4277L26.3976 20.1523L23.3039 27.7773C22.7823 29.0196 22.2671 30 20.9797 30L16.924 29.9941C15.3081 29.9941 14.3853 29.1437 14.343 27.2295L14.1144 21.8594L15.3625 15.1953C15.8237 12.3645 14.8889 11.1646 14.093 10.2148L17.5275 10.2109C18.872 10.211 19.4293 10.8084 19.4806 12.4844L19.84 21.4248L23.841 11.5889C24.2119 10.6845 24.906 10.208 26.0969 10.208H29.1115Z" fill="white"/>
+          <path d="M7.85174 10.6641C9.28687 9.94345 10.6554 10.0338 11.7619 10.7754C12.9287 11.6226 13.5922 12.9158 13.2336 14.6885L10.924 26.9912C10.5862 28.993 8.65369 30.3133 6.64276 29.9336C4.74922 29.5748 3.35277 27.7988 3.72967 25.6641L5.03826 18.5391L4.22479 18.9072C2.71416 19.5856 0.937298 18.9073 0.261897 17.3877C-0.413447 15.8681 0.262199 14.0858 1.77264 13.4043L7.85174 10.6641Z" fill="white"/>
+          <path d="M49.2443 10.2119C51.2703 10.212 51.7946 11.1853 51.3332 13.3047L48.8039 27.1504C48.5479 28.6639 48.1102 29.9969 46.3224 29.9971H43.1476C41.6276 29.9971 41.0944 28.8513 41.3537 27.3799L43.964 12.7324C44.2263 11.1736 44.899 10.212 46.8498 10.2119H49.2443Z" fill="white"/>
+          <path d="M67.5851 10.2051C69.5359 10.2051 70.4343 10.5584 71.5197 11.5322C73.3285 13.1514 73.6701 15.5666 73.2629 17.4873L71.466 27.1445C71.2158 28.6069 70.8296 29.9912 69.0656 29.9912L65.9572 29.9941C64.6034 29.9941 63.8884 29.0049 64.1535 27.3135L65.4142 19.7607C65.5949 18.3738 65.3328 17.3905 64.5793 16.7754C63.4065 15.8196 61.7479 16.2354 60.9064 17.2002C60.3638 17.7791 60.1169 18.5663 59.8273 20.1611L58.5607 27.1533C58.3225 28.5342 57.9366 29.9969 56.1037 29.9971H52.9797C51.035 29.9971 50.8989 28.3024 51.1193 27.3164L53.7512 12.7295C54.0076 11.3907 54.4814 10.208 56.6369 10.208L58.8771 10.2051C60.6138 10.2051 61.6483 10.8506 61.1027 13.2988L60.8703 14.5107C62.0672 12.0716 65.0013 10.2052 67.5851 10.2051Z" fill="white"/>
+          <path d="M48.5988 1C50.5736 1.00011 52.175 2.60414 52.175 4.58203C52.175 6.55993 50.5736 8.16395 48.5988 8.16406C46.6239 8.16406 45.0226 6.56 45.0226 4.58203C45.0226 2.60407 46.6239 1 48.5988 1Z" fill="white"/>
+        </svg>
+      </a>
+
+                        <nav class="header-nav" id="mainNav">
+        <a href="/en/promo-code" class="nav-link">プロモコード</a>
+        <div class="nav-item">
+          <a href="/en/sports-betting" class="nav-link">スポーツ <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/en/sports-betting">スポーツベッティング一覧</a>
+            <a href="/en/sports/フットボール">フットボール</a>
+            <a href="/en/sports/クリケット">クリケット</a>
+            <a href="/en/sports/テニス">テニス</a>
+            <a href="/en/sports/バスケットボール">バスケットボール</a>
+            <a href="/en/sports/eスポーツ">eスポーツ</a>
+            <a href="/en/live-streaming">ライブストリーミング</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/en/casino" class="nav-link">カジノ <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/en/casino">カジノホーム</a>
+            <a href="/en/slots/">スロットレビュー</a>
+            <a href="/en/providers/">ゲームプロバイダー</a>
+            <a href="/en/aviator">Aviator</a>
+            <a href="/en/crash/">クラッシュゲーム</a>
+            <a href="/en/poker">ポーカー</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/en/bonus/" class="nav-link">ボーナス <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/en/bonus/">ボーナス一覧</a>
+            <a href="/en/bonus/first-deposit-bonus">初回入金200%</a>
+            <a href="/en/bonus/second-deposit-bonus">2回目入金150%</a>
+            <a href="/en/bonus/third-deposit-bonus">3回目入金150%</a>
+            <a href="/en/bonus/fourth-deposit-bonus">4回目入金100%</a>
+            <a href="/en/bonus/wagering-requirements">ウェージャリング規則</a>
+            <a href="/en/bonus/free-spins-today">本日のフリースピン</a>
+            <a href="/en/bonus/キャッシュバック-bonus">キャッシュバック</a>
+            <a href="/en/vip-club">VIPクラブ</a>
+            <a href="/en/lucky-drive">Lucky Drive</a>
+            <a href="/en/promotions">プロモーション一覧</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/en/tools/" class="nav-link">ツール <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/en/tools/">計算ツール一覧</a>
+            <a href="/en/tools/odds-converter">オッズ変換</a>
+            <a href="/en/tools/parlay-calculator">パーレイ計算機</a>
+            <a href="/en/tools/kelly-criterion-calculator">ケリー基準</a>
+            <a href="/en/tools/arbitrage-calculator">アービトラージ</a>
+            <a href="/en/tools/hedge-calculator">Hedge</a>
+            <a href="/en/tools/each-way-calculator">イーチウェイ</a>
+            <a href="/en/tools/implied-probability-calculator">暗示確率</a>
+            <a href="/en/tools/bankroll-calculator">バンクロール</a>
+            <a href="/en/tools/surebet-calculator">シュアベット</a>
+            <a href="/en/tools/matched-bet-calculator">マッチドベット</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/en/payments/" class="nav-link">その他 <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/en/payments/">決済方法</a>
+            <a href="/en/app">モバイルアプリ</a>
+            <a href="/en/india/">インドガイド</a>
+            <a href="/en/mirrors">ミラーサイト</a>
+            <a href="/en/access">ログイン</a>
+            <a href="/en/register">登録する</a>
+            <a href="/en/review">レビュー</a>
+            <a href="/en/website">1winについて</a>
+            <a href="/en/faq">よくある質問</a>
+          </div>
+        </div>
+        <a href="/en/news" class="nav-link">ニュース</a>
+      </nav>
+
+      <div class="header-actions"><select class="lang-switcher" onchange="if(this.value)window.location.href=this.value" aria-label="言語"><option value="" selected>JA</option><option value="/ar/tools/each-way-calculator.html">AR</option><option value="/bg/tools/each-way-calculator.html">BG</option><option value="/bn/tools/each-way-calculator.html">BN</option><option value="/ca/tools/each-way-calculator.html">CA</option><option value="/cs/tools/each-way-calculator.html">CS</option><option value="/da/tools/each-way-calculator.html">DA</option><option value="/de/tools/each-way-calculator.html">DE</option><option value="/el/tools/each-way-calculator.html">EL</option><option value="/en/tools/each-way-calculator.html">EN</option><option value="/es/tools/each-way-calculator.html">ES</option><option value="/et/tools/each-way-calculator.html">ET</option><option value="/fa/tools/each-way-calculator.html">FA</option><option value="/fi/tools/each-way-calculator.html">FI</option><option value="/fr/tools/each-way-calculator.html">FR</option><option value="/gl/tools/each-way-calculator.html">GL</option><option value="/he/tools/each-way-calculator.html">HE</option><option value="/hi/tools/each-way-calculator.html">HI</option><option value="/hr/tools/each-way-calculator.html">HR</option><option value="/hu/tools/each-way-calculator.html">HU</option><option value="/id/tools/each-way-calculator.html">ID</option><option value="/it/tools/each-way-calculator.html">IT</option><option value="/kk/tools/each-way-calculator.html">KK</option><option value="/ko/tools/each-way-calculator.html">KO</option><option value="/lo/tools/each-way-calculator.html">LO</option><option value="/lt/tools/each-way-calculator.html">LT</option><option value="/lv/tools/each-way-calculator.html">LV</option><option value="/mn/tools/each-way-calculator.html">MN</option><option value="/ms/tools/each-way-calculator.html">MS</option><option value="/mt/tools/each-way-calculator.html">MT</option><option value="/nb/tools/each-way-calculator.html">NB</option><option value="/nl/">NL</option><option value="/pl/tools/each-way-calculator.html">PL</option><option value="/pt/tools/each-way-calculator.html">PT</option><option value="/ro/tools/each-way-calculator.html">RO</option><option value="/ru/tools/each-way-calculator.html">RU</option><option value="/sk/tools/each-way-calculator.html">SK</option><option value="/sl/tools/each-way-calculator.html">SL</option><option value="/sq/tools/each-way-calculator.html">SQ</option><option value="/sr/tools/each-way-calculator.html">SR</option><option value="/sv/tools/each-way-calculator.html">SV</option><option value="/th/tools/each-way-calculator.html">TH</option><option value="/tl/tools/each-way-calculator.html">TL</option><option value="/tr/tools/each-way-calculator.html">TR</option><option value="/uk/tools/each-way-calculator.html">UK</option><option value="/ur/tools/each-way-calculator.html">UR</option><option value="/uz/tools/each-way-calculator.html">UZ</option><option value="/vi/tools/each-way-calculator.html">VI</option><option value="/zh/tools/each-way-calculator.html">ZH</option></select>
+        <a href="https://playstake.io/landing?c=max3000&offer=max3000" target="_blank" rel="noopener" class="btn btn-signup" aria-label="新規登録">登録する</a>
+        <button class="hamburger" id="hamburger" aria-label="メニュー切替">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <a href="/en/">ホーム</a>
+        <a href="/en/tools/">ツール</a>
+        <span aria-current="page">Each-way calculator</span>
+      </div>
+    </nav>
+    <article class="page-content">
+      <div class="container">
+        <h1>Each-way calculator: win and place returns</h1>
+        <style>
+.calc-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px 24px;margin:32px 0}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.calc-field label{display:block;font-size:13px;color:var(--text-dim);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.calc-field input,.calc-field select{width:100%;background:var(--elevated);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-family:var(--font-mono);font-size:15px}
+.calc-field input:focus,.calc-field select:focus{outline:none;border-color:var(--blue)}
+.calc-output{background:var(--elevated);border-radius:10px;padding:20px;margin-top:20px}
+.calc-output-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:12px}
+.out-item{background:var(--bg);border-radius:8px;padding:14px 16px}
+.out-label{font-size:12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.out-val{font-family:var(--font-mono);font-size:18px;font-weight:700;color:var(--gold)}
+.out-val.green{color:var(--green)}
+.out-val.warn{color:var(--red)}
+.related-tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:16px}
+.related-tools a{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:14px;transition:border-color .2s}
+.related-tools a:hover{border-color:var(--blue)}
+</style>
+<section class="lede">
+  <p>Stake holds a Curaçao 1668/JAZ licence and offers horse racing markets with 400,000+ registered players. This each-way calculator breaks down your win and place returns based on the bookmaker fraction and number of places paid. 登録する with プロモコード <span class="code-highlight">NEWBONUS</span> to access racing markets right away.</p>
+</section>
+
+<section class="calc-box">
+  <h2>Each-way bet calculator</h2>
+  <div class="calc-grid">
+    <div class="calc-field"><label>Unit stake (each way)</label><input type="number" id="ew-stake" step="0.01" min="0.01" value="10" placeholder="10"></div>
+    <div class="calc-field"><label>Decimal win odds</label><input type="number" id="ew-odds" step="0.01" min="1.01" value="8.00" placeholder="8.00"></div>
+    <div class="calc-field"><label>Place fraction (e.g. 1/4 = 0.25)</label>
+      <select id="ew-frac">
+        <option value="0.2">1/5</option>
+        <option value="0.25" selected>1/4</option>
+        <option value="0.333">1/3</option>
+        <option value="0.5">1/2</option>
+      </select>
+    </div>
+    <div class="calc-field"><label>Places paid</label>
+      <select id="ew-places">
+        <option value="2">2 places</option>
+        <option value="3" selected>3 places</option>
+        <option value="4">4 places</option>
+        <option value="5">5 places</option>
+      </select>
+    </div>
+    <div class="calc-field"><label>Finish position</label>
+      <select id="ew-pos">
+        <option value="1">1st (win)</option>
+        <option value="2">2nd</option>
+        <option value="3">3rd</option>
+        <option value="4">4th</option>
+        <option value="5+">5th or lower</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-output">
+    <div style="font-size:13px;color:var(--text-dim);font-weight:600;text-transform:uppercase;letter-spacing:.5px">Each-way result</div>
+    <div class="calc-output-grid">
+      <div class="out-item"><div class="out-label">Total staked</div><div class="out-val" id="ew-total-staked">--</div></div>
+      <div class="out-item"><div class="out-label">Win part return</div><div class="out-val" id="ew-win-ret">--</div></div>
+      <div class="out-item"><div class="out-label">Place part return</div><div class="out-val" id="ew-place-ret">--</div></div>
+      <div class="out-item"><div class="out-label">Total return</div><div class="out-val green" id="ew-total-ret">--</div></div>
+      <div class="out-item"><div class="out-label">Net profit / loss</div><div class="out-val" id="ew-profit">--</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>この計算機の使い方</h2>
+  <p>An each-way bet is two separate bets of equal stake: one on the selection to win and one on the selection to be placed (finish within a certain number of positions). The total cost is double your unit stake.</p>
+  <p style="margin-top:12px">The <strong>win part</strong> pays out only if the selection finishes first. The return is: win stake x win decimal odds.</p>
+  <p style="margin-top:12px">The <strong>place part</strong> pays out if the selection finishes within the number of places paid. The place odds are calculated from the win odds: <strong>place odds = ((win odds - 1) x fraction) + 1</strong>. For a horse at decimal 8.00 with a 1/4 fraction, place odds = ((8.00 - 1) x 0.25) + 1 = 2.75.</p>
+  <p style="margin-top:12px">Place fractions and number of places paid vary by race type and field size. Standard UK rules for horse racing: fields of 5-7 runners typically pay 1/4 on 2 places; 8+ runners pay 1/4 on 3 places; 16+ runners in handicaps pay 1/4 on 4 places; some big handicaps pay 1/5 on 5-6 places.</p>
+  <p style="margin-top:12px">選択が勝った場合、勝利部分とプレース部分の両方が支払われます。2位または3位（プレース内）で終了した場合、プレース部分のみ支払われます。支払いプレース外で終了した場合、両部分が負けとなり、ダブルステーク全額を失います。</p>
+  <p style="margin-top:12px">Each-wayベットは大きなオッズ（一般的に10進数で8.00以上）の馬に特に魅力的です。なぜなら、勝利部分が負けてもプレース部分が利益を返せるからです。3.00未満の低オッズの選択では、プレースリターンがダブルステークを正当化することはほとんどありません。</p>
+</section>
+
+<section style="margin-top:40px">
+  <h2>1winでこれを使う理由</h2>
+  <p>Stake's racing markets include each-way options across 40,000+ events. Use code <span class="code-highlight">NEWBONUS</span> at registration to start betting on horse racing with a boosted balance.</p>
+  <div style="margin-top:20px"><a class="btn btn-primary btn-lg" href="https://winnersclub.com/en/register?promo=NEWBONUS">1winに登録する and claim NEWBONUS</a></div>
+</section>
+
+<section class="faq" style="margin-top:40px">
+  <h2>よくある質問</h2>
+  <details><summary>How many places does a standard race pay?</summary><p>It depends on the field size and race type. Fields of 5-7 runners typically pay 2 places; 8+ runners pay 3 places; 16+ runners in handicaps often pay 4 places. Your bookmaker's specific terms override these defaults.</p></details>
+  <details><summary>What does the place fraction mean?</summary><p>The place fraction reduces the win odds to calculate place odds. A 1/4 fraction on 9.00 win odds gives place odds of ((9-1) x 0.25) + 1 = 3.00. You receive this price on the place part if your horse is placed.</p></details>
+  <details><summary>Is each-way betting good value?</summary><p>Each-way bets offer good value for longer-priced horses in competitive fields. For short-priced favourites, the doubled stake is rarely justified by the small place return.</p></details>
+  <details><summary>Can I place each-way bets in-play?</summary><p>Most bookmakers, including Stake, restrict in-play each-way betting to specific events. Pre-race each-way markets are always available for listed races.</p></details>
+  <details><summary>What happens if a race is shortened by non-runners?</summary><p>フィールドが閾値以下に減少した場合（例：8から5へ）、ブックメーカーは支払われるプレース数を減らしたり、分数を変更したりする場合があります。レース開始前に必ず更新された条件を確認してください。</p></details>
+</section>
+
+<section style="margin-top:40px">
+  <h2>Related tools</h2>
+  <div class="related-tools">
+    <a href="/en/tools/odds-converter">オッズ変換</a>
+    <a href="/en/tools/implied-probability-calculator">Implied probability calculator</a>
+    <a href="/en/tools/kelly-criterion-calculator">ケリー基準計算機</a>
+    <a href="/en/tools/matched-bet-calculator">マッチドベット計算機</a>
+    <a href="/en/tools/bankroll-calculator">Bankroll calculator</a>
+  </div>
+</section>
+
+      </div>
+    </article>
+  </main>
+<footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg width="80" height="38" viewBox="0 0 74 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29.1115 10.208C30.1487 10.208 31.0356 10.842 31.0959 12.6963L31.4601 21.4219L35.4465 11.6406C35.8806 10.5914 36.6194 10.208 37.7228 10.208H40.6838C42.2819 10.208 42.6501 11.6798 42.0109 13.1904L36.1096 27.7871C35.5337 29.2101 34.9846 29.9971 33.6701 29.9971L29.0451 30C27.5587 29.9999 26.7382 29.0408 26.7111 27.4277L26.3976 20.1523L23.3039 27.7773C22.7823 29.0196 22.2671 30 20.9797 30L16.924 29.9941C15.3081 29.9941 14.3853 29.1437 14.343 27.2295L14.1144 21.8594L15.3625 15.1953C15.8237 12.3645 14.8889 11.1646 14.093 10.2148L17.5275 10.2109C18.872 10.211 19.4293 10.8084 19.4806 12.4844L19.84 21.4248L23.841 11.5889C24.2119 10.6845 24.906 10.208 26.0969 10.208H29.1115Z" fill="white"/>
+          <path d="M7.85174 10.6641C9.28687 9.94345 10.6554 10.0338 11.7619 10.7754C12.9287 11.6226 13.5922 12.9158 13.2336 14.6885L10.924 26.9912C10.5862 28.993 8.65369 30.3133 6.64276 29.9336C4.74922 29.5748 3.35277 27.7988 3.72967 25.6641L5.03826 18.5391L4.22479 18.9072C2.71416 19.5856 0.937298 18.9073 0.261897 17.3877C-0.413447 15.8681 0.262199 14.0858 1.77264 13.4043L7.85174 10.6641Z" fill="white"/>
+          <path d="M49.2443 10.2119C51.2703 10.212 51.7946 11.1853 51.3332 13.3047L48.8039 27.1504C48.5479 28.6639 48.1102 29.9969 46.3224 29.9971H43.1476C41.6276 29.9971 41.0944 28.8513 41.3537 27.3799L43.964 12.7324C44.2263 11.1736 44.899 10.212 46.8498 10.2119H49.2443Z" fill="white"/>
+          <path d="M67.5851 10.2051C69.5359 10.2051 70.4343 10.5584 71.5197 11.5322C73.3285 13.1514 73.6701 15.5666 73.2629 17.4873L71.466 27.1445C71.2158 28.6069 70.8296 29.9912 69.0656 29.9912L65.9572 29.9941C64.6034 29.9941 63.8884 29.0049 64.1535 27.3135L65.4142 19.7607C65.5949 18.3738 65.3328 17.3905 64.5793 16.7754C63.4065 15.8196 61.7479 16.2354 60.9064 17.2002C60.3638 17.7791 60.1169 18.5663 59.8273 20.1611L58.5607 27.1533C58.3225 28.5342 57.9366 29.9969 56.1037 29.9971H52.9797C51.035 29.9971 50.8989 28.3024 51.1193 27.3164L53.7512 12.7295C54.0076 11.3907 54.4814 10.208 56.6369 10.208L58.8771 10.2051C60.6138 10.2051 61.6483 10.8506 61.1027 13.2988L60.8703 14.5107C62.0672 12.0716 65.0013 10.2052 67.5851 10.2051Z" fill="white"/>
+          <path d="M48.5988 1C50.5736 1.00011 52.175 2.60414 52.175 4.58203C52.175 6.55993 50.5736 8.16395 48.5988 8.16406C46.6239 8.16406 45.0226 6.56 45.0226 4.58203C45.0226 2.60407 46.6239 1 48.5988 1Z" fill="white"/>
+        </svg>
+          <p style="font-size:14px;font-weight:800;color:var(--text-dim);letter-spacing:2px;margin-bottom:16px;text-transform:uppercase;">winnersclub.com - 独立系アフィリエイトレビューサイト</p>
+          <div class="footer-badges">
+            <span class="age-badge">18+</span>
+            <span class="cert-badge">GamCare</span>
+            <span class="cert-badge">SSL</span>
+          </div>
+        </div>
+
+        <div class="footer-links-grid">
+          <div class="footer-col">
+            <h4>プロダクト</h4>
+            <a href="/en/sports-betting">スポーツベッティング</a>
+            <a href="/en/casino">カジノ</a>
+            <a href="/en/aviator">Aviator</a>
+            <a href="/en/poker">ポーカー</a>
+          </div>
+          <div class="footer-col">
+            <h4>プロモーション</h4>
+            <a href="/en/promo-code">プロモコード</a>
+            <a href="/en/vip-club">VIPクラブ</a>
+            <a href="/en/lucky-drive">Lucky Drive</a>
+            <a href="/en/promotions">ボーナス</a>
+            <a href="/en/mirrors">ミラーサイト</a>
+          </div>
+          <div class="footer-col">
+            <h4>サポート</h4>
+            <a href="/en/register">登録する</a>
+            <a href="/en/access">ログイン</a>
+            <a href="/en/review">レビュー</a>
+            <a href="/en/website">ウェブサイト</a>
+            <a href="/en/live-streaming">ライブストリーミング</a>
+            <a href="/en/payment-methods">決済方法</a>
+            <a href="/en/app">アプリダウンロード</a>
+            <a href="/en/news">ニュース</a>
+            <a href="/en/faq">よくある質問</a>
+            <a href="/en/mirrors">ミラーサイト</a>
+          </div>
+          <div class="footer-col">
+            <h4>対応国</h4>
+            <a href="/en/country-bangladesh">バングラデシュ</a>
+            <a href="/en/country-india">インド</a>
+            <a href="/en/country-pakistan">パキスタン</a>
+            <a href="/en/country-korea">韓国</a>
+            <a href="/en/country-malaysia">マレーシア</a>
+            <a href="/en/country-singapore">シンガポール</a>
+            <a href="/en/country-south-africa">南アフリカ</a>
+            <a href="/en/country-tanzania">タンザニア</a>
+            <a href="/en/country-malawi">マラウイ</a>
+            <a href="/en/country-kenya">ケニア</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">本サイトは非公式ファンサイトであり、1winとは一切関係がありません。情報提供のみを目的としています。ギャンブルにはリスクが伴いますので、責任を持ってプレイしてください。ギャンブル依存でお困りの方は、GamCareまたは地域の支援機関にご相談ください。</p>
+        <p class="footer-copyright">&copy; 2026 winnersclub.com. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/script.min.js" defer></script>
+  <script>
+(function(){
+  function calc(){
+    const stake=parseFloat(document.getElementById('ew-stake').value)||0;
+    const odds=parseFloat(document.getElementById('ew-odds').value)||0;
+    const frac=parseFloat(document.getElementById('ew-frac').value)||0;
+    const places=parseInt(document.getElementById('ew-places').value)||0;
+    const pos=document.getElementById('ew-pos').value;
+    const totalStaked=stake*2;
+    document.getElementById('ew-total-staked').textContent=totalStaked.toFixed(2);
+    if(!stake||odds<=1){['ew-win-ret','ew-place-ret','ew-total-ret','ew-profit'].forEach(id=>document.getElementById(id).textContent='--');return;}
+    const placeOdds=((odds-1)*frac)+1;
+    const posNum=pos==='5+'?99:parseInt(pos);
+    const inPlaces=posNum<=places;
+    const isWin=posNum===1;
+    let winRet=0,placeRet=0;
+    if(isWin){winRet=stake*odds;placeRet=stake*placeOdds;}
+    else if(inPlaces){winRet=0;placeRet=stake*placeOdds;}
+    else{winRet=0;placeRet=0;}
+    const totalRet=winRet+placeRet;
+    const profit=totalRet-totalStaked;
+    document.getElementById('ew-win-ret').textContent=winRet.toFixed(2);
+    document.getElementById('ew-place-ret').textContent=placeRet.toFixed(2);
+    document.getElementById('ew-total-ret').textContent=totalRet.toFixed(2);
+    const pEl=document.getElementById('ew-profit');
+    pEl.textContent=profit.toFixed(2);
+    pEl.className=profit>=0?'out-val green':'out-val warn';
+  }
+  ['ew-stake','ew-odds','ew-frac','ew-places','ew-pos'].forEach(id=>document.getElementById(id).addEventListener('change',calc));
+  ['ew-stake','ew-odds'].forEach(id=>document.getElementById(id).addEventListener('input',calc));
+  calc();
+})();
+</script>
+</body>
+</html>

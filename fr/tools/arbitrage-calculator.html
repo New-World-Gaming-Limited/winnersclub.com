@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="dns-prefetch" href="//winnersclub.com">
+  <meta name="theme-color" content="#141415">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculateur d'arbitrage: Guaranteed Profit Stake Split at Stake</title>
+  <meta name="description" content="Find the guaranteed profit stake split for 2-way arbitrage bets instantanély. Enter cotes décimales and total stake. Free arb calculator at Stake, use code NEWBONUS.">
+  <link rel="canonical" href="https://winnersclub.com/fr/tools/arbitrage-calculator.html">
+  <meta property="og:title" content="Calculateur d'arbitrage: Guaranteed Profit Stake Split at Stake">
+  <meta property="og:description" content="Find the guaranteed profit stake split for 2-way arbitrage bets instantanély. Enter cotes décimales and total stake. Free arb calculator at Stake, use code NEWBONUS.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/images/og-default.png"><link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <style id="critical">*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg:#141415;--surface:#1d1e20;--elevated:#2e3035;--blue:#0075ff;--green:#00b24b;--gold:#FFD700;--red:#f44;--purple:#9b59b6;--white:#fff;--text:#e8e8e8;--text-dim:#9a9a9f;--text-muted:#6b6b70;--border:rgba(255,255,255,0.08);--font-body:'Inter',system-ui,-apple-system,sans-serif;--font-mono:'JetBrains Mono','Fira Code',monospace;--section-pad:120px;--container:1280px;--glow-blue:0 0 30px rgba(0,117,255,0.4),0 0 60px rgba(0,117,255,0.2);--glow-green:0 0 30px rgba(0,178,75,0.4),0 0 60px rgba(0,178,75,0.2);--glow-gold:0 0 30px rgba(255,215,0,0.4),0 0 60px rgba(255,215,0,0.2);--ease:cubic-bezier(0.16,1,0.3,1)}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none}button{cursor:pointer;border:none;background:none;font-family:inherit;color:inherit}.text-gradient{background:linear-gradient(135deg,var(--blue) 0,#00d4ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.text-gradient-gold{background:linear-gradient(135deg,var(--gold) 0,#fa0 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.text-green{color:var(--green);font-weight:700}.code-highlight{font-family:var(--font-mono);color:var(--gold);font-weight:700}.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:8px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.5px;transition:all .3s var(--ease);white-space:nowrap}.btn-primary{background:var(--green);color:var(--white);box-shadow:0 4px 15px rgba(0,178,75,0.3)}.btn-primary:hover{transform:translateY(-2px) scale(1.02);box-shadow:var(--glow-green);background:#00cc56}.btn-gold{background:linear-gradient(135deg,var(--gold),#fa0);color:#1a1a1a;box-shadow:0 4px 15px rgba(255,215,0,0.3)}.btn-gold:hover{transform:translateY(-2px) scale(1.02);box-shadow:var(--glow-gold)}.btn-signup{background:var(--green);color:var(--white);padding:10px 24px;border-radius:8px;font-size:13px;box-shadow:0 4px 15px rgba(0,178,75,0.3)}.btn-signup:hover{transform:translateY(-2px);box-shadow:var(--glow-green)}.btn-outline{border:2px solid var(--blue);color:var(--blue);background:transparent}.btn-outline:hover{background:var(--blue);color:var(--white);box-shadow:var(--glow-blue);transform:translateY(-2px)}.btn-lg{padding:16px 40px;font-size:16px;border-radius:10px}.btn-xl{padding:20px 56px;font-size:18px;border-radius:12px}.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(20,20,21,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:transform .35s var(--ease)}.header-inner{max-width:var(--container);margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between;gap:32px}.header-logo svg{display:block}.header-nav{display:flex;align-items:center;gap:8px}.nav-link{padding:8px 14px;font-size:13px;font-weight:600;color:var(--text-dim);border-radius:6px;transition:all .2s;white-space:nowrap}.nav-link:hover{color:var(--white);background:rgba(255,255,255,0.06)}.header-actions{display:flex;align-items:center;gap:16px}.lang-selector{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--text-dim);cursor:pointer}.hamburger{display:none;flex-direction:column;gap:5px;width:28px;padding:4px 0}.hamburger span{display:block;height:2px;background:var(--white);border-radius:2px;transition:all .3s var(--ease)}.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}</style>
+  <link rel="stylesheet" href="/style.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/style.min.css"></noscript>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WC-PLACEHOLDER"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WC-PLACEHOLDER', {anonymize_ip: true});
+</script>
+<script src="/exit-tracker.js" defer></script>
+<script src="/lang-redirect.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Calculateur d'arbitrage: Guaranteed Profit Stake Split at Stake",
+  "description": "Find the guaranteed profit stake split for 2-way arbitrage bets instantanély. Enter cotes décimales and total stake. Free arb calculator at Stake, use code NEWBONUS.",
+  "url": "https://winnersclub.com/en/tools/arbitrage-calculator",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "winnersclub.com",
+    "url": "https://winnersclub.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://winnersclub.com/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Outils",
+      "item": "https://winnersclub.com/en/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Arbitrage calculator"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What arb percentage is profitable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any arb% below 100% (decimal below 1.00) is profitable. Lower percentage means higher guaranteed profit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do bookmakers allow arbitrage betting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most bookmakers restrict arb accounts. It is legal but can lead to stake limits or closures."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can this work for 3-way marchés?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. arb% = (1/o1 + 1/o2 + 1/o3). The calculateur surebet handles 3-way marchés."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why must I split stakes proportionally?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Proportional stakes ensure equal return on any outcome. Unequal stakes would expose you to a loss on some outcomes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between arbitrage and a surebet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are the same concept. Arbitrage is the financial term; surebet is the paris sportifs term for guaranteed profit from cotes discrepancies."
+      }
+    }
+  ]
+}
+</script>
+
+
+  <link rel="alternate" hreflang="ar" href="https://winnersclub.com/ar/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="bg" href="https://winnersclub.com/bg/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="bn" href="https://winnersclub.com/bn/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="ca" href="https://winnersclub.com/ca/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="cs" href="https://winnersclub.com/cs/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="da" href="https://winnersclub.com/da/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="de" href="https://winnersclub.com/de/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="el" href="https://winnersclub.com/el/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="en" href="https://winnersclub.com/en/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="es" href="https://winnersclub.com/es/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="et" href="https://winnersclub.com/et/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="fa" href="https://winnersclub.com/fa/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="fi" href="https://winnersclub.com/fi/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="fr" href="https://winnersclub.com/fr/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="gl" href="https://winnersclub.com/gl/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="he" href="https://winnersclub.com/he/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="hi" href="https://winnersclub.com/hi/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="hr" href="https://winnersclub.com/hr/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="hu" href="https://winnersclub.com/hu/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="id" href="https://winnersclub.com/id/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="it" href="https://winnersclub.com/it/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="ja" href="https://winnersclub.com/ja/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="kk" href="https://winnersclub.com/kk/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="ko" href="https://winnersclub.com/ko/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="lo" href="https://winnersclub.com/lo/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="lt" href="https://winnersclub.com/lt/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="lv" href="https://winnersclub.com/lv/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="mn" href="https://winnersclub.com/mn/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="ms" href="https://winnersclub.com/ms/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="mt" href="https://winnersclub.com/mt/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="nb" href="https://winnersclub.com/nb/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="pl" href="https://winnersclub.com/pl/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="pt" href="https://winnersclub.com/pt/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="ro" href="https://winnersclub.com/ro/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="ru" href="https://winnersclub.com/ru/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="sk" href="https://winnersclub.com/sk/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="sl" href="https://winnersclub.com/sl/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="sq" href="https://winnersclub.com/sq/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="sr" href="https://winnersclub.com/sr/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="sv" href="https://winnersclub.com/sv/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="th" href="https://winnersclub.com/th/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="tl" href="https://winnersclub.com/tl/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="tr" href="https://winnersclub.com/tr/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="uk" href="https://winnersclub.com/uk/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="ur" href="https://winnersclub.com/ur/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="uz" href="https://winnersclub.com/uz/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="vi" href="https://winnersclub.com/vi/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="zh" href="https://winnersclub.com/zh/tools/arbitrage-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://winnersclub.com/en/tools/arbitrage-calculator">
+  </head>
+<body>
+<body>
+  <!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="./" class="header-logo" aria-label="Accueil Stake">
+        <svg width="100" height="48" viewBox="0 0 74 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29.1115 10.208C30.1487 10.208 31.0356 10.842 31.0959 12.6963L31.4601 21.4219L35.4465 11.6406C35.8806 10.5914 36.6194 10.208 37.7228 10.208H40.6838C42.2819 10.208 42.6501 11.6798 42.0109 13.1904L36.1096 27.7871C35.5337 29.2101 34.9846 29.9971 33.6701 29.9971L29.0451 30C27.5587 29.9999 26.7382 29.0408 26.7111 27.4277L26.3976 20.1523L23.3039 27.7773C22.7823 29.0196 22.2671 30 20.9797 30L16.924 29.9941C15.3081 29.9941 14.3853 29.1437 14.343 27.2295L14.1144 21.8594L15.3625 15.1953C15.8237 12.3645 14.8889 11.1646 14.093 10.2148L17.5275 10.2109C18.872 10.211 19.4293 10.8084 19.4806 12.4844L19.84 21.4248L23.841 11.5889C24.2119 10.6845 24.906 10.208 26.0969 10.208H29.1115Z" fill="white"/>
+          <path d="M7.85174 10.6641C9.28687 9.94345 10.6554 10.0338 11.7619 10.7754C12.9287 11.6226 13.5922 12.9158 13.2336 14.6885L10.924 26.9912C10.5862 28.993 8.65369 30.3133 6.64276 29.9336C4.74922 29.5748 3.35277 27.7988 3.72967 25.6641L5.03826 18.5391L4.22479 18.9072C2.71416 19.5856 0.937298 18.9073 0.261897 17.3877C-0.413447 15.8681 0.262199 14.0858 1.77264 13.4043L7.85174 10.6641Z" fill="white"/>
+          <path d="M49.2443 10.2119C51.2703 10.212 51.7946 11.1853 51.3332 13.3047L48.8039 27.1504C48.5479 28.6639 48.1102 29.9969 46.3224 29.9971H43.1476C41.6276 29.9971 41.0944 28.8513 41.3537 27.3799L43.964 12.7324C44.2263 11.1736 44.899 10.212 46.8498 10.2119H49.2443Z" fill="white"/>
+          <path d="M67.5851 10.2051C69.5359 10.2051 70.4343 10.5584 71.5197 11.5322C73.3285 13.1514 73.6701 15.5666 73.2629 17.4873L71.466 27.1445C71.2158 28.6069 70.8296 29.9912 69.0656 29.9912L65.9572 29.9941C64.6034 29.9941 63.8884 29.0049 64.1535 27.3135L65.4142 19.7607C65.5949 18.3738 65.3328 17.3905 64.5793 16.7754C63.4065 15.8196 61.7479 16.2354 60.9064 17.2002C60.3638 17.7791 60.1169 18.5663 59.8273 20.1611L58.5607 27.1533C58.3225 28.5342 57.9366 29.9969 56.1037 29.9971H52.9797C51.035 29.9971 50.8989 28.3024 51.1193 27.3164L53.7512 12.7295C54.0076 11.3907 54.4814 10.208 56.6369 10.208L58.8771 10.2051C60.6138 10.2051 61.6483 10.8506 61.1027 13.2988L60.8703 14.5107C62.0672 12.0716 65.0013 10.2052 67.5851 10.2051Z" fill="white"/>
+          <path d="M48.5988 1C50.5736 1.00011 52.175 2.60414 52.175 4.58203C52.175 6.55993 50.5736 8.16395 48.5988 8.16406C46.6239 8.16406 45.0226 6.56 45.0226 4.58203C45.0226 2.60407 46.6239 1 48.5988 1Z" fill="white"/>
+        </svg>
+      </a>
+
+                        <nav class="header-nav" id="mainNav">
+        <a href="/fr/promo-code" class="nav-link">Code promo</a>
+        <div class="nav-item">
+          <a href="/fr/sports-betting" class="nav-link">Sports <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/fr/sports-betting">All paris sportifs</a>
+            <a href="/fr/sports/football">Football</a>
+            <a href="/fr/sports/cricket">Cricket</a>
+            <a href="/fr/sports/tennis">Tennis</a>
+            <a href="/fr/sports/basketball">Basketball</a>
+            <a href="/fr/sports/esports">Esports</a>
+            <a href="/fr/live-streaming">Streaming en direct</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/fr/casino" class="nav-link">Casino <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/fr/casino">Accueil casino</a>
+            <a href="/fr/slots/">Avis machine à souss</a>
+            <a href="/fr/providers/">Fournisseurs de jeux</a>
+            <a href="/fr/aviator">Aviator</a>
+            <a href="/fr/crash/">Jeu crashs</a>
+            <a href="/fr/poker">Poker</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/fr/bonus/" class="nav-link">Bonus <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/fr/bonus/">Tous les bonus</a>
+            <a href="/fr/bonus/first-deposit-bonus">First dépôt 200%</a>
+            <a href="/fr/bonus/second-deposit-bonus">Second dépôt 150%</a>
+            <a href="/fr/bonus/third-deposit-bonus">Third dépôt 150%</a>
+            <a href="/fr/bonus/fourth-deposit-bonus">Fourth dépôt 100%</a>
+            <a href="/fr/bonus/wagering-requirements">Conditions de mise</a>
+            <a href="/fr/bonus/free-spins-today">Tours gratuits aujourd'hui</a>
+            <a href="/fr/bonus/cashback-bonus">Cashback</a>
+            <a href="/fr/vip-club">club VIP</a>
+            <a href="/fr/lucky-drive">Lucky Drive</a>
+            <a href="/fr/promotions">Toutes les promotions</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/fr/tools/" class="nav-link">Outils <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/fr/tools/">Tous les calculateurs</a>
+            <a href="/fr/tools/odds-converter">Cotes converter</a>
+            <a href="/fr/tools/parlay-calculator">Calculateur parlay</a>
+            <a href="/fr/tools/kelly-criterion-calculator">Critère de Kelly</a>
+            <a href="/fr/tools/arbitrage-calculator">Arbitrage</a>
+            <a href="/fr/tools/hedge-calculator">Couverture</a>
+            <a href="/fr/tools/each-way-calculator">Each-way</a>
+            <a href="/fr/tools/implied-probability-calculator">Probabilité implicite</a>
+            <a href="/fr/tools/bankroll-calculator">Bankroll</a>
+            <a href="/fr/tools/surebet-calculator">Surebet</a>
+            <a href="/fr/tools/matched-bet-calculator">Paris couverts</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/fr/payments/" class="nav-link">Plus <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/fr/payments/">Méthodes de paiement</a>
+            <a href="/fr/app">Application mobile</a>
+            <a href="/fr/india/">Inde guides</a>
+            <a href="/fr/mirrors">Miroirs</a>
+            <a href="/fr/access">Connexion</a>
+            <a href="/fr/register">S'inscrire</a>
+            <a href="/fr/review">Avis</a>
+            <a href="/fr/website">À propos Stake</a>
+            <a href="/fr/faq">FAQ</a>
+          </div>
+        </div>
+        <a href="/fr/news" class="nav-link">Nouvelles</a>
+      </nav>
+
+      <div class="header-actions"><select class="lang-switcher" onchange="if(this.value)window.location.href=this.value" aria-label="Language"><option value="" selected>FR</option><option value="/ar/tools/arbitrage-calculator.html">AR</option><option value="/bg/tools/arbitrage-calculator.html">BG</option><option value="/bn/tools/arbitrage-calculator.html">BN</option><option value="/ca/tools/arbitrage-calculator.html">CA</option><option value="/cs/tools/arbitrage-calculator.html">CS</option><option value="/da/tools/arbitrage-calculator.html">DA</option><option value="/de/tools/arbitrage-calculator.html">DE</option><option value="/el/tools/arbitrage-calculator.html">EL</option><option value="/en/tools/arbitrage-calculator.html">EN</option><option value="/es/tools/arbitrage-calculator.html">ES</option><option value="/et/tools/arbitrage-calculator.html">ET</option><option value="/fa/tools/arbitrage-calculator.html">FA</option><option value="/fi/tools/arbitrage-calculator.html">FI</option><option value="/gl/tools/arbitrage-calculator.html">GL</option><option value="/he/tools/arbitrage-calculator.html">HE</option><option value="/hi/tools/arbitrage-calculator.html">HI</option><option value="/hr/tools/arbitrage-calculator.html">HR</option><option value="/hu/tools/arbitrage-calculator.html">HU</option><option value="/id/tools/arbitrage-calculator.html">ID</option><option value="/it/tools/arbitrage-calculator.html">IT</option><option value="/ja/tools/arbitrage-calculator.html">JA</option><option value="/kk/tools/arbitrage-calculator.html">KK</option><option value="/ko/tools/arbitrage-calculator.html">KO</option><option value="/lo/tools/arbitrage-calculator.html">LO</option><option value="/lt/tools/arbitrage-calculator.html">LT</option><option value="/lv/tools/arbitrage-calculator.html">LV</option><option value="/mn/tools/arbitrage-calculator.html">MN</option><option value="/ms/tools/arbitrage-calculator.html">MS</option><option value="/mt/tools/arbitrage-calculator.html">MT</option><option value="/nb/tools/arbitrage-calculator.html">NB</option><option value="/nl/">NL</option><option value="/pl/tools/arbitrage-calculator.html">PL</option><option value="/pt/tools/arbitrage-calculator.html">PT</option><option value="/ro/tools/arbitrage-calculator.html">RO</option><option value="/ru/tools/arbitrage-calculator.html">RU</option><option value="/sk/tools/arbitrage-calculator.html">SK</option><option value="/sl/tools/arbitrage-calculator.html">SL</option><option value="/sq/tools/arbitrage-calculator.html">SQ</option><option value="/sr/tools/arbitrage-calculator.html">SR</option><option value="/sv/tools/arbitrage-calculator.html">SV</option><option value="/th/tools/arbitrage-calculator.html">TH</option><option value="/tl/tools/arbitrage-calculator.html">TL</option><option value="/tr/tools/arbitrage-calculator.html">TR</option><option value="/uk/tools/arbitrage-calculator.html">UK</option><option value="/ur/tools/arbitrage-calculator.html">UR</option><option value="/uz/tools/arbitrage-calculator.html">UZ</option><option value="/vi/tools/arbitrage-calculator.html">VI</option><option value="/zh/tools/arbitrage-calculator.html">ZH</option></select>
+        <a href="https://playstake.io/landing?c=max3000&offer=max3000" target="_blank" rel="noopener" class="btn btn-signup" aria-label="S'inscrire">S'inscrire</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <a href="/fr/">Accueil</a>
+        <a href="/fr/tools/">Outils</a>
+        <span aria-current="page">Arbitrage calculator</span>
+      </div>
+    </nav>
+    <article class="page-content">
+      <div class="container">
+        <h1>Arbitrage calculator: guaranteed profit stake split</h1>
+        <style>
+.calc-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px 24px;margin:32px 0}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.calc-field label{display:block;font-size:13px;color:var(--text-dim);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.calc-field input,.calc-field select{width:100%;background:var(--elevated);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-family:var(--font-mono);font-size:15px}
+.calc-field input:focus,.calc-field select:focus{outline:none;border-color:var(--blue)}
+.calc-output{background:var(--elevated);border-radius:10px;padding:20px;margin-top:20px}
+.calc-output-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:12px}
+.out-item{background:var(--bg);border-radius:8px;padding:14px 16px}
+.out-label{font-size:12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.out-val{font-family:var(--font-mono);font-size:18px;font-weight:700;color:var(--gold)}
+.out-val.green{color:var(--green)}
+.out-val.warn{color:var(--red)}
+.related-tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:16px}
+.related-tools a{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:14px;transition:border-color .2s}
+.related-tools a:hover{border-color:var(--blue)}
+</style>
+<section class="lede">
+  <p>Stake holds a Curaçao 1668/JAZ licence and prices 40 000+ marchés every day. This free calculateur d'arbitrage finds the guaranteed-profit stake split across two outcome cotes. S'inscrire with code promo <span class="code-highlight">NEWBONUS</span> to open ton compte before you place your first arb.</p>
+</section>
+
+<section class="calc-box">
+  <h2>2-way calculateur d'arbitrage</h2>
+  <div class="calc-grid">
+    <div class="calc-field"><label>Total stake to risk</label><input type="number" id="arb-total" step="1" min="1" value="100" placeholder="100"></div>
+    <div class="calc-field"><label>Outcome 1 cotes décimales</label><input type="number" id="arb-o1" step="0.01" min="1.01" value="2.10" placeholder="2.10"></div>
+    <div class="calc-field"><label>Outcome 2 cotes décimales</label><input type="number" id="arb-o2" step="0.01" min="1.01" value="2.05" placeholder="2.05"></div>
+  </div>
+  <div class="calc-output">
+    <div style="font-size:13px;color:var(--text-dim);font-weight:600;text-transform:uppercase;letter-spacing:.5px">Arbitrage result</div>
+    <div class="calc-output-grid">
+      <div class="out-item"><div class="out-label">Outcome 1 stake</div><div class="out-val" id="arb-s1">--</div></div>
+      <div class="out-item"><div class="out-label">Outcome 2 stake</div><div class="out-val" id="arb-s2">--</div></div>
+      <div class="out-item"><div class="out-label">Arb %</div><div class="out-val" id="arb-pct">--</div></div>
+      <div class="out-item"><div class="out-label">Guaranteed profit</div><div class="out-val green" id="arb-profit">--</div></div>
+    </div>
+    <div id="arb-warn" style="margin-top:12px;font-size:13px;color:var(--red);min-height:18px"></div>
+  </div>
+</section>
+
+<section>
+  <h2>Comment fonctionne cette calculatrice</h2>
+  <p>Arbitrage betting (also called "arbing") exploits price differences across bookmakers to guarantee a profit regardless of outcome. For a 2-way marché, a risk-free situation exists when the sum of the inverse of each cotes is less than 1.00.</p>
+  <p style="margin-top:12px">The arb percentage formula is: <strong>arb% = (1/cotes1 + 1/cotes2)</strong>. If this sum is below 1.00, an arbitrage opportunity exists. The lower the arb%, the larger the guaranteed profit margin.</p>
+  <p style="margin-top:12px">Stake allocation for Outcome 1 uses: <strong>stake1 = total x (1/cotes1) / arb%</strong>. Outcome 2 receives the remainder. This ensures both outcomes return the same total payout.</p>
+  <p style="margin-top:12px">Par exemple, with Outcome 1 at 2.10 and Outcome 2 at 2.05, the arb% = (1/2.10 + 1/2.05) = 0.4762 + 0.4878 = 0.9640. Since this is below 1.00, an arb exists. On a total stake of 100, the guaranteed profit is 100 / 0.9640 - 100 = 3.73 units.</p>
+  <p style="margin-top:12px">Stake allocation is proportional to the probabilité implicite of each outcome. The higher-cotes outcome receives a smaller stake; the lower-cotes outcome receives a larger stake. Both produce identical returns on a win.</p>
+  <p style="margin-top:12px">In practice, real-time pricing and account restrictions make arbing difficult at most bookmakers. This calculator is intended primarily for understanding the math and for quick checks on promotional marchés where cotes may be inflated.</p>
+  <p style="margin-top:12px">La calculatrice suppose qu'aucune commission n'est prélevée. Les paris lay (sur les exchanges) supportent une commission qui réduit le profit garanti. Utilisez la calculatrice Matched Bet pour les calculs lay ajustés en fonction de la commission.</p>
+</section>
+
+<section style="margin-top:40px">
+  <h2>Pourquoi l'utiliser sur Stake</h2>
+  <p>Stake offers 40 000+ marchés with competitive decimal pricing. Use code <span class="code-highlight">NEWBONUS</span> when you register to start with a boosted bankroll and explore all available marchés.</p>
+  <div style="margin-top:20px"><a class="btn btn-primary btn-lg" href="https://winnersclub.com/en/register?promo=NEWBONUS">S'inscrire sur Stake and claim NEWBONUS</a></div>
+</section>
+
+<section class="faq" style="margin-top:40px">
+  <h2>FAQ</h2>
+  <details><summary>What arb percentage is profitable?</summary><p>Any arb% below 100% (expressed as a decimal below 1.00) is profitable. Lower percentages yield higher guaranteed profit. Anything above 1.00 means no arb exists.</p></details>
+  <details><summary>Do bookmakers allow arbitrage betting?</summary><p>Most bookmakers restrict or limit accounts identified as arbers. Arbing is legal but can lead to stake restrictions or account closures. Always check conditions générales.</p></details>
+  <details><summary>Can this work for 3-way marchés?</summary><p>Oui, the principle extends to 3 outcomes: arb% = (1/o1 + 1/o2 + 1/o3). The calculateur surebet on this site handles 3-way marchés explicitly.</p></details>
+  <details><summary>Why must I split stakes proportionally?</summary><p>Proportional stakes ensure equal return regardless of outcome. Unequal stakes would mean one outcome returns more than another, creating exposure to loss.</p></details>
+  <details><summary>What is the difference between arbitrage and a surebet?</summary><p>They are the same concept. "Arbitrage" is the financial term; "surebet" is the paris sportifs community term. Both refer to guaranteed profit from cotes discrepancies.</p></details>
+</section>
+
+<section style="margin-top:40px">
+  <h2>Related tools</h2>
+  <div class="related-tools">
+    <a href="/fr/tools/surebet-calculator">Surebet calculator (2-3 way)</a>
+    <a href="/fr/tools/matched-bet-calculator">Paris couverts calculator</a>
+    <a href="/fr/tools/hedge-calculator">Couverture calculator</a>
+    <a href="/fr/tools/odds-converter">Cotes converter</a>
+    <a href="/fr/tools/implied-probability-calculator">Probabilité implicite calculator</a>
+  </div>
+</section>
+
+      </div>
+    </article>
+  </main>
+<footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg width="80" height="38" viewBox="0 0 74 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29.1115 10.208C30.1487 10.208 31.0356 10.842 31.0959 12.6963L31.4601 21.4219L35.4465 11.6406C35.8806 10.5914 36.6194 10.208 37.7228 10.208H40.6838C42.2819 10.208 42.6501 11.6798 42.0109 13.1904L36.1096 27.7871C35.5337 29.2101 34.9846 29.9971 33.6701 29.9971L29.0451 30C27.5587 29.9999 26.7382 29.0408 26.7111 27.4277L26.3976 20.1523L23.3039 27.7773C22.7823 29.0196 22.2671 30 20.9797 30L16.924 29.9941C15.3081 29.9941 14.3853 29.1437 14.343 27.2295L14.1144 21.8594L15.3625 15.1953C15.8237 12.3645 14.8889 11.1646 14.093 10.2148L17.5275 10.2109C18.872 10.211 19.4293 10.8084 19.4806 12.4844L19.84 21.4248L23.841 11.5889C24.2119 10.6845 24.906 10.208 26.0969 10.208H29.1115Z" fill="white"/>
+          <path d="M7.85174 10.6641C9.28687 9.94345 10.6554 10.0338 11.7619 10.7754C12.9287 11.6226 13.5922 12.9158 13.2336 14.6885L10.924 26.9912C10.5862 28.993 8.65369 30.3133 6.64276 29.9336C4.74922 29.5748 3.35277 27.7988 3.72967 25.6641L5.03826 18.5391L4.22479 18.9072C2.71416 19.5856 0.937298 18.9073 0.261897 17.3877C-0.413447 15.8681 0.262199 14.0858 1.77264 13.4043L7.85174 10.6641Z" fill="white"/>
+          <path d="M49.2443 10.2119C51.2703 10.212 51.7946 11.1853 51.3332 13.3047L48.8039 27.1504C48.5479 28.6639 48.1102 29.9969 46.3224 29.9971H43.1476C41.6276 29.9971 41.0944 28.8513 41.3537 27.3799L43.964 12.7324C44.2263 11.1736 44.899 10.212 46.8498 10.2119H49.2443Z" fill="white"/>
+          <path d="M67.5851 10.2051C69.5359 10.2051 70.4343 10.5584 71.5197 11.5322C73.3285 13.1514 73.6701 15.5666 73.2629 17.4873L71.466 27.1445C71.2158 28.6069 70.8296 29.9912 69.0656 29.9912L65.9572 29.9941C64.6034 29.9941 63.8884 29.0049 64.1535 27.3135L65.4142 19.7607C65.5949 18.3738 65.3328 17.3905 64.5793 16.7754C63.4065 15.8196 61.7479 16.2354 60.9064 17.2002C60.3638 17.7791 60.1169 18.5663 59.8273 20.1611L58.5607 27.1533C58.3225 28.5342 57.9366 29.9969 56.1037 29.9971H52.9797C51.035 29.9971 50.8989 28.3024 51.1193 27.3164L53.7512 12.7295C54.0076 11.3907 54.4814 10.208 56.6369 10.208L58.8771 10.2051C60.6138 10.2051 61.6483 10.8506 61.1027 13.2988L60.8703 14.5107C62.0672 12.0716 65.0013 10.2052 67.5851 10.2051Z" fill="white"/>
+          <path d="M48.5988 1C50.5736 1.00011 52.175 2.60414 52.175 4.58203C52.175 6.55993 50.5736 8.16395 48.5988 8.16406C46.6239 8.16406 45.0226 6.56 45.0226 4.58203C45.0226 2.60407 46.6239 1 48.5988 1Z" fill="white"/>
+        </svg>
+          <p style="font-size:14px;font-weight:800;color:var(--text-dim);letter-spacing:2px;margin-bottom:16px;text-transform:uppercase;">winnersclub.com - avis d'affilié indépendant</p>
+          <div class="footer-badges">
+            <span class="age-badge">18+</span>
+            <span class="cert-badge">GamCare</span>
+            <span class="cert-badge">SSL</span>
+          </div>
+        </div>
+
+        <div class="footer-links-grid">
+          <div class="footer-col">
+            <h4>Produits</h4>
+            <a href="/fr/sports-betting">Paris sportifs</a>
+            <a href="/fr/casino">Casino</a>
+            <a href="/fr/aviator">Aviator</a>
+            <a href="/fr/poker">Poker</a>
+          </div>
+          <div class="footer-col">
+            <h4>Promos</h4>
+            <a href="/fr/promo-code">Code promo</a>
+            <a href="/fr/vip-club">Club VIP</a>
+            <a href="/fr/lucky-drive">Lucky Drive</a>
+            <a href="/fr/promotions">Argent gratuit</a>
+            <a href="/fr/mirrors">Miroir</a>
+          </div>
+          <div class="footer-col">
+            <h4>Assistance</h4>
+            <a href="/fr/register">S'inscrire</a>
+            <a href="/fr/access">Connexion</a>
+            <a href="/fr/review">Avis</a>
+            <a href="/fr/website">Site web</a>
+            <a href="/fr/live-streaming">Streaming en direct</a>
+            <a href="/fr/payment-methods">Paiements</a>
+            <a href="/fr/app">Télécharger Application</a>
+            <a href="/fr/news">Nouvelles</a>
+            <a href="/fr/faq">FAQ</a>
+            <a href="/fr/mirrors">Miroir</a>
+          </div>
+          <div class="footer-col">
+            <h4>Pays</h4>
+            <a href="/fr/country-bangladesh">Bangladesh</a>
+            <a href="/fr/country-india">Inde</a>
+            <a href="/fr/country-pakistan">Pakistan</a>
+            <a href="/fr/country-korea">Corée</a>
+            <a href="/fr/country-malaysia">Malaisie</a>
+            <a href="/fr/country-singapore">Singapour</a>
+            <a href="/fr/country-south-africa">Afrique du Sud</a>
+            <a href="/fr/country-tanzania">Tanzanie</a>
+            <a href="/fr/country-malawi">Malawi</a>
+            <a href="/fr/country-kenya">Kenya</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">Il s'agit d'un site de fans non officiel, sans affiliation ni approbation de Stake. This site is for informationsal purposes only. Jeux d'argent involves risk, please joue de façon responsable. If you or someone you know has a problème de jeu, please contact GamCare or a local support organization.</p>
+        <p class="footer-copyright">&copy; 2026 winnersclub.com. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/script.min.js" defer></script>
+  <script>
+(function(){
+  function calc(){
+    const total=parseFloat(document.getElementById('arb-total').value)||0;
+    const o1=parseFloat(document.getElementById('arb-o1').value)||0;
+    const o2=parseFloat(document.getElementById('arb-o2').value)||0;
+    const warn=document.getElementById('arb-warn');
+    if(!total||o1<=1||o2<=1){['arb-s1','arb-s2','arb-pct','arb-profit'].forEach(id=>document.getElementById(id).textContent='--');warn.textContent='';return;}
+    const arbPct=(1/o1)+(1/o2);
+    document.getElementById('arb-pct').textContent=(arbPct*100).toFixed(3)+'%';
+    if(arbPct>=1){
+      warn.textContent='No arb opportunity. Arb% must be below 100% for a guaranteed profit.';
+      document.getElementById('arb-s1').textContent='N/A';
+      document.getElementById('arb-s2').textContent='N/A';
+      document.getElementById('arb-profit').textContent='N/A';
+      document.getElementById('arb-pct').className='out-val warn';
+      return;
+    }
+    warn.textContent='';
+    document.getElementById('arb-pct').className='out-val green';
+    const s1=total*(1/o1)/arbPct;
+    const s2=total-s1;
+    const payout=s1*o1;
+    const profit=payout-total;
+    document.getElementById('arb-s1').textContent=s1.toFixed(2);
+    document.getElementById('arb-s2').textContent=s2.toFixed(2);
+    document.getElementById('arb-profit').textContent=profit.toFixed(2);
+  }
+  ['arb-total','arb-o1','arb-o2'].forEach(id=>document.getElementById(id).addEventListener('input',calc));
+  calc();
+})();
+</script>
+</body>
+</html>

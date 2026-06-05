@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html lang="bn">
+<head>
+<meta charset="utf-8"/>
+<link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+<link href="//fonts.gstatic.com" rel="dns-prefetch"/>
+<link href="//winnersclub.com" rel="dns-prefetch"/>
+<meta content="#141415" name="theme-color"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>হেজ ক্যালকুলেটর: Stake-এ যে কোনো বাজিতে লক ইন প্রফিট</title>
+<meta content="লাভ লক করতে বা কোনো বাজিতে ক্ষতি এড়াতে সঠিক হেজ স্টেক গণনা করুন। সমান লাভ, নো-লস, এবং কাস্টম হেজ মোড সমর্থন করে। Stake-এ বিনামূল্যের টুল, NEWBONUS ব্যবহার করুন।" name="description"/>
+<link rel="canonical" href="https://winnersclub.com/bn/tools/hedge-calculator.html"><meta content="হেজ ক্যালকুলেটর: Stake-এ যে কোনো বাজিতে লক ইন প্রফিট" property="og:title"/>
+<meta content="লাভ লক করতে বা কোনো বাজিতে ক্ষতি এড়াতে সঠিক হেজ স্টেক গণনা করুন। সমান লাভ, নো-লস, এবং কাস্টম হেজ মোড সমর্থন করে। Stake-এ বিনামূল্যের টুল, NEWBONUS ব্যবহার করুন।" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="/images/og-default.png" property="og:image"/>
+
+<link href="/images/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+<style id="critical">*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg:#141415;--surface:#1d1e20;--elevated:#2e3035;--blue:#0075ff;--green:#00b24b;--gold:#FFD700;--red:#f44;--purple:#9b59b6;--white:#fff;--text:#e8e8e8;--text-dim:#9a9a9f;--text-muted:#6b6b70;--border:rgba(255,255,255,0.08);--font-body:'Inter',system-ui,-apple-system,sans-serif;--font-mono:'JetBrains Mono','Fira Code',monospace;--section-pad:120px;--container:1280px;--glow-blue:0 0 30px rgba(0,117,255,0.4),0 0 60px rgba(0,117,255,0.2);--glow-green:0 0 30px rgba(0,178,75,0.4),0 0 60px rgba(0,178,75,0.2);--glow-gold:0 0 30px rgba(255,215,0,0.4),0 0 60px rgba(255,215,0,0.2);--ease:cubic-bezier(0.16,1,0.3,1)}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none}button{cursor:pointer;border:none;background:none;font-family:inherit;color:inherit}.text-gradient{background:linear-gradient(135deg,var(--blue) 0,#00d4ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.text-gradient-gold{background:linear-gradient(135deg,var(--gold) 0,#fa0 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.text-green{color:var(--green);font-weight:700}.code-highlight{font-family:var(--font-mono);color:var(--gold);font-weight:700}.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:8px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.5px;transition:all .3s var(--ease);white-space:nowrap}.btn-primary{background:var(--green);color:var(--white);box-shadow:0 4px 15px rgba(0,178,75,0.3)}.btn-primary:hover{transform:translateY(-2px) scale(1.02);box-shadow:var(--glow-green);background:#00cc56}.btn-gold{background:linear-gradient(135deg,var(--gold),#fa0);color:#1a1a1a;box-shadow:0 4px 15px rgba(255,215,0,0.3)}.btn-gold:hover{transform:translateY(-2px) scale(1.02);box-shadow:var(--glow-gold)}.btn-signup{background:var(--green);color:var(--white);padding:10px 24px;border-radius:8px;font-size:13px;box-shadow:0 4px 15px rgba(0,178,75,0.3)}.btn-signup:hover{transform:translateY(-2px);box-shadow:var(--glow-green)}.btn-outline{border:2px solid var(--blue);color:var(--blue);background:transparent}.btn-outline:hover{background:var(--blue);color:var(--white);box-shadow:var(--glow-blue);transform:translateY(-2px)}.btn-lg{padding:16px 40px;font-size:16px;border-radius:10px}.btn-xl{padding:20px 56px;font-size:18px;border-radius:12px}.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(20,20,21,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:transform .35s var(--ease)}.header-inner{max-width:var(--container);margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between;gap:32px}.header-logo svg{display:block}.header-nav{display:flex;align-items:center;gap:8px}.nav-link{padding:8px 14px;font-size:13px;font-weight:600;color:var(--text-dim);border-radius:6px;transition:all .2s;white-space:nowrap}.nav-link:hover{color:var(--white);background:rgba(255,255,255,0.06)}.header-actions{display:flex;align-items:center;gap:16px}.lang-selector{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--text-dim);cursor:pointer}.hamburger{display:none;flex-direction:column;gap:5px;width:28px;padding:4px 0}.hamburger span{display:block;height:2px;background:var(--white);border-radius:2px;transition:all .3s var(--ease)}.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}</style>
+<link href="/style.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="/style.min.css" rel="stylesheet"/></noscript>
+<!-- Google Analytics 4 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WC-PLACEHOLDER"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WC-PLACEHOLDER', {anonymize_ip: true});
+</script>
+<script defer="" src="/exit-tracker.js"></script>
+<script defer="" src="/lang-redirect.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Hedge Calculator: Lock In Profit on Any Bet at Stake",
+  "description": "Calculate the exact hedge stake to lock in profit or avoid loss on any bet. Supports equal profit, no-loss, and custom hedge modes. Free tool at Stake, use NEWBONUS.",
+  "url": "https://winnersclub.com/en/tools/hedge-calculator",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "winnersclub.com",
+    "url": "https://winnersclub.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://winnersclub.com/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://winnersclub.com/en/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Hedge calculator"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"When should I hedge a bet?","acceptedAnswer":{"@type":"Answer","text":"Hedge when your original selection has moved significantly in your favour and you want to secure profit before the event concludes."}},
+    {"@type":"Question","name":"Does hedging reduce my profit?","acceptedAnswer":{"@type":"Answer","text":"Yes. Placing a stake on both outcomes costs additional money. Locked-in profit is always less than maximum upside from the original bet alone."}},
+    {"@type":"Question","name":"Can I hedge a parlay?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use the original potential parlay payout as the stake input and hedge the final leg's opposing outcome."}},
+    {"@type":"Question","name":"What is partial hedging?","acceptedAnswer":{"@type":"Answer","text":"Partial hedging places a smaller stake on the opposing outcome than a full lock requires, reducing exposure while leaving some upside."}},
+    {"@type":"Question","name":"Is hedging the same as arbitrage?","acceptedAnswer":{"@type":"Answer","text":"No. Arbitrage places both bets simultaneously from separate bookmakers. Hedging adds a second bet after the original has moved in your favour."}}
+  ]
+}
+</script>
+
+  <link rel="alternate" hreflang="ar" href="https://winnersclub.com/ar/tools/hedge-calculator">
+  <link rel="alternate" hreflang="bg" href="https://winnersclub.com/bg/tools/hedge-calculator">
+  <link rel="alternate" hreflang="bn" href="https://winnersclub.com/bn/tools/hedge-calculator">
+  <link rel="alternate" hreflang="ca" href="https://winnersclub.com/ca/tools/hedge-calculator">
+  <link rel="alternate" hreflang="cs" href="https://winnersclub.com/cs/tools/hedge-calculator">
+  <link rel="alternate" hreflang="da" href="https://winnersclub.com/da/tools/hedge-calculator">
+  <link rel="alternate" hreflang="de" href="https://winnersclub.com/de/tools/hedge-calculator">
+  <link rel="alternate" hreflang="el" href="https://winnersclub.com/el/tools/hedge-calculator">
+  <link rel="alternate" hreflang="en" href="https://winnersclub.com/en/tools/hedge-calculator">
+  <link rel="alternate" hreflang="es" href="https://winnersclub.com/es/tools/hedge-calculator">
+  <link rel="alternate" hreflang="et" href="https://winnersclub.com/et/tools/hedge-calculator">
+  <link rel="alternate" hreflang="fa" href="https://winnersclub.com/fa/tools/hedge-calculator">
+  <link rel="alternate" hreflang="fi" href="https://winnersclub.com/fi/tools/hedge-calculator">
+  <link rel="alternate" hreflang="fr" href="https://winnersclub.com/fr/tools/hedge-calculator">
+  <link rel="alternate" hreflang="gl" href="https://winnersclub.com/gl/tools/hedge-calculator">
+  <link rel="alternate" hreflang="he" href="https://winnersclub.com/he/tools/hedge-calculator">
+  <link rel="alternate" hreflang="hi" href="https://winnersclub.com/hi/tools/hedge-calculator">
+  <link rel="alternate" hreflang="hr" href="https://winnersclub.com/hr/tools/hedge-calculator">
+  <link rel="alternate" hreflang="hu" href="https://winnersclub.com/hu/tools/hedge-calculator">
+  <link rel="alternate" hreflang="id" href="https://winnersclub.com/id/tools/hedge-calculator">
+  <link rel="alternate" hreflang="it" href="https://winnersclub.com/it/tools/hedge-calculator">
+  <link rel="alternate" hreflang="ja" href="https://winnersclub.com/ja/tools/hedge-calculator">
+  <link rel="alternate" hreflang="kk" href="https://winnersclub.com/kk/tools/hedge-calculator">
+  <link rel="alternate" hreflang="ko" href="https://winnersclub.com/ko/tools/hedge-calculator">
+  <link rel="alternate" hreflang="lo" href="https://winnersclub.com/lo/tools/hedge-calculator">
+  <link rel="alternate" hreflang="lt" href="https://winnersclub.com/lt/tools/hedge-calculator">
+  <link rel="alternate" hreflang="lv" href="https://winnersclub.com/lv/tools/hedge-calculator">
+  <link rel="alternate" hreflang="mn" href="https://winnersclub.com/mn/tools/hedge-calculator">
+  <link rel="alternate" hreflang="ms" href="https://winnersclub.com/ms/tools/hedge-calculator">
+  <link rel="alternate" hreflang="mt" href="https://winnersclub.com/mt/tools/hedge-calculator">
+  <link rel="alternate" hreflang="nb" href="https://winnersclub.com/nb/tools/hedge-calculator">
+  <link rel="alternate" hreflang="pl" href="https://winnersclub.com/pl/tools/hedge-calculator">
+  <link rel="alternate" hreflang="pt" href="https://winnersclub.com/pt/tools/hedge-calculator">
+  <link rel="alternate" hreflang="ro" href="https://winnersclub.com/ro/tools/hedge-calculator">
+  <link rel="alternate" hreflang="ru" href="https://winnersclub.com/ru/tools/hedge-calculator">
+  <link rel="alternate" hreflang="sk" href="https://winnersclub.com/sk/tools/hedge-calculator">
+  <link rel="alternate" hreflang="sl" href="https://winnersclub.com/sl/tools/hedge-calculator">
+  <link rel="alternate" hreflang="sq" href="https://winnersclub.com/sq/tools/hedge-calculator">
+  <link rel="alternate" hreflang="sr" href="https://winnersclub.com/sr/tools/hedge-calculator">
+  <link rel="alternate" hreflang="sv" href="https://winnersclub.com/sv/tools/hedge-calculator">
+  <link rel="alternate" hreflang="th" href="https://winnersclub.com/th/tools/hedge-calculator">
+  <link rel="alternate" hreflang="tl" href="https://winnersclub.com/tl/tools/hedge-calculator">
+  <link rel="alternate" hreflang="tr" href="https://winnersclub.com/tr/tools/hedge-calculator">
+  <link rel="alternate" hreflang="uk" href="https://winnersclub.com/uk/tools/hedge-calculator">
+  <link rel="alternate" hreflang="ur" href="https://winnersclub.com/ur/tools/hedge-calculator">
+  <link rel="alternate" hreflang="uz" href="https://winnersclub.com/uz/tools/hedge-calculator">
+  <link rel="alternate" hreflang="vi" href="https://winnersclub.com/vi/tools/hedge-calculator">
+  <link rel="alternate" hreflang="zh" href="https://winnersclub.com/zh/tools/hedge-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://winnersclub.com/en/tools/hedge-calculator">
+  </head>
+<body>
+<body>
+ ═════════════════════════════ হেডার ═══════════════════════════ 
+<header class="site-header" id="siteHeader">
+<div class="header-inner">
+<a aria-label="Stake বাড়ি" class="header-logo" href="./">
+<svg fill="none" height="48" viewbox="0 0 74 36" width="100" xmlns="http://www.w3.org/2000/svg">
+<path d="M29.1115 10.208C30.1487 10.208 31.0356 10.842 31.0959 12.6963L31.4601 21.4219L35.4465 11.6406C35.8806 10.5914 36.6194 10.208 37.7228 10.208H40.6838C42.2819 10.208 42.6501 11.6798 42.0109 13.1904L36.1096 27.7871C35.5337 29.2101 34.9846 29.9971 33.6701 29.9971L29.0451 30C27.5587 29.9999 26.7382 29.0408 26.7111 27.4277L26.3976 20.1523L23.3039 27.7773C22.7823 29.0196 22.2671 30 20.9797 30L16.924 29.9941C15.3081 29.9941 14.3853 29.1437 14.343 27.2295L14.1144 21.8594L15.3625 15.1953C15.8237 12.3645 14.8889 11.1646 14.093 10.2148L17.5275 10.2109C18.872 10.211 19.4293 10.8084 19.4806 12.4844L19.84 21.4248L23.841 11.5889C24.2119 10.6845 24.906 10.208 26.0969 10.208H29.1115Z" fill="white"></path>
+<path d="M7.85174 10.6641C9.28687 9.94345 10.6554 10.0338 11.7619 10.7754C12.9287 11.6226 13.5922 12.9158 13.2336 14.6885L10.924 26.9912C10.5862 28.993 8.65369 30.3133 6.64276 29.9336C4.74922 29.5748 3.35277 27.7988 3.72967 25.6641L5.03826 18.5391L4.22479 18.9072C2.71416 19.5856 0.937298 18.9073 0.261897 17.3877C-0.413447 15.8681 0.262199 14.0858 1.77264 13.4043L7.85174 10.6641Z" fill="white"></path>
+<path d="M49.2443 10.2119C51.2703 10.212 51.7946 11.1853 51.3332 13.3047L48.8039 27.1504C48.5479 28.6639 48.1102 29.9969 46.3224 29.9971H43.1476C41.6276 29.9971 41.0944 28.8513 41.3537 27.3799L43.964 12.7324C44.2263 11.1736 44.899 10.212 46.8498 10.2119H49.2443Z" fill="white"></path>
+<path d="M67.5851 10.2051C69.5359 10.2051 70.4343 10.5584 71.5197 11.5322C73.3285 13.1514 73.6701 15.5666 73.2629 17.4873L71.466 27.1445C71.2158 28.6069 70.8296 29.9912 69.0656 29.9912L65.9572 29.9941C64.6034 29.9941 63.8884 29.0049 64.1535 27.3135L65.4142 19.7607C65.5949 18.3738 65.3328 17.3905 64.5793 16.7754C63.4065 15.8196 61.7479 16.2354 60.9064 17.2002C60.3638 17.7791 60.1169 18.5663 59.8273 20.1611L58.5607 27.1533C58.3225 28.5342 57.9366 29.9969 56.1037 29.9971H52.9797C51.035 29.9971 50.8989 28.3024 51.1193 27.3164L53.7512 12.7295C54.0076 11.3907 54.4814 10.208 56.6369 10.208L58.8771 10.2051C60.6138 10.2051 61.6483 10.8506 61.1027 13.2988L60.8703 14.5107C62.0672 12.0716 65.0013 10.2052 67.5851 10.2051Z" fill="white"></path>
+<path d="M48.5988 1C50.5736 1.00011 52.175 2.60414 52.175 4.58203C52.175 6.55993 50.5736 8.16395 48.5988 8.16406C46.6239 8.16406 45.0226 6.56 45.0226 4.58203C45.0226 2.60407 46.6239 1 48.5988 1Z" fill="white"></path>
+</svg>
+</a>
+<nav class="header-nav" id="mainNav">
+<a class="nav-link" href="/bn/promo-code">প্রচার কোড</a>
+<div class="nav-item">
+<a class="nav-link" href="/bn/sports-betting">খেলাধুলা <svg class="nav-chevron" fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<div class="nav-dropdown">
+<a href="/bn/sports-betting">সমস্ত ক্রীড়া বাজি</a>
+<a href="/bn/sports/football">ফুটবল</a>
+<a href="/bn/sports/cricket">ক্রিকেট</a>
+<a href="/bn/sports/tennis">টেনিস</a>
+<a href="/bn/sports/basketball">বাস্কেটবল</a>
+<a href="/bn/sports/esports">Esports</a>
+<a href="/bn/live-streaming">লাইভ স্ট্রিমিং</a>
+</div>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/bn/casino">ক্যাসিনো <svg class="nav-chevron" fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<div class="nav-dropdown">
+<a href="/bn/casino">ক্যাসিনো বাড়ি</a>
+<a href="/bn/slots/">স্লট পর্যালোচনা</a>
+<a href="/bn/providers/">গেম প্রদানকারী</a>
+<a href="/bn/aviator">Aviator</a>
+<a href="/bn/crash/">ক্র্যাশ গেম</a>
+<a href="/bn/poker">জুজু</a>
+</div>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/bn/bonus/">বোনাস <svg class="nav-chevron" fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<div class="nav-dropdown">
+<a href="/bn/bonus/">সব বোনাস</a>
+<a href="/bn/bonus/first-deposit-bonus">প্রথমে 200% জমা দিন</a>
+<a href="/bn/bonus/second-deposit-bonus">দ্বিতীয় আমানত 150%</a>
+<a href="/bn/bonus/third-deposit-bonus">তৃতীয় আমানত 150%</a>
+<a href="/bn/bonus/fourth-deposit-bonus">চতুর্থ আমানত 100%</a>
+<a href="/bn/bonus/wagering-requirements">বাজি ধরার নিয়ম</a>
+<a href="/bn/bonus/free-spins-today">আজ বিনামূল্যে স্পিন</a>
+<a href="/bn/bonus/cashback-bonus">ক্যাশব্যাক</a>
+<a href="/bn/vip-club">ভিআইপি ক্লাব</a>
+<a href="/bn/lucky-drive">Lucky Drive</a>
+<a href="/bn/promotions">সমস্ত প্রচার</a>
+</div>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/bn/tools/">টুলস <svg class="nav-chevron" fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<div class="nav-dropdown">
+<a href="/bn/tools/">সব ক্যালকুলেটর</a>
+<a href="/bn/tools/odds-converter">অডস কনভার্টার</a>
+<a href="/bn/tools/parlay-calculator">পার্লে ক্যালকুলেটর</a>
+<a href="/bn/tools/kelly-criterion-calculator">কেলি মানদণ্ড</a>
+<a href="/bn/tools/arbitrage-calculator">সালিশ</a>
+<a href="/bn/tools/hedge-calculator">হেজ</a>
+<a href="/bn/tools/each-way-calculator">প্রতিটি উপায়</a>
+<a href="/bn/tools/implied-probability-calculator">উহ্য সম্ভাবনা</a>
+<a href="/bn/tools/bankroll-calculator">ব্যাঙ্করোল</a>
+<a href="/bn/tools/surebet-calculator">সুরবেত</a>
+<a href="/bn/tools/matched-bet-calculator">মিলেছে বাজি</a>
+</div>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/bn/payments/">আরও <svg class="nav-chevron" fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<div class="nav-dropdown">
+<a href="/bn/payments/">পেমেন্ট পদ্ধতি</a>
+<a href="/bn/app">মোবাইল অ্যাপ</a>
+<a href="/bn/india/">ভারত গাইড</a>
+<a href="/bn/mirrors">আয়না</a>
+<a href="/bn/access">লগইন করুন</a>
+<a href="/bn/register">নিবন্ধন করুন</a>
+<a href="/bn/review">পর্যালোচনা</a>
+<a href="/bn/website">Stake সম্পর্কে</a>
+<a href="/bn/faq">FAQ</a>
+</div>
+</div>
+<a class="nav-link" href="/bn/news">খবর</a>
+</nav>
+<div class="header-actions"><select class="lang-switcher" onchange="if(this.value)window.location.href=this.value" aria-label="ভাষা"><option value="" selected>BN</option><option value="/ar/tools/hedge-calculator.html">AR</option><option value="/bg/tools/hedge-calculator.html">BG</option><option value="/ca/tools/hedge-calculator.html">CA</option><option value="/cs/tools/hedge-calculator.html">CS</option><option value="/da/tools/hedge-calculator.html">DA</option><option value="/de/tools/hedge-calculator.html">DE</option><option value="/el/tools/hedge-calculator.html">EL</option><option value="/en/tools/hedge-calculator.html">EN</option><option value="/es/tools/hedge-calculator.html">ES</option><option value="/et/tools/hedge-calculator.html">ET</option><option value="/fa/tools/hedge-calculator.html">FA</option><option value="/fi/tools/hedge-calculator.html">FI</option><option value="/fr/tools/hedge-calculator.html">FR</option><option value="/gl/tools/hedge-calculator.html">GL</option><option value="/he/tools/hedge-calculator.html">HE</option><option value="/hi/tools/hedge-calculator.html">HI</option><option value="/hr/tools/hedge-calculator.html">HR</option><option value="/hu/tools/hedge-calculator.html">HU</option><option value="/id/tools/hedge-calculator.html">ID</option><option value="/it/tools/hedge-calculator.html">IT</option><option value="/ja/tools/hedge-calculator.html">JA</option><option value="/kk/tools/hedge-calculator.html">KK</option><option value="/ko/tools/hedge-calculator.html">KO</option><option value="/lo/tools/hedge-calculator.html">LO</option><option value="/lt/tools/hedge-calculator.html">LT</option><option value="/lv/tools/hedge-calculator.html">LV</option><option value="/mn/tools/hedge-calculator.html">MN</option><option value="/ms/tools/hedge-calculator.html">MS</option><option value="/mt/tools/hedge-calculator.html">MT</option><option value="/nb/tools/hedge-calculator.html">NB</option><option value="/nl/">NL</option><option value="/pl/tools/hedge-calculator.html">PL</option><option value="/pt/tools/hedge-calculator.html">PT</option><option value="/ro/tools/hedge-calculator.html">RO</option><option value="/ru/tools/hedge-calculator.html">RU</option><option value="/sk/tools/hedge-calculator.html">SK</option><option value="/sl/tools/hedge-calculator.html">SL</option><option value="/sq/tools/hedge-calculator.html">SQ</option><option value="/sr/tools/hedge-calculator.html">SR</option><option value="/sv/tools/hedge-calculator.html">SV</option><option value="/th/tools/hedge-calculator.html">TH</option><option value="/tl/tools/hedge-calculator.html">TL</option><option value="/tr/tools/hedge-calculator.html">TR</option><option value="/uk/tools/hedge-calculator.html">UK</option><option value="/ur/tools/hedge-calculator.html">UR</option><option value="/uz/tools/hedge-calculator.html">UZ</option><option value="/vi/tools/hedge-calculator.html">VI</option><option value="/zh/tools/hedge-calculator.html">ZH</option></select>
+<a aria-label="সাইন আপ করুন" class="btn btn-signup" href="https://playstake.io/landing?c=max3000&offer=max3000" rel="noopener" target="_blank">নিবন্ধন করুন</a>
+<button aria-label="মেনু টগল করুন" class="hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<nav aria-label="ব্রেডক্রাম্ব" class="breadcrumbs">
+<div class="container">
+<a href="/bn/">বাড়ি</a>
+<a href="/bn/tools/">টুলস</a>
+<span aria-current="page">হেজ ক্যালকুলেটর</span>
+</div>
+</nav>
+<article class="page-content">
+<div class="container">
+<h1>হেজ ক্যালকুলেটর: লাভ লক করুন বা ক্ষতি কম করুন</h1>
+<style>
+.calc-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px 24px;margin:32px 0}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.calc-field label{display:block;font-size:13px;color:var(--text-dim);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.calc-field input,.calc-field select{width:100%;background:var(--elevated);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-family:var(--font-mono);font-size:15px}
+.calc-field input:focus,.calc-field select:focus{outline:none;border-color:var(--blue)}
+.calc-output{background:var(--elevated);border-radius:10px;padding:20px;margin-top:20px}
+.calc-output-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:12px}
+.out-item{background:var(--bg);border-radius:8px;padding:14px 16px}
+.out-label{font-size:12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.out-val{font-family:var(--font-mono);font-size:18px;font-weight:700;color:var(--gold)}
+.out-val.green{color:var(--green)}
+.out-val.warn{color:var(--red)}
+.related-tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:16px}
+.related-tools a{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:14px;transition:border-color .2s}
+.related-tools a:hover{border-color:var(--blue)}
+</style>
+<section class="lede">
+<p>Stake Curaçao 1668/JAZ এর অধীনে লাইসেন্সপ্রাপ্ত এবং 40,000+ বেটিং মার্কেট কভার করে। এই হেজ ক্যালকুলেটরটি আপনাকে বলে যে লাভে লক করতে বা আপনার ক্ষতি কমাতে বিপরীত ফলাফলের উপর কতটা অংশ নিতে হবে। প্রচার কোড দিয়ে নিবন্ধন করুন <span class="code-highlight">NEWBONUS</span> এবং নির্ভুলতার সাথে প্রতিটি অবস্থান পরিচালনা করুন।</p>
+</section>
+<section class="calc-box">
+<h2>হেজ বাজি ক্যালকুলেটর</h2>
+<div class="calc-grid">
+<div class="calc-field"><label>মূল বাজি</label><input id="h-ostake" min="0.01" placeholder="50" step="0.01" type="number" value="50"/></div>
+<div class="calc-field"><label>মূল দশমিক মতভেদ</label><input id="h-oodds" min="1.01" placeholder="4.00" step="0.01" type="number" value="4.00"/></div>
+<div class="calc-field"><label>হেজ দশমিক মতভেদ</label><input id="h-hodds" min="1.01" placeholder="1.40" step="0.01" type="number" value="1.40"/></div>
+<div class="calc-field"><label>হেজ গোল</label>
+<select id="h-goal">
+<option value="equal">সমান লাভে তালা</option>
+<option value="zeroloss">কোনো ক্ষতির নিশ্চয়তা নেই</option>
+<option value="custom">কাস্টম হেজ বাজি</option>
+</select>
+</div>
+<div class="calc-field" id="custom-stake-wrap" style="display:none"><label>কাস্টম হেজ বাজি</label><input id="h-cstake" min="0.01" placeholder="50" step="0.01" type="number" value="50"/></div>
+</div>
+<div class="calc-output">
+<div style="font-size:13px;color:var(--text-dim);font-weight:600;text-transform:uppercase;letter-spacing:.5px">হেজ ফলাফল</div>
+<div class="calc-output-grid">
+<div class="out-item"><div class="out-label">হেজ বাজি</div><div class="out-val" id="h-hstake">--</div></div>
+<div class="out-item"><div class="out-label">আসল জিতলে লাভ</div><div class="out-val green" id="h-p-orig">--</div></div>
+<div class="out-item"><div class="out-label">হেজ জিতলে লাভ</div><div class="out-val green" id="h-p-hedge">--</div></div>
+<div class="out-item"><div class="out-label">টোটাল স্টেকড</div><div class="out-val" id="h-total">--</div></div>
+</div>
+</div>
+</section>
+<section>
+<h2>এই ক্যালকুলেটর কিভাবে কাজ করে</h2>
+<p>একটি বাজি হেজ করার অর্থ হল আপনার আসল অবস্থান ইতিমধ্যেই স্থাপন করার পরে (সাধারণত আসলটি আপনার পক্ষে চলে যাওয়ার পরে) বিরোধী ফলাফলের উপর একটি বাজি রাখা। লক্ষ্য হল একটি লাভের নিশ্চয়তা দেওয়া বা সর্বাধিক ক্ষতি কমানো যাই হোক না কেন ফলাফল।</p>
+<p style="margin-top:12px">"সমান লাভে লক" মোডের জন্য, ক্যালকুলেটর হেজ স্টেক খুঁজে পায় যা উভয় পরিস্থিতিতেই একই নেট লাভ ফেরত দেয়। সূত্রটি হল: <strong>হেজ স্টেক = (অরিজিনাল স্টেক x আসল মতভেদ) / (1 + হেজ অডস - 1)</strong>, যা সহজ করে: আসল জয় রিটার্ন / হেজ অডস।</p>
+<p style="margin-top:12px">কংক্রিটভাবে: 4.00-এ একটি 50-ইউনিট আসল স্টক 200 ফেরত দেয় যদি এটি জিতে যায় (150 লাভ)। 1.40 এ হেজ করতে, প্রয়োজনীয় স্টেক = 200 / 1.40 = 142.86। যদি আসল জয়ী হয়: লাভ = 200 - 50 - 142.86 = 7.14। হেজ জিতলে: লাভ = 142.86 x 1.40 - 50 - 142.86 = 7.14। উভয় পরিস্থিতিতে একই লাভ ফেরত.</p>
+<p style="margin-top:12px">"গ্যারান্টি নো লস" মোড প্রয়োজনীয় হেজ স্টেক হিসেব করে যাতে কোনো ফলাফলই ক্ষতির কারণ না হয়। এটি ব্রেক-ইভেন হেজ। উপরের উদাহরণের জন্য, যে কোনো হেজ স্টেক যেটি মূল 50-ইউনিট বিনিয়োগকে কভার করে যখন মূল দিকটি উদ্বৃত্তের জন্য যোগ্যতা অর্জন করে।</p>
+<p style="margin-top:12px">"কাস্টম স্টেক" মোড আপনাকে যেকোনো হেজ পরিমাণ প্রবেশ করতে দেয় এবং ফলস্বরূপ লাভ/ক্ষতির পরিস্থিতি পাশাপাশি দেখতে দেয়। আপনি যখন ফলাফলে সম্পূর্ণরূপে লক না করে আংশিকভাবে হেজ করতে চান তখন এটি কার্যকর।</p>
+<p style="margin-top:12px">লক্ষ্য করুন যে হেজিং সর্বদা নিশ্চিততার বিনিময়ে সর্বাধিক উর্ধ্বগতি হ্রাস করে। হেজ করার সঠিক পরিমাণ আপনার ঝুঁকি সহনশীলতার উপর নির্ভর করে এবং আপনার আসল বাজি রাখার পর থেকে ইন-প্লে প্রাইস মুভের আকারের উপর।</p>
+</section>
+<section style="margin-top:40px">
+<h2>কেন এটি Stake এ ব্যবহার করুন</h2>
+<p>Stake-এর ইন-প্লে মার্কেট 40,000+ ইভেন্ট জুড়ে ক্রমাগত আপডেট হয়। যখন আপনার প্রাক-ম্যাচ অবস্থান লাভে চলে যায়, তখন এই ক্যালকুলেটর আপনাকে সর্বোত্তম হেজ নির্ধারণ করতে সাহায্য করে। সাথে নিবন্ধন করুন <span class="code-highlight">NEWBONUS</span> অবিলম্বে লাইভ বাজি অ্যাক্সেস করতে.</p>
+<div style="margin-top:20px"><a class="btn btn-primary btn-lg" href="https://winnersclub.com/bn/register?promo=NEWBONUS">Stake এ নিবন্ধন করুন এবং NEWBONUS দাবি করুন৷</a></div>
+</section>
+<section class="faq" style="margin-top:40px">
+<h2>FAQ</h2>
+<details><summary>আমি কখন একটি বাজি হেজ করা উচিত?</summary><p>যখন আপনার আসল নির্বাচন উল্লেখযোগ্যভাবে আপনার পক্ষে চলে যায় এবং আপনি ইভেন্ট শেষ হওয়ার আগে কিছু লাভ সুরক্ষিত করতে চান তখন হেজ করুন। সাধারণ পরিস্থিতিতে একটি ফুটবল দল হাফ টাইমে জয়ী হয় এবং আপনি দ্বিতীয়ার্ধের ফলাফল নির্বিশেষে একটি ফেরতের নিশ্চয়তা দিতে চান।</p></details>
+<details><summary>হেজিং কি আমার লাভ কমিয়ে দেয়?</summary><p>হ্যাঁ। উভয় ফলাফলের উপর একটি অংশ স্থাপন করে, আপনি অতিরিক্ত অর্থ ব্যয় করছেন। শুধুমাত্র মূল বাজি থেকে লক-ইন লাভ আপনার সর্বোচ্চ সম্ভাব্য উর্ধ্বগতির চেয়ে কম হবে।</p></details>
+<details><summary>আমি কি একটি পার্লে হেজ করতে পারি?</summary><p>হ্যাঁ। যদি একটি পার্লে এর শেষ লেগ মুলতুবি থাকে, আপনি বিরোধী ফলাফলের উপর শেষ পা হেজ করতে পারেন। আপনার "অরিজিনাল স্টেক" হিসাবে আসল সম্ভাব্য পার্লে পেআউট এবং হেজ অডস হিসাবে শেষ-লেগ অডস ব্যবহার করুন।</p></details>
+<details><summary>আংশিক হেজিং কি?</summary><p>আংশিক হেজিং সম্পূর্ণ লকের প্রয়োজনের তুলনায় বিপরীত ফলাফলের উপর একটি ছোট অংশীদারিত্ব রাখে। এটি সম্পূর্ণরূপে লাভে লক না করেই এক্সপোজার হ্রাস করে, মূল বাজিতে কিছুটা উল্টোদিকে রেখে।</p></details>
+<details><summary>হেজিং কি সালিশের মতই?</summary><p>না। আরবিট্রেজ পৃথক বুকমেকারদের থেকে ইভেন্টের আগে একই সাথে উভয় বাজি রাখে। প্রথমটি ইতিমধ্যে তৈরি হওয়ার পরে হেজিং দ্বিতীয় বাজি রাখে, সাধারণত যখন অবস্থানটি আপনার পক্ষে চলে যায়।</p></details>
+</section>
+<section style="margin-top:40px">
+<h2>সম্পর্কিত সরঞ্জাম</h2>
+<div class="related-tools">
+<a href="/bn/tools/arbitrage-calculator">আরবিট্রেজ ক্যালকুলেটর</a>
+<a href="/bn/tools/matched-bet-calculator">মিলে যাওয়া বাজি ক্যালকুলেটর</a>
+<a href="/bn/tools/parlay-calculator">পার্লে ক্যালকুলেটর</a>
+<a href="/bn/tools/kelly-criterion-calculator">কেলি মানদণ্ড ক্যালকুলেটর</a>
+<a href="/bn/tools/odds-converter">অডস কনভার্টার</a>
+</div>
+</section>
+</div>
+</article>
+</main>
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-top">
+<div class="footer-brand">
+<svg fill="none" height="38" viewbox="0 0 74 36" width="80" xmlns="http://www.w3.org/2000/svg">
+<path d="M29.1115 10.208C30.1487 10.208 31.0356 10.842 31.0959 12.6963L31.4601 21.4219L35.4465 11.6406C35.8806 10.5914 36.6194 10.208 37.7228 10.208H40.6838C42.2819 10.208 42.6501 11.6798 42.0109 13.1904L36.1096 27.7871C35.5337 29.2101 34.9846 29.9971 33.6701 29.9971L29.0451 30C27.5587 29.9999 26.7382 29.0408 26.7111 27.4277L26.3976 20.1523L23.3039 27.7773C22.7823 29.0196 22.2671 30 20.9797 30L16.924 29.9941C15.3081 29.9941 14.3853 29.1437 14.343 27.2295L14.1144 21.8594L15.3625 15.1953C15.8237 12.3645 14.8889 11.1646 14.093 10.2148L17.5275 10.2109C18.872 10.211 19.4293 10.8084 19.4806 12.4844L19.84 21.4248L23.841 11.5889C24.2119 10.6845 24.906 10.208 26.0969 10.208H29.1115Z" fill="white"></path>
+<path d="M7.85174 10.6641C9.28687 9.94345 10.6554 10.0338 11.7619 10.7754C12.9287 11.6226 13.5922 12.9158 13.2336 14.6885L10.924 26.9912C10.5862 28.993 8.65369 30.3133 6.64276 29.9336C4.74922 29.5748 3.35277 27.7988 3.72967 25.6641L5.03826 18.5391L4.22479 18.9072C2.71416 19.5856 0.937298 18.9073 0.261897 17.3877C-0.413447 15.8681 0.262199 14.0858 1.77264 13.4043L7.85174 10.6641Z" fill="white"></path>
+<path d="M49.2443 10.2119C51.2703 10.212 51.7946 11.1853 51.3332 13.3047L48.8039 27.1504C48.5479 28.6639 48.1102 29.9969 46.3224 29.9971H43.1476C41.6276 29.9971 41.0944 28.8513 41.3537 27.3799L43.964 12.7324C44.2263 11.1736 44.899 10.212 46.8498 10.2119H49.2443Z" fill="white"></path>
+<path d="M67.5851 10.2051C69.5359 10.2051 70.4343 10.5584 71.5197 11.5322C73.3285 13.1514 73.6701 15.5666 73.2629 17.4873L71.466 27.1445C71.2158 28.6069 70.8296 29.9912 69.0656 29.9912L65.9572 29.9941C64.6034 29.9941 63.8884 29.0049 64.1535 27.3135L65.4142 19.7607C65.5949 18.3738 65.3328 17.3905 64.5793 16.7754C63.4065 15.8196 61.7479 16.2354 60.9064 17.2002C60.3638 17.7791 60.1169 18.5663 59.8273 20.1611L58.5607 27.1533C58.3225 28.5342 57.9366 29.9969 56.1037 29.9971H52.9797C51.035 29.9971 50.8989 28.3024 51.1193 27.3164L53.7512 12.7295C54.0076 11.3907 54.4814 10.208 56.6369 10.208L58.8771 10.2051C60.6138 10.2051 61.6483 10.8506 61.1027 13.2988L60.8703 14.5107C62.0672 12.0716 65.0013 10.2052 67.5851 10.2051Z" fill="white"></path>
+<path d="M48.5988 1C50.5736 1.00011 52.175 2.60414 52.175 4.58203C52.175 6.55993 50.5736 8.16395 48.5988 8.16406C46.6239 8.16406 45.0226 6.56 45.0226 4.58203C45.0226 2.60407 46.6239 1 48.5988 1Z" fill="white"></path>
+</svg>
+<p style="font-size:14px;font-weight:800;color:var(--text-dim);letter-spacing:2px;margin-bottom:16px;text-transform:uppercase;">winnersclub.com - স্বাধীন অ্যাফিলিয়েট পর্যালোচনা</p>
+<div class="footer-badges">
+<span class="age-badge">18+</span>
+<span class="cert-badge">GamCare</span>
+<span class="cert-badge">SSL</span>
+</div>
+</div>
+<div class="footer-links-grid">
+<div class="footer-col">
+<h4>পণ্য</h4>
+<a href="/bn/sports-betting">ক্রীড়া পণ</a>
+<a href="/bn/casino">ক্যাসিনো</a>
+<a href="/bn/aviator">Aviator</a>
+<a href="/bn/poker">জুজু</a>
+</div>
+<div class="footer-col">
+<h4>প্রচার</h4>
+<a href="/bn/promo-code">প্রচার কোড</a>
+<a href="/bn/vip-club">ভিআইপি ক্লাব</a>
+<a href="/bn/lucky-drive">Lucky Drive</a>
+<a href="/bn/promotions">বিনামূল্যে টাকা</a>
+<a href="/bn/mirrors">আয়না</a>
+</div>
+<div class="footer-col">
+<h4>সমর্থন</h4>
+<a href="/bn/register">নিবন্ধন করুন</a>
+<a href="/bn/access">লগইন করুন</a>
+<a href="/bn/review">পর্যালোচনা</a>
+<a href="/bn/website">ওয়েবসাইট</a>
+<a href="/bn/live-streaming">লাইভ স্ট্রিমিং</a>
+<a href="/bn/payment-methods">পেমেন্ট</a>
+<a href="/bn/app">অ্যাপ ডাউনলোড করুন</a>
+<a href="/bn/news">খবর</a>
+<a href="/bn/faq">FAQ</a>
+<a href="/bn/mirrors">আয়না</a>
+</div>
+<div class="footer-col">
+<h4>দেশগুলো</h4>
+<a href="/bn/country-bangladesh">বাংলাদেশ</a>
+<a href="/bn/country-india">ভারত</a>
+<a href="/bn/country-pakistan">পাকিস্তান</a>
+<a href="/bn/country-korea">কোরিয়া</a>
+<a href="/bn/country-malaysia">মালয়েশিয়া</a>
+<a href="/bn/country-singapore">সিঙ্গাপুর</a>
+<a href="/bn/country-south-africa">দক্ষিণ আফ্রিকা</a>
+<a href="/bn/country-tanzania">তানজানিয়া</a>
+<a href="/bn/country-malawi">মালাউই</a>
+<a href="/bn/country-kenya">কেনিয়া</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="footer-disclaimer">এটি একটি অনানুষ্ঠানিক ফ্যান সাইট এবং এটি Stake দ্বারা অনুমোদিত বা অনুমোদিত নয়৷ এই সাইটটি শুধুমাত্র তথ্যের উদ্দেশ্যে। জুয়ায় ঝুঁকি জড়িত, দয়া করে দায়িত্বের সাথে খেলুন। যদি আপনার বা আপনার পরিচিত কারো জুয়ার সমস্যা থাকে, তাহলে অনুগ্রহ করে GamCare বা স্থানীয় সহায়তা সংস্থার সাথে যোগাযোগ করুন।</p>
+<p class="footer-copyright">© 2026 winnersclub.com। সর্বস্বত্ব সংরক্ষিত</p>
+</div>
+</div>
+</footer>
+<script defer="" src="/script.min.js"></script>
+<script>
+(function(){
+  const goalSel=document.getElementById('h-goal');
+  const customWrap=document.getElementById('custom-stake-wrap');
+  goalSel.addEventListener('change',function(){
+    customWrap.style.display=this.value==='custom'?'':'none';
+    calc();
+  });
+
+  function calc(){
+    const os=parseFloat(document.getElementById('h-ostake').value)||0;
+    const oo=parseFloat(document.getElementById('h-oodds').value)||0;
+    const ho=parseFloat(document.getElementById('h-hodds').value)||0;
+    const goal=goalSel.value;
+    if(os<=0||oo<=1||ho<=1){['h-hstake','h-p-orig','h-p-hedge','h-total'].forEach(id=>document.getElementById(id).textContent='--');return;}
+    const origReturn=os*oo;
+    let hs;
+    if(goal==='equal'){
+      hs=origReturn/ho;
+    } else if(goal==='zeroloss'){
+      // hedge stake such that hedge payout covers original stake
+      hs=os/ho;
+    } else {
+      hs=parseFloat(document.getElementById('h-cstake').value)||0;
+    }
+    const profitIfOrig=origReturn-os-hs;
+    const profitIfHedge=(hs*ho)-os-hs;
+    document.getElementById('h-hstake').textContent=hs.toFixed(2);
+    document.getElementById('h-p-orig').textContent=profitIfOrig.toFixed(2);
+    document.getElementById('h-p-hedge').textContent=profitIfHedge.toFixed(2);
+    document.getElementById('h-total').textContent=(os+hs).toFixed(2);
+  }
+
+  ['h-ostake','h-oodds','h-hodds','h-cstake'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el) el.addEventListener('input',calc);
+  });
+  calc();
+})();
+</script>
+</body>
+</body></html>

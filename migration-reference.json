@@ -1,0 +1,66 @@
+{
+  "domain": "www.1win.codes",
+  "languages": [
+    "en", "fr", "de", "zh", "tr", "ru", "nl", "vi", "bg", "ja", "ar", "el",
+    "es", "ro", "th", "hi", "sq", "my", "hr", "cs", "da", "et", "fi", "he",
+    "hu", "id", "it", "kk", "km", "ko", "lo", "lv", "lt", "ms", "mt", "mn",
+    "nb", "fa", "pl", "sr", "sk", "sl", "uk", "uz", "tl", "pt", "sv", "bn", "ur"
+  ],
+  "english_categories": [
+    { "slug": "", "page": "index.html", "description": "Homepage / Landing" },
+    { "slug": "promo-code", "page": "promo-code.html", "description": "1win Promo Code XLBONUS" },
+    { "slug": "register", "page": "index.html", "description": "Registration (maps to homepage register section)" },
+    { "slug": "mirrors", "page": "mirror.html", "description": "1win Mirror / Access" },
+    { "slug": "access", "page": "mirror.html", "description": "Access 1win (maps to mirror page)" },
+    { "slug": "review", "page": "index.html", "description": "1win Review (maps to homepage)" },
+    { "slug": "website", "page": "index.html", "description": "1win Website info" },
+    { "slug": "payment-methods", "page": "payments.html", "description": "Payment Methods" },
+    { "slug": "app", "page": "app.html", "description": "1win App Download" },
+    { "slug": "news", "page": "news.html", "description": "News" },
+    { "slug": "live-streaming", "page": "sports-betting.html", "description": "Live Streaming (maps to sports)" },
+    { "slug": "reviews/1win", "page": "index.html", "description": "1win Review page" }
+  ],
+  "our_pages": [
+    "index.html",
+    "promo-code.html",
+    "sports-betting.html",
+    "casino.html",
+    "aviator.html",
+    "poker.html",
+    "lucky-drive.html",
+    "promotions.html",
+    "vip-club.html",
+    "payments.html",
+    "app.html",
+    "faq.html",
+    "news.html",
+    "mirror.html"
+  ],
+  "page_mapping_for_existing_urls": {
+    "/en/": "index.html",
+    "/en/promo-code/": "promo-code.html",
+    "/en/register/": "index.html",
+    "/en/mirrors/": "mirror.html",
+    "/en/access/": "mirror.html",
+    "/en/review/": "index.html",
+    "/en/website/": "index.html",
+    "/en/payment-methods/": "payments.html",
+    "/en/app/": "app.html",
+    "/en/news/": "news.html",
+    "/en/live-streaming/": "sports-betting.html",
+    "/en/reviews/1win/": "index.html"
+  },
+  "translation_notes": {
+    "high_traffic_languages": ["ko", "ru", "tr", "hi", "bn", "pt", "es", "ar", "vi", "ja"],
+    "mirror_traffic_languages": ["ko", "ru", "tr", "vi", "bn", "ur", "hi", "ar", "fa"],
+    "url_pattern": "/{lang}/{category-slug}/",
+    "translated_slugs": {
+      "fr": { "promo-code": "code-promotionnel-1win", "mirrors": "1win-miroirs", "register": "1win-s-39-inscrire", "review": "1win-avis", "app": "application-mobile-1win", "payment-methods": "methodes-de-paiement-1win", "access": "connexion-1win", "news": "nouvelles", "live-streaming": "1win-diffusion-en-direct", "website": "site-web-1win" },
+      "de": { "promo-code": "1win-aktionscode", "mirrors": "1win-spiegel", "register": "1win-registrieren", "review": "1win-bewertung", "app": "1win-mobile-app", "payment-methods": "1win-zahlungsmethoden", "access": "1win-anmeldung", "news": "nachricht", "live-streaming": "1win-live-streaming", "website": "1win-website" },
+      "ko": { "promo-code": "promo-code", "mirrors": "mirrors", "register": "register", "review": "review", "app": "app", "payment-methods": "payment-methods", "access": "access", "news": "news", "live-streaming": "live-streaming", "website": "website" }
+    }
+  },
+  "exit_link": "https://1wvear.life",
+  "promo_code": "XLBONUS",
+  "bonus_amount": "600%"
+}

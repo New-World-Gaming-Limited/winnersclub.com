@@ -1,0 +1,82 @@
+2026-05-29 15:54:34,703 [INFO] === update_daily_tips.py start | ts=2026-05-29T15:54:34+00:00 | dry_run=True ===
+2026-05-29 15:54:34,703 [INFO] --- Processing sport: football -> todays-football.html ---
+2026-05-29 15:54:34,703 [INFO] [football] Fetching matches (stub - replace with live feed)
+2026-05-29 15:54:34,703 [INFO] Selected 3 matches (top by liquidity): ['Manchester United vs Arsenal', 'Bayern Munich vs Dortmund', 'Barcelona vs Atletico Madrid']
+2026-05-29 15:54:34,703 [INFO] [DRY RUN] Would write 27228 chars to /home/user/workspace/1win-codes-repo/en/tips/todays-football.html
+2026-05-29 15:54:34,704 [INFO] [DRY RUN] data-updated would be set to: 2026-05-29T15:54:34+00:00
+2026-05-29 15:54:34,704 [INFO] [DRY RUN] First tip card preview:
+    <div class="tip-card">
+      <div class="tip-card-header">
+        <span class="tip-sport-tag">Preview</span>
+        <span class="tip-time">Start: TBC</span>
+      </div>
+      <p class="tip-match"><strong>Team A vs Team B</strong></p>
+      <p class="tip-pick">Pick: N/A | Suggested odds: N/A</p>
+      <p class="tip-reasoning">Dry run preview.</p>
+      <a class="btn btn-primary" href="https://1win.codes/en/register?promo=XLBONUS">Claim XLBONUS and bet at 1win</a>
+    </div>
+2026-05-29 15:54:34,704 [INFO] --- Processing sport: cricket -> todays-cricket.html ---
+2026-05-29 15:54:34,704 [INFO] [cricket] Fetching matches (stub - replace with live feed)
+2026-05-29 15:54:34,704 [INFO] Selected 3 matches (top by liquidity): ['India vs Australia', 'Mumbai Indians vs RCB', 'England vs New Zealand']
+2026-05-29 15:54:34,704 [INFO] [DRY RUN] Would write 26863 chars to /home/user/workspace/1win-codes-repo/en/tips/todays-cricket.html
+2026-05-29 15:54:34,704 [INFO] [DRY RUN] data-updated would be set to: 2026-05-29T15:54:34+00:00
+2026-05-29 15:54:34,704 [INFO] [DRY RUN] First tip card preview:
+    <div class="tip-card">
+      <div class="tip-card-header">
+        <span class="tip-sport-tag">Preview</span>
+        <span class="tip-time">Start: TBC</span>
+      </div>
+      <p class="tip-match"><strong>Team A vs Team B</strong></p>
+      <p class="tip-pick">Pick: N/A | Suggested odds: N/A</p>
+      <p class="tip-reasoning">Dry run preview.</p>
+      <a class="btn btn-primary" href="https://1win.codes/en/register?promo=XLBONUS">Claim XLBONUS and bet at 1win</a>
+    </div>
+2026-05-29 15:54:34,704 [INFO] --- Processing sport: tennis -> todays-tennis.html ---
+2026-05-29 15:54:34,704 [INFO] [tennis] Fetching matches (stub - replace with live feed)
+2026-05-29 15:54:34,704 [INFO] Selected 3 matches (top by liquidity): ['Carlos Alcaraz vs Jannik Sinner', 'Iga Swiatek vs Elena Rybakina', 'ATP Challenger Featured Match']
+2026-05-29 15:54:34,705 [INFO] [DRY RUN] Would write 27096 chars to /home/user/workspace/1win-codes-repo/en/tips/todays-tennis.html
+2026-05-29 15:54:34,705 [INFO] [DRY RUN] data-updated would be set to: 2026-05-29T15:54:34+00:00
+2026-05-29 15:54:34,705 [INFO] [DRY RUN] First tip card preview:
+    <div class="tip-card">
+      <div class="tip-card-header">
+        <span class="tip-sport-tag">Preview</span>
+        <span class="tip-time">Start: TBC</span>
+      </div>
+      <p class="tip-match"><strong>Team A vs Team B</strong></p>
+      <p class="tip-pick">Pick: N/A | Suggested odds: N/A</p>
+      <p class="tip-reasoning">Dry run preview.</p>
+      <a class="btn btn-primary" href="https://1win.codes/en/register?promo=XLBONUS">Claim XLBONUS and bet at 1win</a>
+    </div>
+2026-05-29 15:54:34,705 [INFO] --- Processing sport: basketball -> todays-basketball.html ---
+2026-05-29 15:54:34,705 [INFO] [basketball] Fetching matches (stub - replace with live feed)
+2026-05-29 15:54:34,705 [INFO] Selected 3 matches (top by liquidity): ['Los Angeles Lakers vs Boston Celtics', 'Golden State Warriors vs Phoenix Suns', 'Real Madrid vs Olympiacos']
+2026-05-29 15:54:34,705 [INFO] [DRY RUN] Would write 27113 chars to /home/user/workspace/1win-codes-repo/en/tips/todays-basketball.html
+2026-05-29 15:54:34,705 [INFO] [DRY RUN] data-updated would be set to: 2026-05-29T15:54:34+00:00
+2026-05-29 15:54:34,705 [INFO] [DRY RUN] First tip card preview:
+    <div class="tip-card">
+      <div class="tip-card-header">
+        <span class="tip-sport-tag">Preview</span>
+        <span class="tip-time">Start: TBC</span>
+      </div>
+      <p class="tip-match"><strong>Team A vs Team B</strong></p>
+      <p class="tip-pick">Pick: N/A | Suggested odds: N/A</p>
+      <p class="tip-reasoning">Dry run preview.</p>
+      <a class="btn btn-primary" href="https://1win.codes/en/register?promo=XLBONUS">Claim XLBONUS and bet at 1win</a>
+    </div>
+2026-05-29 15:54:34,705 [INFO] --- Processing sport: esports -> todays-esports.html ---
+2026-05-29 15:54:34,705 [INFO] [esports] Fetching matches (stub - replace with live feed)
+2026-05-29 15:54:34,705 [INFO] Selected 3 matches (top by liquidity): ['Natus Vincere vs FaZe Clan', 'T1 vs Gen.G', 'Team Spirit vs Gaimin Gladiators']
+2026-05-29 15:54:34,706 [INFO] [DRY RUN] Would write 27260 chars to /home/user/workspace/1win-codes-repo/en/tips/todays-esports.html
+2026-05-29 15:54:34,706 [INFO] [DRY RUN] data-updated would be set to: 2026-05-29T15:54:34+00:00
+2026-05-29 15:54:34,706 [INFO] [DRY RUN] First tip card preview:
+    <div class="tip-card">
+      <div class="tip-card-header">
+        <span class="tip-sport-tag">Preview</span>
+        <span class="tip-time">Start: TBC</span>
+      </div>
+      <p class="tip-match"><strong>Team A vs Team B</strong></p>
+      <p class="tip-pick">Pick: N/A | Suggested odds: N/A</p>
+      <p class="tip-reasoning">Dry run preview.</p>
+      <a class="btn btn-primary" href="https://1win.codes/en/register?promo=XLBONUS">Claim XLBONUS and bet at 1win</a>
+    </div>
+2026-05-29 15:54:34,706 [INFO] === Done: 5 updated, 0 errors ===

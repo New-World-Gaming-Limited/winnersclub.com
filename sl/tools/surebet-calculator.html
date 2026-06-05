@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html lang="sl">
+<head>
+<meta charset="utf-8"/>
+<link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+<link href="//fonts.gstatic.com" rel="dns-prefetch"/>
+<link href="//winnersclub.com" rel="dns-prefetch"/>
+<meta content="#141415" name="theme-color"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Surebet Calculator: 2-3 Way Arb Detector and Stake Split at Stake</title>
+<meta content="Detect 2-way and 3-way surebets and calculate guaranteed-profit stake splits instantly. Free arb calculator at Stake. Use promocijska koda NEWBONUS when you register." name="description"/>
+<link rel="canonical" href="https://winnersclub.com/sl/tools/surebet-calculator.html">
+<meta content="Surebet Calculator: 2-3 Way Arb Detector and Stake Split at Stake" property="og:title"/>
+<meta content="Detect 2-way and 3-way surebets and calculate guaranteed-profit stake splits instantly. Free arb calculator at Stake. Use promocijska koda NEWBONUS when you register." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="/images/og-default.png" property="og:image"/><link href="/images/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+<style id="critical">*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg:#141415;--surface:#1d1e20;--elevated:#2e3035;--blue:#0075ff;--green:#00b24b;--gold:#FFD700;--red:#f44;--purple:#9b59b6;--white:#fff;--text:#e8e8e8;--text-dim:#9a9a9f;--text-muted:#6b6b70;--border:rgba(255,255,255,0.08);--font-body:'Inter',system-ui,-apple-system,sans-serif;--font-mono:'JetBrains Mono','Fira Code',monospace;--section-pad:120px;--container:1280px;--glow-blue:0 0 30px rgba(0,117,255,0.4),0 0 60px rgba(0,117,255,0.2);--glow-green:0 0 30px rgba(0,178,75,0.4),0 0 60px rgba(0,178,75,0.2);--glow-gold:0 0 30px rgba(255,215,0,0.4),0 0 60px rgba(255,215,0,0.2);--ease:cubic-bezier(0.16,1,0.3,1)}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none}button{cursor:pointer;border:none;background:none;font-family:inherit;color:inherit}.text-gradient{background:linear-gradient(135deg,var(--blue) 0,#00d4ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.text-gradient-gold{background:linear-gradient(135deg,var(--gold) 0,#fa0 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.text-green{color:var(--green);font-weight:700}.code-highlight{font-family:var(--font-mono);color:var(--gold);font-weight:700}.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:8px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.5px;transition:all .3s var(--ease);white-space:nowrap}.btn-primary{background:var(--green);color:var(--white);box-shadow:0 4px 15px rgba(0,178,75,0.3)}.btn-primary:hover{transform:translateY(-2px) scale(1.02);box-shadow:var(--glow-green);background:#00cc56}.btn-gold{background:linear-gradient(135deg,var(--gold),#fa0);color:#1a1a1a;box-shadow:0 4px 15px rgba(255,215,0,0.3)}.btn-gold:hover{transform:translateY(-2px) scale(1.02);box-shadow:var(--glow-gold)}.btn-signup{background:var(--green);color:var(--white);padding:10px 24px;border-radius:8px;font-size:13px;box-shadow:0 4px 15px rgba(0,178,75,0.3)}.btn-signup:hover{transform:translateY(-2px);box-shadow:var(--glow-green)}.btn-outline{border:2px solid var(--blue);color:var(--blue);background:transparent}.btn-outline:hover{background:var(--blue);color:var(--white);box-shadow:var(--glow-blue);transform:translateY(-2px)}.btn-lg{padding:16px 40px;font-size:16px;border-radius:10px}.btn-xl{padding:20px 56px;font-size:18px;border-radius:12px}.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(20,20,21,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:transform .35s var(--ease)}.header-inner{max-width:var(--container);margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between;gap:32px}.header-logo svg{display:block}.header-nav{display:flex;align-items:center;gap:8px}.nav-link{padding:8px 14px;font-size:13px;font-weight:600;color:var(--text-dim);border-radius:6px;transition:all .2s;white-space:nowrap}.nav-link:hover{color:var(--white);background:rgba(255,255,255,0.06)}.header-actions{display:flex;align-items:center;gap:16px}.lang-selector{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--text-dim);cursor:pointer}.hamburger{display:none;flex-direction:column;gap:5px;width:28px;padding:4px 0}.hamburger span{display:block;height:2px;background:var(--white);border-radius:2px;transition:all .3s var(--ease)}.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}</style>
+<link href="/style.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="/style.min.css" rel="stylesheet"/></noscript>
+<!-- Google Analytics 4 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WC-PLACEHOLDER"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WC-PLACEHOLDER', {anonymize_ip: true});
+</script>
+<script defer="" src="/exit-tracker.js"></script>
+<script defer="" src="/lang-redirect.js"></script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Surebet Calculator: 2-3 Way Arb Detector and Stake Split at Stake",
+  "description": "Detect 2-way and 3-way surebets and calculate guaranteed-profit stake splits instantly. Free arb calculator at Stake. Use promocijska koda NEWBONUS when you register.",
+  "url": "https://winnersclub.com/en/tools/surebet-calculator",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "winnersclub.com",
+    "url": "https://winnersclub.com/"
+  }
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://winnersclub.com/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://winnersclub.com/en/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Surebet calculator"
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How often do real surebets occur?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Genuine surebets are rare and typically disappear within minutes. They are more common during major events when bookmakers compete aggressively."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum arb% that makes a surebet worthwhile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any arb% below 100% is profitable in theory. Most arbers target at least 1-2% guaranteed margin after rounding and time costs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need računs at multiple bookmakers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Da. Surebets arise from discrepancies between different bookmakers. One bookmaker cannot offer a surebet against itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this for in-play markets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Da, but both bets must be placed almost simultaneously as in-play prices move quickly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is surebet betting legal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Legal but some bookmakers restrict identified arber računs. Always check terms and conditions."
+      }
+    }
+  ]
+}</script>
+  <link rel="alternate" hreflang="ar" href="https://winnersclub.com/ar/tools/surebet-calculator">
+  <link rel="alternate" hreflang="bg" href="https://winnersclub.com/bg/tools/surebet-calculator">
+  <link rel="alternate" hreflang="bn" href="https://winnersclub.com/bn/tools/surebet-calculator">
+  <link rel="alternate" hreflang="ca" href="https://winnersclub.com/ca/tools/surebet-calculator">
+  <link rel="alternate" hreflang="cs" href="https://winnersclub.com/cs/tools/surebet-calculator">
+  <link rel="alternate" hreflang="da" href="https://winnersclub.com/da/tools/surebet-calculator">
+  <link rel="alternate" hreflang="de" href="https://winnersclub.com/de/tools/surebet-calculator">
+  <link rel="alternate" hreflang="el" href="https://winnersclub.com/el/tools/surebet-calculator">
+  <link rel="alternate" hreflang="en" href="https://winnersclub.com/en/tools/surebet-calculator">
+  <link rel="alternate" hreflang="es" href="https://winnersclub.com/es/tools/surebet-calculator">
+  <link rel="alternate" hreflang="et" href="https://winnersclub.com/et/tools/surebet-calculator">
+  <link rel="alternate" hreflang="fa" href="https://winnersclub.com/fa/tools/surebet-calculator">
+  <link rel="alternate" hreflang="fi" href="https://winnersclub.com/fi/tools/surebet-calculator">
+  <link rel="alternate" hreflang="fr" href="https://winnersclub.com/fr/tools/surebet-calculator">
+  <link rel="alternate" hreflang="gl" href="https://winnersclub.com/gl/tools/surebet-calculator">
+  <link rel="alternate" hreflang="he" href="https://winnersclub.com/he/tools/surebet-calculator">
+  <link rel="alternate" hreflang="hi" href="https://winnersclub.com/hi/tools/surebet-calculator">
+  <link rel="alternate" hreflang="hr" href="https://winnersclub.com/hr/tools/surebet-calculator">
+  <link rel="alternate" hreflang="hu" href="https://winnersclub.com/hu/tools/surebet-calculator">
+  <link rel="alternate" hreflang="id" href="https://winnersclub.com/id/tools/surebet-calculator">
+  <link rel="alternate" hreflang="it" href="https://winnersclub.com/it/tools/surebet-calculator">
+  <link rel="alternate" hreflang="ja" href="https://winnersclub.com/ja/tools/surebet-calculator">
+  <link rel="alternate" hreflang="kk" href="https://winnersclub.com/kk/tools/surebet-calculator">
+  <link rel="alternate" hreflang="ko" href="https://winnersclub.com/ko/tools/surebet-calculator">
+  <link rel="alternate" hreflang="lo" href="https://winnersclub.com/lo/tools/surebet-calculator">
+  <link rel="alternate" hreflang="lt" href="https://winnersclub.com/lt/tools/surebet-calculator">
+  <link rel="alternate" hreflang="lv" href="https://winnersclub.com/lv/tools/surebet-calculator">
+  <link rel="alternate" hreflang="mn" href="https://winnersclub.com/mn/tools/surebet-calculator">
+  <link rel="alternate" hreflang="ms" href="https://winnersclub.com/ms/tools/surebet-calculator">
+  <link rel="alternate" hreflang="mt" href="https://winnersclub.com/mt/tools/surebet-calculator">
+  <link rel="alternate" hreflang="nb" href="https://winnersclub.com/nb/tools/surebet-calculator">
+  <link rel="alternate" hreflang="pl" href="https://winnersclub.com/pl/tools/surebet-calculator">
+  <link rel="alternate" hreflang="pt" href="https://winnersclub.com/pt/tools/surebet-calculator">
+  <link rel="alternate" hreflang="ro" href="https://winnersclub.com/ro/tools/surebet-calculator">
+  <link rel="alternate" hreflang="ru" href="https://winnersclub.com/ru/tools/surebet-calculator">
+  <link rel="alternate" hreflang="sk" href="https://winnersclub.com/sk/tools/surebet-calculator">
+  <link rel="alternate" hreflang="sl" href="https://winnersclub.com/sl/tools/surebet-calculator">
+  <link rel="alternate" hreflang="sq" href="https://winnersclub.com/sq/tools/surebet-calculator">
+  <link rel="alternate" hreflang="sr" href="https://winnersclub.com/sr/tools/surebet-calculator">
+  <link rel="alternate" hreflang="sv" href="https://winnersclub.com/sv/tools/surebet-calculator">
+  <link rel="alternate" hreflang="th" href="https://winnersclub.com/th/tools/surebet-calculator">
+  <link rel="alternate" hreflang="tl" href="https://winnersclub.com/tl/tools/surebet-calculator">
+  <link rel="alternate" hreflang="tr" href="https://winnersclub.com/tr/tools/surebet-calculator">
+  <link rel="alternate" hreflang="uk" href="https://winnersclub.com/uk/tools/surebet-calculator">
+  <link rel="alternate" hreflang="ur" href="https://winnersclub.com/ur/tools/surebet-calculator">
+  <link rel="alternate" hreflang="uz" href="https://winnersclub.com/uz/tools/surebet-calculator">
+  <link rel="alternate" hreflang="vi" href="https://winnersclub.com/vi/tools/surebet-calculator">
+  <link rel="alternate" hreflang="zh" href="https://winnersclub.com/zh/tools/surebet-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://winnersclub.com/en/tools/surebet-calculator">
+  </head>
+<body>
+<body>
+<!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+<header class="site-header" id="siteHeader">
+<div class="header-inner">
+<a aria-label="Stake home" class="header-logo" href="./">
+<svg fill="none" height="48" viewbox="0 0 74 36" width="100" xmlns="http://www.w3.org/2000/svg">
+<path d="M29.1115 10.208C30.1487 10.208 31.0356 10.842 31.0959 12.6963L31.4601 21.4219L35.4465 11.6406C35.8806 10.5914 36.6194 10.208 37.7228 10.208H40.6838C42.2819 10.208 42.6501 11.6798 42.0109 13.1904L36.1096 27.7871C35.5337 29.2101 34.9846 29.9971 33.6701 29.9971L29.0451 30C27.5587 29.9999 26.7382 29.0408 26.7111 27.4277L26.3976 20.1523L23.3039 27.7773C22.7823 29.0196 22.2671 30 20.9797 30L16.924 29.9941C15.3081 29.9941 14.3853 29.1437 14.343 27.2295L14.1144 21.8594L15.3625 15.1953C15.8237 12.3645 14.8889 11.1646 14.093 10.2148L17.5275 10.2109C18.872 10.211 19.4293 10.8084 19.4806 12.4844L19.84 21.4248L23.841 11.5889C24.2119 10.6845 24.906 10.208 26.0969 10.208H29.1115Z" fill="white"></path>
+<path d="M7.85174 10.6641C9.28687 9.94345 10.6554 10.0338 11.7619 10.7754C12.9287 11.6226 13.5922 12.9158 13.2336 14.6885L10.924 26.9912C10.5862 28.993 8.65369 30.3133 6.64276 29.9336C4.74922 29.5748 3.35277 27.7988 3.72967 25.6641L5.03826 18.5391L4.22479 18.9072C2.71416 19.5856 0.937298 18.9073 0.261897 17.3877C-0.413447 15.8681 0.262199 14.0858 1.77264 13.4043L7.85174 10.6641Z" fill="white"></path>
+<path d="M49.2443 10.2119C51.2703 10.212 51.7946 11.1853 51.3332 13.3047L48.8039 27.1504C48.5479 28.6639 48.1102 29.9969 46.3224 29.9971H43.1476C41.6276 29.9971 41.0944 28.8513 41.3537 27.3799L43.964 12.7324C44.2263 11.1736 44.899 10.212 46.8498 10.2119H49.2443Z" fill="white"></path>
+<path d="M67.5851 10.2051C69.5359 10.2051 70.4343 10.5584 71.5197 11.5322C73.3285 13.1514 73.6701 15.5666 73.2629 17.4873L71.466 27.1445C71.2158 28.6069 70.8296 29.9912 69.0656 29.9912L65.9572 29.9941C64.6034 29.9941 63.8884 29.0049 64.1535 27.3135L65.4142 19.7607C65.5949 18.3738 65.3328 17.3905 64.5793 16.7754C63.4065 15.8196 61.7479 16.2354 60.9064 17.2002C60.3638 17.7791 60.1169 18.5663 59.8273 20.1611L58.5607 27.1533C58.3225 28.5342 57.9366 29.9969 56.1037 29.9971H52.9797C51.035 29.9971 50.8989 28.3024 51.1193 27.3164L53.7512 12.7295C54.0076 11.3907 54.4814 10.208 56.6369 10.208L58.8771 10.2051C60.6138 10.2051 61.6483 10.8506 61.1027 13.2988L60.8703 14.5107C62.0672 12.0716 65.0013 10.2052 67.5851 10.2051Z" fill="white"></path>
+<path d="M48.5988 1C50.5736 1.00011 52.175 2.60414 52.175 4.58203C52.175 6.55993 50.5736 8.16395 48.5988 8.16406C46.6239 8.16406 45.0226 6.56 45.0226 4.58203C45.0226 2.60407 46.6239 1 48.5988 1Z" fill="white"></path>
+</svg>
+</a>
+<nav class="header-nav" id="mainNav">
+<a class="nav-link" href="/en/promo-code">Promocijska koda</a>
+<div class="nav-item">
+<a class="nav-link" href="/en/sports-betting">Šport <svg class="nav-chevron" fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<div class="nav-dropdown">
+<a href="/en/sports-betting">Vse športne stave</a>
+<a href="/en/sports/football">Negomet</a>
+<a href="/en/sports/cricket">Kriket</a>
+<a href="/en/sports/tennis">Tenis</a>
+<a href="/en/sports/basketball">Košarka</a>
+<a href="/en/sports/esports">Esport</a>
+<a href="/en/live-streaming">Prenos v živo</a>
+</div>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/en/casino">Kasino <svg class="nav-chevron" fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<div class="nav-dropdown">
+<a href="/en/casino">Kasino</a>
+<a href="/en/slots/">Ocene slotov</a>
+<a href="/en/providers/">Ponudniki iger</a>
+<a href="/en/aviator">Aviator</a>
+<a href="/en/crash/">Crash igre</a>
+<a href="/en/poker">Poker</a>
+</div>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/en/bonus/">Bonuses <svg class="nav-chevron" fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<div class="nav-dropdown">
+<a href="/en/bonus/">Vsi bonusi</a>
+<a href="/en/bonus/first-deposit-bonus">Prvi polog 200%</a>
+<a href="/en/bonus/second-deposit-bonus">Drugi polog 150%</a>
+<a href="/en/bonus/third-deposit-bonus">Tretji polog 150%</a>
+<a href="/en/bonus/fourth-deposit-bonus">Četrti polog 100%</a>
+<a href="/en/bonus/wagering-requirements">Pravila o stavah</a>
+<a href="/en/bonus/free-spins-today">Brezplačni vrtljaji danes</a>
+<a href="/en/bonus/cashback-bonus">Cashback</a>
+<a href="/en/vip-club">VIP club</a>
+<a href="/en/lucky-drive">Lucky Drive</a>
+<a href="/en/promotions">Vse akcije</a>
+</div>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/en/tools/">Tools <svg class="nav-chevron" fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<div class="nav-dropdown">
+<a href="/en/tools/">Vsi kalkulatorji</a>
+<a href="/en/tools/odds-converter">Pretvornik kvot</a>
+<a href="/en/tools/parlay-calculator">Kalkulator parlaya</a>
+<a href="/en/tools/kelly-criterion-calculator">Kellyjev kriterij</a>
+<a href="/en/tools/arbitrage-calculator">Arbitrage</a>
+<a href="/en/tools/hedge-calculator">Hedge</a>
+<a href="/en/tools/each-way-calculator">Each-way</a>
+<a href="/en/tools/implied-probability-calculator">Implicitna verjetnost</a>
+<a href="/en/tools/bankroll-calculator">Bankroll</a>
+<a href="/en/tools/surebet-calculator">Surebet</a>
+<a href="/en/tools/matched-bet-calculator">Usklajena stava</a>
+</div>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/en/payments/">More <svg class="nav-chevron" fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<div class="nav-dropdown">
+<a href="/en/payments/">Načini plačila</a>
+<a href="/en/app">Mobile app</a>
+<a href="/en/india/">Vodniki Indija</a>
+<a href="/en/mirrors">Mirrors</a>
+<a href="/en/access">Prijava</a>
+<a href="/en/register">Registriraj se</a>
+<a href="/en/review">Ocena</a>
+<a href="/en/website">About Stake</a>
+<a href="/en/faq">FAQ</a>
+</div>
+</div>
+<a class="nav-link" href="/en/news">Novice</a>
+</nav>
+<div class="header-actions"><select class="lang-switcher" onchange="if(this.value)window.location.href=this.value" aria-label="Language"><option value="" selected>SL</option><option value="/ar/tools/surebet-calculator.html">AR</option><option value="/bg/tools/surebet-calculator.html">BG</option><option value="/bn/tools/surebet-calculator.html">BN</option><option value="/ca/tools/surebet-calculator.html">CA</option><option value="/cs/tools/surebet-calculator.html">CS</option><option value="/da/tools/surebet-calculator.html">DA</option><option value="/de/tools/surebet-calculator.html">DE</option><option value="/el/tools/surebet-calculator.html">EL</option><option value="/en/tools/surebet-calculator.html">EN</option><option value="/es/tools/surebet-calculator.html">ES</option><option value="/et/tools/surebet-calculator.html">ET</option><option value="/fa/tools/surebet-calculator.html">FA</option><option value="/fi/tools/surebet-calculator.html">FI</option><option value="/fr/tools/surebet-calculator.html">FR</option><option value="/gl/tools/surebet-calculator.html">GL</option><option value="/he/tools/surebet-calculator.html">HE</option><option value="/hi/tools/surebet-calculator.html">HI</option><option value="/hr/tools/surebet-calculator.html">HR</option><option value="/hu/tools/surebet-calculator.html">HU</option><option value="/id/tools/surebet-calculator.html">ID</option><option value="/it/tools/surebet-calculator.html">IT</option><option value="/ja/tools/surebet-calculator.html">JA</option><option value="/kk/tools/surebet-calculator.html">KK</option><option value="/ko/tools/surebet-calculator.html">KO</option><option value="/lo/tools/surebet-calculator.html">LO</option><option value="/lt/tools/surebet-calculator.html">LT</option><option value="/lv/tools/surebet-calculator.html">LV</option><option value="/mn/tools/surebet-calculator.html">MN</option><option value="/ms/tools/surebet-calculator.html">MS</option><option value="/mt/tools/surebet-calculator.html">MT</option><option value="/nb/tools/surebet-calculator.html">NB</option><option value="/nl/">NL</option><option value="/pl/tools/surebet-calculator.html">PL</option><option value="/pt/tools/surebet-calculator.html">PT</option><option value="/ro/tools/surebet-calculator.html">RO</option><option value="/ru/tools/surebet-calculator.html">RU</option><option value="/sk/tools/surebet-calculator.html">SK</option><option value="/sq/tools/surebet-calculator.html">SQ</option><option value="/sr/tools/surebet-calculator.html">SR</option><option value="/sv/tools/surebet-calculator.html">SV</option><option value="/th/tools/surebet-calculator.html">TH</option><option value="/tl/tools/surebet-calculator.html">TL</option><option value="/tr/tools/surebet-calculator.html">TR</option><option value="/uk/tools/surebet-calculator.html">UK</option><option value="/ur/tools/surebet-calculator.html">UR</option><option value="/uz/tools/surebet-calculator.html">UZ</option><option value="/vi/tools/surebet-calculator.html">VI</option><option value="/zh/tools/surebet-calculator.html">ZH</option></select>
+<a aria-label="Sign Up" class="btn btn-signup" href="https://playstake.io/landing?c=max3000&offer=max3000" rel="noopener" target="_blank">Registriraj se</a>
+<button aria-label="Toggle menu" class="hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+<div class="container">
+<a href="/en/">Home</a>
+<a href="/en/tools/">Tools</a>
+<span aria-current="page">Surebet calculator</span>
+</div>
+</nav>
+<article class="page-content">
+<div class="container">
+<h1>Surebet calculator: 2-way and 3-way arb detector</h1>
+<style>
+.calc-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px 24px;margin:32px 0}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.calc-field label{display:block;font-size:13px;color:var(--text-dim);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.calc-field input,.calc-field select{width:100%;background:var(--elevated);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-family:var(--font-mono);font-size:15px}
+.calc-field input:focus,.calc-field select:focus{outline:none;border-color:var(--blue)}
+.calc-output{background:var(--elevated);border-radius:10px;padding:20px;margin-top:20px}
+.calc-output-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:12px}
+.out-item{background:var(--bg);border-radius:8px;padding:14px 16px}
+.out-label{font-size:12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.out-val{font-family:var(--font-mono);font-size:18px;font-weight:700;color:var(--gold)}
+.out-val.green{color:var(--green)}
+.out-val.warn{color:var(--red)}
+.related-tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:16px}
+.related-tools a{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:14px;transition:border-color .2s}
+.related-tools a:hover{border-color:var(--blue)}
+.market-row{display:grid;grid-template-columns:1fr 1fr 36px;gap:8px;margin-bottom:8px;align-items:center}
+.market-row input{background:var(--elevated);border:1px solid var(--border);border-radius:8px;padding:9px 12px;color:var(--text);font-family:var(--font-mono);font-size:14px;width:100%}
+.market-row input:focus{outline:none;border-color:var(--blue)}
+.remove-btn{background:var(--elevated);border:1px solid var(--border);border-radius:6px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;color:var(--text-dim);transition:color .2s}
+.remove-btn:hover{color:var(--red)}
+</style>
+<section class="lede">
+<p>Stake holds a Curaçao 1668/JAZ licence and offers 40 000+ trgov across 30+ športov. This surebet calculator checks 2-way and 3-way markets for guaranteed-profit opportunities and calculates the exact stake to place on each outcome. Registriraj se with promocijska koda <span class="code-highlight">NEWBONUS</span> before you place your first surebet.</p>
+</section>
+<section class="calc-box">
+<h2>Surebet detector and stake calculator</h2>
+<div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap">
+<button class="way-btn active" data-ways="2" style="padding:9px 20px;border-radius:6px;background:var(--blue);border:1px solid var(--blue);font-size:13px;font-weight:600;cursor:pointer;color:#fff">2-way</button>
+<button class="way-btn" data-ways="3" style="padding:9px 20px;border-radius:6px;background:var(--elevated);border:1px solid var(--border);font-size:13px;font-weight:600;cursor:pointer;color:var(--text)">3-way</button>
+</div>
+<div class="calc-grid">
+<div class="calc-field"><label>Total stake to distribute</label><input id="sb-total" min="1" placeholder="100" step="1" type="number" value="100"/></div>
+<div class="calc-field"><label>Outcome 1 kvote (decimal)</label><input id="sb-o1" min="1.01" placeholder="2.20" step="0.01" type="number" value="2.20"/></div>
+<div class="calc-field"><label>Outcome 2 kvote (decimal)</label><input id="sb-o2" min="1.01" placeholder="2.10" step="0.01" type="number" value="2.10"/></div>
+<div class="calc-field" id="sb-o3-wrap"><label>Outcome 3 kvote (decimal)</label><input id="sb-o3" min="1.01" placeholder="3.60" step="0.01" type="number" value="3.60"/></div>
+</div>
+<div class="calc-output">
+<div style="font-size:13px;color:var(--text-dim);font-weight:600;text-transform:uppercase;letter-spacing:.5px">Surebet result</div>
+<div class="calc-output-grid">
+<div class="out-item"><div class="out-label">Arb %</div><div class="out-val" id="sb-arbpct">--</div></div>
+<div class="out-item"><div class="out-label">Guaranteed profit</div><div class="out-val green" id="sb-profit">--</div></div>
+<div class="out-item"><div class="out-label">Stake on outcome 1</div><div class="out-val" id="sb-s1">--</div></div>
+<div class="out-item"><div class="out-label">Stake on outcome 2</div><div class="out-val" id="sb-s2">--</div></div>
+<div class="out-item" id="sb-s3-item"><div class="out-label">Stake on outcome 3</div><div class="out-val" id="sb-s3">--</div></div>
+</div>
+<div id="sb-warn" style="margin-top:12px;font-size:13px;color:var(--red);min-height:18px"></div>
+</div>
+</section>
+<section>
+<h2>Kako deluje ta kalkulator</h2>
+<p>A surebet (also called an arb) occurs when the combined implied probabilities across all outcomes in a market fall below 100%. By distributing a stake across each outcome in proportion to their implied probability, you guarantee a profit regardless of result.</p>
+<p style="margin-top:12px">For a 2-way market: arb% = (1/o1) + (1/o2). For a 3-way market: arb% = (1/o1) + (1/o2) + (1/o3). If arb% is less than 1.00, a surebet exists.</p>
+<p style="margin-top:12px">Stake allocation for each outcome: <strong>stake_n = (total x (1/odds_n)) / arb%</strong>. This ensures that every outcome pays out the same total amount: total / arb%. The guaranteed profit is (total / arb%) - total.</p>
+<p style="margin-top:12px">For example: o1 = 2.20, o2 = 2.10, o3 = 3.60. Arb% = 0.4545 + 0.4762 + 0.2778 = 1.2085. This is above 1.00, so no surebet exists. But if o3 were 5.00, arb% = 0.4545 + 0.4762 + 0.2000 = 1.1307, still no surebet. For a surebet on a 3-way, you typically need all three outcomes to be generously priced simultaneously.</p>
+<p style="margin-top:12px">Iskanje netveganih stav zahteva sočasno primerjavo cen pri več stavnicah. Realni nesokladji so redki in kratkotrajni, saj stavnice hitro prilagajajo kvote. Najpogostejše pristne netvegane stave izhajajo iz promocijskih zvišanj ali napačnih kvot, ki se počasi popravijo.</p>
+<p style="margin-top:12px">The calculator does not apply commission deductions. If one leg is placed at a betting exchange, the lay commission (typically 2-5%) must be factored in to determine whether the net surebet still holds. See the matched bet calculator for commission-aware calculations.</p>
+</section>
+<section style="margin-top:40px">
+<h2>Zakaj ga uporabljati pri Stake</h2>
+<p>Stake prices 40 000+ trgov competitively. When promotional kvote boosts go live, this calculator lets you check instantly whether they create a surebet against the standard market. Registriraj se with <span class="code-highlight">NEWBONUS</span> to access all markets and akcije.</p>
+<div style="margin-top:20px"><a class="btn btn-primary btn-lg" href="https://winnersclub.com/en/register?promo=NEWBONUS">Registriraj se pri Stake and claim NEWBONUS</a></div>
+</section>
+<section class="faq" style="margin-top:40px">
+<h2>FAQ</h2>
+<details><summary>How often do real surebets occur?</summary><p>Genuine surebets across reputable bookmakers are rare and disappear within minutes of appearing. They are more common during major events when multiple bookmakers compete and errors or boosts create temporary discrepancies.</p></details>
+<details><summary>What is the minimum arb% that makes a surebet worthwhile?</summary><p>Any arb% below 100% (less than 1.00 in decimal form) is technically profitable. However, after račun for minimum stake rounding and time cost, most arbers target at least 1-2% guaranteed profit margin.</p></details>
+<details><summary>Do I need accounts at multiple bookmakers?</summary><p>Da. Surebets arise from price discrepancies between different bookmakers. A single bookmaker cannot offer a surebet against itself in a standard market.</p></details>
+<details><summary>Can I use this for in-play markets?</summary><p>Da, but in-play markets move quickly. You must be able to place both bets almost simultaneously. Price changes between placements can eliminate the arb or even create a loss.</p></details>
+<details><summary>Is surebet betting legal?</summary><p>Surebet betting is legal but some bookmakers restrict računs identified as arbers. Always check terms and conditions and be aware of potential stake limits.</p></details>
+</section>
+<section style="margin-top:40px">
+<h2>Related tools</h2>
+<div class="related-tools">
+<a href="/en/tools/arbitrage-calculator">Arbitrage calculator (2-way)</a>
+<a href="/en/tools/matched-bet-calculator">Usklajena stava calculator</a>
+<a href="/en/tools/implied-probability-calculator">Implicitna verjetnost calculator</a>
+<a href="/en/tools/hedge-calculator">Hedge calculator</a>
+<a href="/en/tools/odds-converter">Pretvornik kvot</a>
+</div>
+</section>
+</div>
+</article>
+</main>
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-top">
+<div class="footer-brand">
+<svg fill="none" height="38" viewbox="0 0 74 36" width="80" xmlns="http://www.w3.org/2000/svg">
+<path d="M29.1115 10.208C30.1487 10.208 31.0356 10.842 31.0959 12.6963L31.4601 21.4219L35.4465 11.6406C35.8806 10.5914 36.6194 10.208 37.7228 10.208H40.6838C42.2819 10.208 42.6501 11.6798 42.0109 13.1904L36.1096 27.7871C35.5337 29.2101 34.9846 29.9971 33.6701 29.9971L29.0451 30C27.5587 29.9999 26.7382 29.0408 26.7111 27.4277L26.3976 20.1523L23.3039 27.7773C22.7823 29.0196 22.2671 30 20.9797 30L16.924 29.9941C15.3081 29.9941 14.3853 29.1437 14.343 27.2295L14.1144 21.8594L15.3625 15.1953C15.8237 12.3645 14.8889 11.1646 14.093 10.2148L17.5275 10.2109C18.872 10.211 19.4293 10.8084 19.4806 12.4844L19.84 21.4248L23.841 11.5889C24.2119 10.6845 24.906 10.208 26.0969 10.208H29.1115Z" fill="white"></path>
+<path d="M7.85174 10.6641C9.28687 9.94345 10.6554 10.0338 11.7619 10.7754C12.9287 11.6226 13.5922 12.9158 13.2336 14.6885L10.924 26.9912C10.5862 28.993 8.65369 30.3133 6.64276 29.9336C4.74922 29.5748 3.35277 27.7988 3.72967 25.6641L5.03826 18.5391L4.22479 18.9072C2.71416 19.5856 0.937298 18.9073 0.261897 17.3877C-0.413447 15.8681 0.262199 14.0858 1.77264 13.4043L7.85174 10.6641Z" fill="white"></path>
+<path d="M49.2443 10.2119C51.2703 10.212 51.7946 11.1853 51.3332 13.3047L48.8039 27.1504C48.5479 28.6639 48.1102 29.9969 46.3224 29.9971H43.1476C41.6276 29.9971 41.0944 28.8513 41.3537 27.3799L43.964 12.7324C44.2263 11.1736 44.899 10.212 46.8498 10.2119H49.2443Z" fill="white"></path>
+<path d="M67.5851 10.2051C69.5359 10.2051 70.4343 10.5584 71.5197 11.5322C73.3285 13.1514 73.6701 15.5666 73.2629 17.4873L71.466 27.1445C71.2158 28.6069 70.8296 29.9912 69.0656 29.9912L65.9572 29.9941C64.6034 29.9941 63.8884 29.0049 64.1535 27.3135L65.4142 19.7607C65.5949 18.3738 65.3328 17.3905 64.5793 16.7754C63.4065 15.8196 61.7479 16.2354 60.9064 17.2002C60.3638 17.7791 60.1169 18.5663 59.8273 20.1611L58.5607 27.1533C58.3225 28.5342 57.9366 29.9969 56.1037 29.9971H52.9797C51.035 29.9971 50.8989 28.3024 51.1193 27.3164L53.7512 12.7295C54.0076 11.3907 54.4814 10.208 56.6369 10.208L58.8771 10.2051C60.6138 10.2051 61.6483 10.8506 61.1027 13.2988L60.8703 14.5107C62.0672 12.0716 65.0013 10.2052 67.5851 10.2051Z" fill="white"></path>
+<path d="M48.5988 1C50.5736 1.00011 52.175 2.60414 52.175 4.58203C52.175 6.55993 50.5736 8.16395 48.5988 8.16406C46.6239 8.16406 45.0226 6.56 45.0226 4.58203C45.0226 2.60407 46.6239 1 48.5988 1Z" fill="white"></path>
+</svg>
+<p style="font-size:14px;font-weight:800;color:var(--text-dim);letter-spacing:2px;margin-bottom:16px;text-transform:uppercase;">winnersclub.com - neodvisna partnerska ocena</p>
+<div class="footer-badges">
+<span class="age-badge">18+</span>
+<span class="cert-badge">GamCare</span>
+<span class="cert-badge">SSL</span>
+</div>
+</div>
+<div class="footer-links-grid">
+<div class="footer-col">
+<h4>Products</h4>
+<a href="/en/sports-betting">Športne stave</a>
+<a href="/en/casino">Kasino</a>
+<a href="/en/aviator">Aviator</a>
+<a href="/en/poker">Poker</a>
+</div>
+<div class="footer-col">
+<h4>Promos</h4>
+<a href="/en/promo-code">Promocijska koda</a>
+<a href="/en/vip-club">VIP klub</a>
+<a href="/en/lucky-drive">Lucky Drive</a>
+<a href="/en/promotions">Free Money</a>
+<a href="/en/mirrors">Mirror</a>
+</div>
+<div class="footer-col">
+<h4>Support</h4>
+<a href="/en/register">Registriraj se</a>
+<a href="/en/access">Prijava</a>
+<a href="/en/review">Ocena</a>
+<a href="/en/website">Website</a>
+<a href="/en/live-streaming">Live Streaming</a>
+<a href="/en/payment-methods">Payments</a>
+<a href="/en/app">Prenesi aplikacijo</a>
+<a href="/en/news">Novice</a>
+<a href="/en/faq">FAQ</a>
+<a href="/en/mirrors">Mirror</a>
+</div>
+<div class="footer-col">
+<h4>Countries</h4>
+<a href="/en/country-bangladesh">Bangladesh</a>
+<a href="/en/country-india">India</a>
+<a href="/en/country-pakistan">Pakistan</a>
+<a href="/en/country-korea">Korea</a>
+<a href="/en/country-malaysia">Malaysia</a>
+<a href="/en/country-singapore">Singapore</a>
+            <a href="/en/country-argentina">Argentina</a>
+            <a href="/en/country-chile">Chile</a>
+<a href="/en/country-south-africa">South Africa</a>
+<a href="/en/country-tanzania">Tanzania</a>
+<a href="/en/country-malawi">Malawi</a>
+<a href="/en/country-kenya">Kenya</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="footer-disclaimer">To je neuradna navijačka stran in ni povezana niti odobrena s strani Stake. Stran je zgolj informativnega značaja. Igre na srečo vključujejo tveganje, prosimo igrajte odgovorno. Če vi ali kdo, ki ga poznate, ima težave z igrami na srečo, se obrnite na GamCare ali lokalno podporno organizacijo.</p>
+<p class="footer-copyright">© 2026 winnersclub.com. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script defer="" src="/script.min.js"></script>
+<script>
+(function(){
+  let ways=2;
+  document.querySelectorAll('.way-btn').forEach(btn=>{
+    btn.onclick=function(){
+      document.querySelectorAll('.way-btn').forEach(b=>{
+        b.style.background='var(--elevated)';b.style.borderColor='var(--border)';b.style.color='var(--text)';
+      });
+      this.style.background='var(--blue)';this.style.borderColor='var(--blue)';this.style.color='#fff';
+      ways=parseInt(this.dataset.ways);
+      document.getElementById('sb-o3-wrap').style.display=ways===3?'':'none';
+      document.getElementById('sb-s3-item').style.display=ways===3?'':'none';
+      calc();
+    };
+  });
+  document.getElementById('sb-o3-wrap').style.display='none';
+  document.getElementById('sb-s3-item').style.display='none';
+
+  function calc(){
+    const total=parseFloat(document.getElementById('sb-total').value)||0;
+    const o1=parseFloat(document.getElementById('sb-o1').value)||0;
+    const o2=parseFloat(document.getElementById('sb-o2').value)||0;
+    const o3=ways===3?(parseFloat(document.getElementById('sb-o3').value)||0):Infinity;
+    const warn=document.getElementById('sb-warn');
+    if(!total||o1<=1||o2<=1||(ways===3&&o3<=1)){
+      ['sb-arbpct','sb-profit','sb-s1','sb-s2','sb-s3'].forEach(id=>document.getElementById(id).textContent='--');
+      warn.textContent='';
+      return;
+    }
+    let arbPct=(1/o1)+(1/o2)+(ways===3?1/o3:0);
+    document.getElementById('sb-arbpct').textContent=(arbPct*100).toFixed(3)+'%';
+    const arbEl=document.getElementById('sb-arbpct');
+    if(arbPct>=1){
+      warn.textContent='No surebet. Arb% must be below 100% for guaranteed profit.';
+      arbEl.className='out-val warn';
+      ['sb-profit','sb-s1','sb-s2','sb-s3'].forEach(id=>document.getElementById(id).textContent='N/A');
+      return;
+    }
+    warn.textContent='Surebet detected!';
+    warn.style.color='var(--green)';
+    arbEl.className='out-val green';
+    const payout=total/arbPct;
+    const profit=payout-total;
+    document.getElementById('sb-profit').textContent=profit.toFixed(2);
+    document.getElementById('sb-s1').textContent=(total*(1/o1)/arbPct).toFixed(2);
+    document.getElementById('sb-s2').textContent=(total*(1/o2)/arbPct).toFixed(2);
+    if(ways===3) document.getElementById('sb-s3').textContent=(total*(1/o3)/arbPct).toFixed(2);
+  }
+
+  ['sb-total','sb-o1','sb-o2','sb-o3'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el) el.addEventListener('input',calc);
+  });
+  calc();
+})();
+</script>
+</body>
+</body></html>

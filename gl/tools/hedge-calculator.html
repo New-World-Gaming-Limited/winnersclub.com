@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="dns-prefetch" href="//winnersclub.com">
+  <meta name="theme-color" content="#141415">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hedge Calculator: Lock In Profit on Any Bet at Stake</title>
+  <meta name="description" content="Calculate the exact hedge stake to lock in profit or avoid loss on any bet. Supports equal profit, no-loss, and custom hedge modes. Free tool at Stake, use NEWBONUS.">
+  <link rel="canonical" href="https://winnersclub.com/gl/tools/hedge-calculator.html">
+  <meta property="og:title" content="Hedge Calculator: Lock In Profit on Any Bet at Stake">
+  <meta property="og:description" content="Calculate the exact hedge stake to lock in profit or avoid loss on any bet. Supports equal profit, no-loss, and custom hedge modes. Free tool at Stake, use NEWBONUS.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/images/og-default.png"><link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <style id="critical">*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg:#141415;--surface:#1d1e20;--elevated:#2e3035;--blue:#0075ff;--green:#00b24b;--gold:#FFD700;--red:#f44;--purple:#9b59b6;--white:#fff;--text:#e8e8e8;--text-dim:#9a9a9f;--text-muted:#6b6b70;--border:rgba(255,255,255,0.08);--font-body:'Inter',system-ui,-apple-system,sans-serif;--font-mono:'JetBrains Mono','Fira Code',monospace;--section-pad:120px;--container:1280px;--glow-blue:0 0 30px rgba(0,117,255,0.4),0 0 60px rgba(0,117,255,0.2);--glow-green:0 0 30px rgba(0,178,75,0.4),0 0 60px rgba(0,178,75,0.2);--glow-gold:0 0 30px rgba(255,215,0,0.4),0 0 60px rgba(255,215,0,0.2);--ease:cubic-bezier(0.16,1,0.3,1)}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none}button{cursor:pointer;border:none;background:none;font-family:inherit;color:inherit}.text-gradient{background:linear-gradient(135deg,var(--blue) 0,#00d4ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.text-gradient-gold{background:linear-gradient(135deg,var(--gold) 0,#fa0 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.text-green{color:var(--green);font-weight:700}.code-highlight{font-family:var(--font-mono);color:var(--gold);font-weight:700}.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:8px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.5px;transition:all .3s var(--ease);white-space:nowrap}.btn-primary{background:var(--green);color:var(--white);box-shadow:0 4px 15px rgba(0,178,75,0.3)}.btn-primary:hover{transform:translateY(-2px) scale(1.02);box-shadow:var(--glow-green);background:#00cc56}.btn-gold{background:linear-gradient(135deg,var(--gold),#fa0);color:#1a1a1a;box-shadow:0 4px 15px rgba(255,215,0,0.3)}.btn-gold:hover{transform:translateY(-2px) scale(1.02);box-shadow:var(--glow-gold)}.btn-signup{background:var(--green);color:var(--white);padding:10px 24px;border-radius:8px;font-size:13px;box-shadow:0 4px 15px rgba(0,178,75,0.3)}.btn-signup:hover{transform:translateY(-2px);box-shadow:var(--glow-green)}.btn-outline{border:2px solid var(--blue);color:var(--blue);background:transparent}.btn-outline:hover{background:var(--blue);color:var(--white);box-shadow:var(--glow-blue);transform:translateY(-2px)}.btn-lg{padding:16px 40px;font-size:16px;border-radius:10px}.btn-xl{padding:20px 56px;font-size:18px;border-radius:12px}.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(20,20,21,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:transform .35s var(--ease)}.header-inner{max-width:var(--container);margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between;gap:32px}.header-logo svg{display:block}.header-nav{display:flex;align-items:center;gap:8px}.nav-link{padding:8px 14px;font-size:13px;font-weight:600;color:var(--text-dim);border-radius:6px;transition:all .2s;white-space:nowrap}.nav-link:hover{color:var(--white);background:rgba(255,255,255,0.06)}.header-actions{display:flex;align-items:center;gap:16px}.lang-selector{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--text-dim);cursor:pointer}.hamburger{display:none;flex-direction:column;gap:5px;width:28px;padding:4px 0}.hamburger span{display:block;height:2px;background:var(--white);border-radius:2px;transition:all .3s var(--ease)}.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}</style>
+  <link rel="stylesheet" href="/style.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/style.min.css"></noscript>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WC-PLACEHOLDER"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WC-PLACEHOLDER', {anonymize_ip: true});
+</script>
+<script src="/exit-tracker.js" defer></script>
+<script src="/lang-redirect.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Hedge Calculator: Lock In Profit on Any Bet at Stake",
+  "description": "Calculate the exact hedge stake to lock in profit or avoid loss on any bet. Supports equal profit, no-loss, and custom hedge modes. Free tool at Stake, use NEWBONUS.",
+  "url": "https://winnersclub.com/en/tools/hedge-calculator",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "winnersclub.com",
+    "url": "https://winnersclub.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://winnersclub.com/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://winnersclub.com/en/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Hedge calculator"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"When should I hedge a bet?","acceptedAnswer":{"@type":"Answer","text":"Hedge when your original selection has moved significantly in your favour and you want to secure profit before the event concludes."}},
+    {"@type":"Question","name":"Does hedging reduce my profit?","acceptedAnswer":{"@type":"Answer","text":"Yes. Placing a stake on both outcomes costs additional money. Locked-in profit is always less than maximum upside from the original bet alone."}},
+    {"@type":"Question","name":"Can I hedge a parlay?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use the original potential parlay payout as the stake input and hedge the final leg's opposing outcome."}},
+    {"@type":"Question","name":"What is partial hedging?","acceptedAnswer":{"@type":"Answer","text":"Partial hedging places a smaller stake on the opposing outcome than a full lock requires, reducing exposure while leaving some upside."}},
+    {"@type":"Question","name":"Is hedging the same as arbitrage?","acceptedAnswer":{"@type":"Answer","text":"No. Arbitrage places both bets simultaneously from separate bookmakers. Hedging adds a second bet after the original has moved in your favour."}}
+  ]
+}
+</script>
+
+
+  <link rel="alternate" hreflang="ar" href="https://winnersclub.com/ar/tools/hedge-calculator">
+  <link rel="alternate" hreflang="bg" href="https://winnersclub.com/bg/tools/hedge-calculator">
+  <link rel="alternate" hreflang="bn" href="https://winnersclub.com/bn/tools/hedge-calculator">
+  <link rel="alternate" hreflang="ca" href="https://winnersclub.com/ca/tools/hedge-calculator">
+  <link rel="alternate" hreflang="cs" href="https://winnersclub.com/cs/tools/hedge-calculator">
+  <link rel="alternate" hreflang="da" href="https://winnersclub.com/da/tools/hedge-calculator">
+  <link rel="alternate" hreflang="de" href="https://winnersclub.com/de/tools/hedge-calculator">
+  <link rel="alternate" hreflang="el" href="https://winnersclub.com/el/tools/hedge-calculator">
+  <link rel="alternate" hreflang="en" href="https://winnersclub.com/en/tools/hedge-calculator">
+  <link rel="alternate" hreflang="es" href="https://winnersclub.com/es/tools/hedge-calculator">
+  <link rel="alternate" hreflang="et" href="https://winnersclub.com/et/tools/hedge-calculator">
+  <link rel="alternate" hreflang="fa" href="https://winnersclub.com/fa/tools/hedge-calculator">
+  <link rel="alternate" hreflang="fi" href="https://winnersclub.com/fi/tools/hedge-calculator">
+  <link rel="alternate" hreflang="fr" href="https://winnersclub.com/fr/tools/hedge-calculator">
+  <link rel="alternate" hreflang="gl" href="https://winnersclub.com/gl/tools/hedge-calculator">
+  <link rel="alternate" hreflang="he" href="https://winnersclub.com/he/tools/hedge-calculator">
+  <link rel="alternate" hreflang="hi" href="https://winnersclub.com/hi/tools/hedge-calculator">
+  <link rel="alternate" hreflang="hr" href="https://winnersclub.com/hr/tools/hedge-calculator">
+  <link rel="alternate" hreflang="hu" href="https://winnersclub.com/hu/tools/hedge-calculator">
+  <link rel="alternate" hreflang="id" href="https://winnersclub.com/id/tools/hedge-calculator">
+  <link rel="alternate" hreflang="it" href="https://winnersclub.com/it/tools/hedge-calculator">
+  <link rel="alternate" hreflang="ja" href="https://winnersclub.com/ja/tools/hedge-calculator">
+  <link rel="alternate" hreflang="kk" href="https://winnersclub.com/kk/tools/hedge-calculator">
+  <link rel="alternate" hreflang="ko" href="https://winnersclub.com/ko/tools/hedge-calculator">
+  <link rel="alternate" hreflang="lo" href="https://winnersclub.com/lo/tools/hedge-calculator">
+  <link rel="alternate" hreflang="lt" href="https://winnersclub.com/lt/tools/hedge-calculator">
+  <link rel="alternate" hreflang="lv" href="https://winnersclub.com/lv/tools/hedge-calculator">
+  <link rel="alternate" hreflang="mn" href="https://winnersclub.com/mn/tools/hedge-calculator">
+  <link rel="alternate" hreflang="ms" href="https://winnersclub.com/ms/tools/hedge-calculator">
+  <link rel="alternate" hreflang="mt" href="https://winnersclub.com/mt/tools/hedge-calculator">
+  <link rel="alternate" hreflang="nb" href="https://winnersclub.com/nb/tools/hedge-calculator">
+  <link rel="alternate" hreflang="pl" href="https://winnersclub.com/pl/tools/hedge-calculator">
+  <link rel="alternate" hreflang="pt" href="https://winnersclub.com/pt/tools/hedge-calculator">
+  <link rel="alternate" hreflang="ro" href="https://winnersclub.com/ro/tools/hedge-calculator">
+  <link rel="alternate" hreflang="ru" href="https://winnersclub.com/ru/tools/hedge-calculator">
+  <link rel="alternate" hreflang="sk" href="https://winnersclub.com/sk/tools/hedge-calculator">
+  <link rel="alternate" hreflang="sl" href="https://winnersclub.com/sl/tools/hedge-calculator">
+  <link rel="alternate" hreflang="sq" href="https://winnersclub.com/sq/tools/hedge-calculator">
+  <link rel="alternate" hreflang="sr" href="https://winnersclub.com/sr/tools/hedge-calculator">
+  <link rel="alternate" hreflang="sv" href="https://winnersclub.com/sv/tools/hedge-calculator">
+  <link rel="alternate" hreflang="th" href="https://winnersclub.com/th/tools/hedge-calculator">
+  <link rel="alternate" hreflang="tl" href="https://winnersclub.com/tl/tools/hedge-calculator">
+  <link rel="alternate" hreflang="tr" href="https://winnersclub.com/tr/tools/hedge-calculator">
+  <link rel="alternate" hreflang="uk" href="https://winnersclub.com/uk/tools/hedge-calculator">
+  <link rel="alternate" hreflang="ur" href="https://winnersclub.com/ur/tools/hedge-calculator">
+  <link rel="alternate" hreflang="uz" href="https://winnersclub.com/uz/tools/hedge-calculator">
+  <link rel="alternate" hreflang="vi" href="https://winnersclub.com/vi/tools/hedge-calculator">
+  <link rel="alternate" hreflang="zh" href="https://winnersclub.com/zh/tools/hedge-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://winnersclub.com/en/tools/hedge-calculator">
+  </head>
+<body>
+<body>
+  <!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="./" class="header-logo" aria-label="Stake inicio">
+        <svg width="100" height="48" viewBox="0 0 74 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29.1115 10.208C30.1487 10.208 31.0356 10.842 31.0959 12.6963L31.4601 21.4219L35.4465 11.6406C35.8806 10.5914 36.6194 10.208 37.7228 10.208H40.6838C42.2819 10.208 42.6501 11.6798 42.0109 13.1904L36.1096 27.7871C35.5337 29.2101 34.9846 29.9971 33.6701 29.9971L29.0451 30C27.5587 29.9999 26.7382 29.0408 26.7111 27.4277L26.3976 20.1523L23.3039 27.7773C22.7823 29.0196 22.2671 30 20.9797 30L16.924 29.9941C15.3081 29.9941 14.3853 29.1437 14.343 27.2295L14.1144 21.8594L15.3625 15.1953C15.8237 12.3645 14.8889 11.1646 14.093 10.2148L17.5275 10.2109C18.872 10.211 19.4293 10.8084 19.4806 12.4844L19.84 21.4248L23.841 11.5889C24.2119 10.6845 24.906 10.208 26.0969 10.208H29.1115Z" fill="white"/>
+          <path d="M7.85174 10.6641C9.28687 9.94345 10.6554 10.0338 11.7619 10.7754C12.9287 11.6226 13.5922 12.9158 13.2336 14.6885L10.924 26.9912C10.5862 28.993 8.65369 30.3133 6.64276 29.9336C4.74922 29.5748 3.35277 27.7988 3.72967 25.6641L5.03826 18.5391L4.22479 18.9072C2.71416 19.5856 0.937298 18.9073 0.261897 17.3877C-0.413447 15.8681 0.262199 14.0858 1.77264 13.4043L7.85174 10.6641Z" fill="white"/>
+          <path d="M49.2443 10.2119C51.2703 10.212 51.7946 11.1853 51.3332 13.3047L48.8039 27.1504C48.5479 28.6639 48.1102 29.9969 46.3224 29.9971H43.1476C41.6276 29.9971 41.0944 28.8513 41.3537 27.3799L43.964 12.7324C44.2263 11.1736 44.899 10.212 46.8498 10.2119H49.2443Z" fill="white"/>
+          <path d="M67.5851 10.2051C69.5359 10.2051 70.4343 10.5584 71.5197 11.5322C73.3285 13.1514 73.6701 15.5666 73.2629 17.4873L71.466 27.1445C71.2158 28.6069 70.8296 29.9912 69.0656 29.9912L65.9572 29.9941C64.6034 29.9941 63.8884 29.0049 64.1535 27.3135L65.4142 19.7607C65.5949 18.3738 65.3328 17.3905 64.5793 16.7754C63.4065 15.8196 61.7479 16.2354 60.9064 17.2002C60.3638 17.7791 60.1169 18.5663 59.8273 20.1611L58.5607 27.1533C58.3225 28.5342 57.9366 29.9969 56.1037 29.9971H52.9797C51.035 29.9971 50.8989 28.3024 51.1193 27.3164L53.7512 12.7295C54.0076 11.3907 54.4814 10.208 56.6369 10.208L58.8771 10.2051C60.6138 10.2051 61.6483 10.8506 61.1027 13.2988L60.8703 14.5107C62.0672 12.0716 65.0013 10.2052 67.5851 10.2051Z" fill="white"/>
+          <path d="M48.5988 1C50.5736 1.00011 52.175 2.60414 52.175 4.58203C52.175 6.55993 50.5736 8.16395 48.5988 8.16406C46.6239 8.16406 45.0226 6.56 45.0226 4.58203C45.0226 2.60407 46.6239 1 48.5988 1Z" fill="white"/>
+        </svg>
+      </a>
+
+                        <nav class="header-nav" id="mainNav">
+        <a href="/en/promo-code" class="nav-link">Código Promocional</a>
+        <div class="nav-item">
+          <a href="/en/sports-betting" class="nav-link">Deportes <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/en/sports-betting">Todas as apostas deportivas</a>
+            <a href="/en/sports/football">Football</a>
+            <a href="/en/sports/cricket">Cricket</a>
+            <a href="/en/sports/tennis">Tennis</a>
+            <a href="/en/sports/basketball">Basketball</a>
+            <a href="/en/sports/esports">Esports</a>
+            <a href="/en/live-streaming">Transmisión en directo</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/en/casino" class="nav-link">Casino <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/en/casino">Inicio do casino</a>
+            <a href="/en/slots/">Recensións de slots</a>
+            <a href="/en/providers/">Provedores de xogos</a>
+            <a href="/en/aviator">Aviator</a>
+            <a href="/en/crash/">Xogos crash</a>
+            <a href="/en/poker">Póker</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/en/bonus/" class="nav-link">Bonos <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/en/bonus/">Todos os bonos</a>
+            <a href="/en/bonus/first-deposit-bonus">Primeiro depósito 200%</a>
+            <a href="/en/bonus/second-deposit-bonus">Segundo depósito 150%</a>
+            <a href="/en/bonus/third-deposit-bonus">Terceiro depósito 150%</a>
+            <a href="/en/bonus/fourth-deposit-bonus">Cuarto depósito 100%</a>
+            <a href="/en/bonus/wagering-requirements">Requisitos de aposta</a>
+            <a href="/en/bonus/free-spins-today">Xiros gratis hoxe</a>
+            <a href="/en/bonus/cashback-bonus">Cashback</a>
+            <a href="/en/vip-club">Club VIP</a>
+            <a href="/en/lucky-drive">Lucky Drive</a>
+            <a href="/en/promotions">Todas as promocións</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/en/tools/" class="nav-link">Ferramentas <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/en/tools/">Todas as calculadoras</a>
+            <a href="/en/tools/cotas-converter">Conversor de cotas</a>
+            <a href="/en/tools/parlay-calculator">Calculadora de parlay</a>
+            <a href="/en/tools/kelly-criterion-calculator">Criterio de Kelly</a>
+            <a href="/en/tools/arbitrage-calculator">Arbitrage</a>
+            <a href="/en/tools/hedge-calculator">Hedge</a>
+            <a href="/en/tools/each-way-calculator">Each-way</a>
+            <a href="/en/tools/implied-probability-calculator">Probabilidade implícita</a>
+            <a href="/en/tools/bankroll-calculator">Bankroll</a>
+            <a href="/en/tools/surebet-calculator">Surebet</a>
+            <a href="/en/tools/matched-bet-calculator">Aposta combinada</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/en/payments/" class="nav-link">Máis <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/en/payments/">Métodos de pagamento</a>
+            <a href="/en/app">Aplicación móbil</a>
+            <a href="/en/india/">Guías da India</a>
+            <a href="/en/mirrors">Espellos</a>
+            <a href="/en/access">Iniciar sesión</a>
+            <a href="/en/register">Rexístrate</a>
+            <a href="/en/review">Recensión</a>
+            <a href="/en/website">About Stake</a>
+            <a href="/en/faq">Preguntas frecuentes</a>
+          </div>
+        </div>
+        <a href="/en/news" class="nav-link">Novas</a>
+      </nav>
+
+      <div class="header-actions"><select class="lang-switcher" onchange="if(this.value)window.location.href=this.value" aria-label="Lingua"><option value="" selected>GL</option><option value="/ar/tools/hedge-calculator.html">AR</option><option value="/bg/tools/hedge-calculator.html">BG</option><option value="/bn/tools/hedge-calculator.html">BN</option><option value="/ca/tools/hedge-calculator.html">CA</option><option value="/cs/tools/hedge-calculator.html">CS</option><option value="/da/tools/hedge-calculator.html">DA</option><option value="/de/tools/hedge-calculator.html">DE</option><option value="/el/tools/hedge-calculator.html">EL</option><option value="/en/tools/hedge-calculator.html">EN</option><option value="/es/tools/hedge-calculator.html">ES</option><option value="/et/tools/hedge-calculator.html">ET</option><option value="/fa/tools/hedge-calculator.html">FA</option><option value="/fi/tools/hedge-calculator.html">FI</option><option value="/fr/tools/hedge-calculator.html">FR</option><option value="/he/tools/hedge-calculator.html">HE</option><option value="/hi/tools/hedge-calculator.html">HI</option><option value="/hr/tools/hedge-calculator.html">HR</option><option value="/hu/tools/hedge-calculator.html">HU</option><option value="/id/tools/hedge-calculator.html">ID</option><option value="/it/tools/hedge-calculator.html">IT</option><option value="/ja/tools/hedge-calculator.html">JA</option><option value="/kk/tools/hedge-calculator.html">KK</option><option value="/ko/tools/hedge-calculator.html">KO</option><option value="/lo/tools/hedge-calculator.html">LO</option><option value="/lt/tools/hedge-calculator.html">LT</option><option value="/lv/tools/hedge-calculator.html">LV</option><option value="/mn/tools/hedge-calculator.html">MN</option><option value="/ms/tools/hedge-calculator.html">MS</option><option value="/mt/tools/hedge-calculator.html">MT</option><option value="/nb/tools/hedge-calculator.html">NB</option><option value="/nl/">NL</option><option value="/pl/tools/hedge-calculator.html">PL</option><option value="/pt/tools/hedge-calculator.html">PT</option><option value="/ro/tools/hedge-calculator.html">RO</option><option value="/ru/tools/hedge-calculator.html">RU</option><option value="/sk/tools/hedge-calculator.html">SK</option><option value="/sl/tools/hedge-calculator.html">SL</option><option value="/sq/tools/hedge-calculator.html">SQ</option><option value="/sr/tools/hedge-calculator.html">SR</option><option value="/sv/tools/hedge-calculator.html">SV</option><option value="/th/tools/hedge-calculator.html">TH</option><option value="/tl/tools/hedge-calculator.html">TL</option><option value="/tr/tools/hedge-calculator.html">TR</option><option value="/uk/tools/hedge-calculator.html">UK</option><option value="/ur/tools/hedge-calculator.html">UR</option><option value="/uz/tools/hedge-calculator.html">UZ</option><option value="/vi/tools/hedge-calculator.html">VI</option><option value="/zh/tools/hedge-calculator.html">ZH</option></select>
+        <a href="https://playstake.io/landing?c=max3000&offer=max3000" target="_blank" rel="noopener" class="btn btn-signup" aria-label="Rexístrate">Rexístrate</a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <a href="/en/">Inicio</a>
+        <a href="/en/tools/">Ferramentas</a>
+        <span aria-current="page">Hedge calculator</span>
+      </div>
+    </nav>
+    <article class="page-content">
+      <div class="container">
+        <h1>Hedge calculator: lock in profit or minimise loss</h1>
+        <style>
+.calc-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px 24px;margin:32px 0}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.calc-field label{display:block;font-size:13px;color:var(--text-dim);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.calc-field input,.calc-field select{width:100%;background:var(--elevated);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-family:var(--font-mono);font-size:15px}
+.calc-field input:focus,.calc-field select:focus{outline:none;border-color:var(--blue)}
+.calc-output{background:var(--elevated);border-radius:10px;padding:20px;margin-top:20px}
+.calc-output-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:12px}
+.out-item{background:var(--bg);border-radius:8px;padding:14px 16px}
+.out-label{font-size:12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.out-val{font-family:var(--font-mono);font-size:18px;font-weight:700;color:var(--gold)}
+.out-val.green{color:var(--green)}
+.out-val.warn{color:var(--red)}
+.related-tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:16px}
+.related-tools a{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:14px;transition:border-color .2s}
+.related-tools a:hover{border-color:var(--blue)}
+</style>
+<section class="lede">
+  <p>Stake is licenciado under Curaçao 1668/JAZ and covers 40,000+ betting mercados. This hedge calculator tells you exactly how much to stake on the opposing outcome to lock in a profit or cut your loss. Register with código promocional <span class="code-highlight">NEWBONUS</span> and manage every position with precision.</p>
+</section>
+
+<section class="calc-box">
+  <h2>Hedge bet calculator</h2>
+  <div class="calc-grid">
+    <div class="calc-field"><label>Original stake</label><input type="number" id="h-ostake" step="0.01" min="0.01" value="50" placeholder="50"></div>
+    <div class="calc-field"><label>Original decimal cotas</label><input type="number" id="h-ocotas" step="0.01" min="1.01" value="4.00" placeholder="4.00"></div>
+    <div class="calc-field"><label>Hedge decimal cotas</label><input type="number" id="h-hcotas" step="0.01" min="1.01" value="1.40" placeholder="1.40"></div>
+    <div class="calc-field"><label>Hedge goal</label>
+      <select id="h-goal">
+        <option value="equal">Lock in equal profit</option>
+        <option value="zeroloss">Guarantee no loss</option>
+        <option value="custom">Custom hedge stake</option>
+      </select>
+    </div>
+    <div class="calc-field" id="custom-stake-wrap" style="display:none"><label>Custom hedge stake</label><input type="number" id="h-cstake" step="0.01" min="0.01" value="50" placeholder="50"></div>
+  </div>
+  <div class="calc-output">
+    <div style="font-size:13px;color:var(--text-dim);font-weight:600;text-transform:uppercase;letter-spacing:.5px">Hedge result</div>
+    <div class="calc-output-grid">
+      <div class="out-item"><div class="out-label">Hedge stake</div><div class="out-val" id="h-hstake">--</div></div>
+      <div class="out-item"><div class="out-label">Profit if original wins</div><div class="out-val green" id="h-p-orig">--</div></div>
+      <div class="out-item"><div class="out-label">Profit if hedge wins</div><div class="out-val green" id="h-p-hedge">--</div></div>
+      <div class="out-item"><div class="out-label">Total staked</div><div class="out-val" id="h-total">--</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>How this calculator works</h2>
+  <p>Hedging a bet means placing a stake on the opposing outcome after your original position has already been placed (usually after the original has moved in your favour). The goal is to guarantee a profit or reduce maximum loss regardless of which outcome occurs.</p>
+  <p style="margin-top:12px">For the "lock in equal profit" mode, the calculator finds the hedge stake that makes both scenarios return the same net profit. The formula is: <strong>hedge stake = (original stake x original cotas) / (1 + hedge cotas - 1)</strong>, which simplifies to: original win return / hedge cotas.</p>
+  <p style="margin-top:12px">Concretely: a 50-unit original stake at 4.00 returns 200 if it wins (150 profit). To hedge at 1.40, the required stake = 200 / 1.40 = 142.86. If the original wins: profit = 200 - 50 - 142.86 = 7.14. If the hedge wins: profit = 142.86 x 1.40 - 50 - 142.86 = 7.14. Both scenarios return the same profit.</p>
+  <p style="margin-top:12px">The "guarantee no loss" mode calculates the hedge stake needed so that neither outcome results in a loss. This is the break-even hedge. For the example above, any hedge stake that covers the original 50-unit investment while the original side returns surplus qualifies.</p>
+  <p style="margin-top:12px">The "custom stake" mode lets you enter any hedge amount and see the resulting profit/loss scenarios side by side. This is useful when you want to partially hedge rather than fully lock in a result.</p>
+  <p style="margin-top:12px">Note that hedging always reduces maximum upside in exchange for certainty. The right amount to hedge depends on your risk tolerance and the size of the in-play price move since your original bet was placed.</p>
+</section>
+
+<section style="margin-top:40px">
+  <h2>Why use it at Stake</h2>
+  <p>Stake's in-play mercados update continuously across 40,000+ events. When your pre-match position moves into profit, this calculator helps you decide the optimal hedge. Register with <span class="code-highlight">NEWBONUS</span> to access apostas en directo instantly.</p>
+  <div style="margin-top:20px"><a class="btn btn-primary btn-lg" href="https://winnersclub.com/gl/register?promo=NEWBONUS">Register at Stake and claim NEWBONUS</a></div>
+</section>
+
+<section class="faq" style="margin-top:40px">
+  <h2>Preguntas frecuentes</h2>
+  <details><summary>When should I hedge a bet?</summary><p>Hedge when your original selection has moved significantly in your favour and you want to secure some profit before the event concludes. Common scenarios include a football team winning at half time and you want to guarantee a return regardless of the second half result.</p></details>
+  <details><summary>Does hedging reduce my profit?</summary><p>Yes. By placing a stake on both outcomes, you are spending additional money. The locked-in profit will always be less than your maximum potential upside from the original bet alone.</p></details>
+  <details><summary>Can I hedge a parlay?</summary><p>Yes. If the final leg of a parlay is pending, you can hedge the last leg on the opposing outcome. Use the original potential parlay payout as your "original stake" and the last-leg cotas as the hedge cotas.</p></details>
+  <details><summary>What is partial hedging?</summary><p>Partial hedging places a smaller stake on the opposing outcome than a full lock would require. It reduces exposure without fully locking in profit, leaving some upside on the original bet.</p></details>
+  <details><summary>Is hedging the same as arbitrage?</summary><p>No. Arbitrage places both bets simultaneously before the event from separate bookmakers. Hedging places the second bet after the first has already been made, typically when the position has moved in your favour.</p></details>
+</section>
+
+<section style="margin-top:40px">
+  <h2>Related tools</h2>
+  <div class="related-tools">
+    <a href="/en/tools/arbitrage-calculator">Arbitrage calculator</a>
+    <a href="/en/tools/matched-bet-calculator">Matched bet calculator</a>
+    <a href="/en/tools/parlay-calculator">Calculadora de parlay</a>
+    <a href="/en/tools/kelly-criterion-calculator">Kelly criterion calculator</a>
+    <a href="/en/tools/cotas-converter">Conversor de cotas</a>
+  </div>
+</section>
+
+      </div>
+    </article>
+  </main>
+<footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg width="80" height="38" viewBox="0 0 74 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29.1115 10.208C30.1487 10.208 31.0356 10.842 31.0959 12.6963L31.4601 21.4219L35.4465 11.6406C35.8806 10.5914 36.6194 10.208 37.7228 10.208H40.6838C42.2819 10.208 42.6501 11.6798 42.0109 13.1904L36.1096 27.7871C35.5337 29.2101 34.9846 29.9971 33.6701 29.9971L29.0451 30C27.5587 29.9999 26.7382 29.0408 26.7111 27.4277L26.3976 20.1523L23.3039 27.7773C22.7823 29.0196 22.2671 30 20.9797 30L16.924 29.9941C15.3081 29.9941 14.3853 29.1437 14.343 27.2295L14.1144 21.8594L15.3625 15.1953C15.8237 12.3645 14.8889 11.1646 14.093 10.2148L17.5275 10.2109C18.872 10.211 19.4293 10.8084 19.4806 12.4844L19.84 21.4248L23.841 11.5889C24.2119 10.6845 24.906 10.208 26.0969 10.208H29.1115Z" fill="white"/>
+          <path d="M7.85174 10.6641C9.28687 9.94345 10.6554 10.0338 11.7619 10.7754C12.9287 11.6226 13.5922 12.9158 13.2336 14.6885L10.924 26.9912C10.5862 28.993 8.65369 30.3133 6.64276 29.9336C4.74922 29.5748 3.35277 27.7988 3.72967 25.6641L5.03826 18.5391L4.22479 18.9072C2.71416 19.5856 0.937298 18.9073 0.261897 17.3877C-0.413447 15.8681 0.262199 14.0858 1.77264 13.4043L7.85174 10.6641Z" fill="white"/>
+          <path d="M49.2443 10.2119C51.2703 10.212 51.7946 11.1853 51.3332 13.3047L48.8039 27.1504C48.5479 28.6639 48.1102 29.9969 46.3224 29.9971H43.1476C41.6276 29.9971 41.0944 28.8513 41.3537 27.3799L43.964 12.7324C44.2263 11.1736 44.899 10.212 46.8498 10.2119H49.2443Z" fill="white"/>
+          <path d="M67.5851 10.2051C69.5359 10.2051 70.4343 10.5584 71.5197 11.5322C73.3285 13.1514 73.6701 15.5666 73.2629 17.4873L71.466 27.1445C71.2158 28.6069 70.8296 29.9912 69.0656 29.9912L65.9572 29.9941C64.6034 29.9941 63.8884 29.0049 64.1535 27.3135L65.4142 19.7607C65.5949 18.3738 65.3328 17.3905 64.5793 16.7754C63.4065 15.8196 61.7479 16.2354 60.9064 17.2002C60.3638 17.7791 60.1169 18.5663 59.8273 20.1611L58.5607 27.1533C58.3225 28.5342 57.9366 29.9969 56.1037 29.9971H52.9797C51.035 29.9971 50.8989 28.3024 51.1193 27.3164L53.7512 12.7295C54.0076 11.3907 54.4814 10.208 56.6369 10.208L58.8771 10.2051C60.6138 10.2051 61.6483 10.8506 61.1027 13.2988L60.8703 14.5107C62.0672 12.0716 65.0013 10.2052 67.5851 10.2051Z" fill="white"/>
+          <path d="M48.5988 1C50.5736 1.00011 52.175 2.60414 52.175 4.58203C52.175 6.55993 50.5736 8.16395 48.5988 8.16406C46.6239 8.16406 45.0226 6.56 45.0226 4.58203C45.0226 2.60407 46.6239 1 48.5988 1Z" fill="white"/>
+        </svg>
+          <p style="font-size:14px;font-weight:800;color:var(--text-dim);letter-spacing:2px;margin-bottom:16px;text-transform:uppercase;">winnersclub.com - recensión de afiliado independente</p>
+          <div class="footer-badges">
+            <span class="age-badge">18+</span>
+            <span class="cert-badge">GamCare</span>
+            <span class="cert-badge">SSL</span>
+          </div>
+        </div>
+
+        <div class="footer-links-grid">
+          <div class="footer-col">
+            <h4>Products</h4>
+            <a href="/en/sports-betting">Apostas Deportivas</a>
+            <a href="/en/casino">Casino</a>
+            <a href="/en/aviator">Aviator</a>
+            <a href="/en/poker">Póker</a>
+          </div>
+          <div class="footer-col">
+            <h4>Promos</h4>
+            <a href="/en/promo-code">Código Promocional</a>
+            <a href="/en/vip-club">Club VIP</a>
+            <a href="/en/lucky-drive">Lucky Drive</a>
+            <a href="/en/promotions">Free Money</a>
+            <a href="/en/mirrors">Mirror</a>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <a href="/en/register">Rexístrate</a>
+            <a href="/en/access">Iniciar sesión</a>
+            <a href="/en/review">Recensión</a>
+            <a href="/en/website">Website</a>
+            <a href="/en/live-streaming">Transmisión en Directo</a>
+            <a href="/en/payment-methods">Payments</a>
+            <a href="/en/app">Descarga a App</a>
+            <a href="/en/news">Novas</a>
+            <a href="/en/faq">Preguntas frecuentes</a>
+            <a href="/en/mirrors">Mirror</a>
+          </div>
+          <div class="footer-col">
+            <h4>Countries</h4>
+            <a href="/en/country-bangladesh">Bangladesh</a>
+            <a href="/en/country-india">India</a>
+            <a href="/en/country-pakistan">Pakistan</a>
+            <a href="/en/country-korea">Korea</a>
+            <a href="/en/country-malaysia">Malaysia</a>
+            <a href="/en/country-singapore">Singapore</a>
+            <a href="/en/country-argentina">Argentina</a>
+            <a href="/en/country-chile">Chile</a>
+            <a href="/en/country-south-africa">South Africa</a>
+            <a href="/en/country-tanzania">Tanzania</a>
+            <a href="/en/country-malawi">Malawi</a>
+            <a href="/en/country-kenya">Kenya</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">Este é un sitio de fans non oficial e non está afiliado nin avalado por Stake. Este sitio é só para fins informativos. O xogo implica risco, xoga con responsabilidade. If you or someone you know has a gambling problem, please contact GamCare or a local support organization.</p>
+        <p class="footer-copyright">&copy; 2026 winnersclub.com. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/script.min.js" defer></script>
+  <script>
+(function(){
+  const goalSel=document.getElementById('h-goal');
+  const customWrap=document.getElementById('custom-stake-wrap');
+  goalSel.addEventListener('change',function(){
+    customWrap.style.display=this.value==='custom'?'':'none';
+    calc();
+  });
+
+  function calc(){
+    const os=parseFloat(document.getElementById('h-ostake').value)||0;
+    const oo=parseFloat(document.getElementById('h-ocotas').value)||0;
+    const ho=parseFloat(document.getElementById('h-hcotas').value)||0;
+    const goal=goalSel.value;
+    if(os<=0||oo<=1||ho<=1){['h-hstake','h-p-orig','h-p-hedge','h-total'].forEach(id=>document.getElementById(id).textContent='--');return;}
+    const origReturn=os*oo;
+    let hs;
+    if(goal==='equal'){
+      hs=origReturn/ho;
+    } else if(goal==='zeroloss'){
+      // hedge stake such that hedge payout covers original stake
+      hs=os/ho;
+    } else {
+      hs=parseFloat(document.getElementById('h-cstake').value)||0;
+    }
+    const profitIfOrig=origReturn-os-hs;
+    const profitIfHedge=(hs*ho)-os-hs;
+    document.getElementById('h-hstake').textContent=hs.toFixed(2);
+    document.getElementById('h-p-orig').textContent=profitIfOrig.toFixed(2);
+    document.getElementById('h-p-hedge').textContent=profitIfHedge.toFixed(2);
+    document.getElementById('h-total').textContent=(os+hs).toFixed(2);
+  }
+
+  ['h-ostake','h-ocotas','h-hcotas','h-cstake'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el) el.addEventListener('input',calc);
+  });
+  calc();
+})();
+</script>
+</body>
+</html>

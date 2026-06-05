@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="dns-prefetch" href="//winnersclub.com">
+  <meta name="theme-color" content="#141415">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelly Criterion Calculator: Optimal Stake Sizing at Stake</title>
+  <meta name="description" content="Calculate your optimal bet size using the Kelly criterion. Enter bankroll, odds and win probability. Supports full, half and quarter Kelly. Use NEWBONUS at Stake.">
+  <link rel="canonical" href="https://winnersclub.com/kk/tools/kelly-criterion-calculator.html">
+  <meta property="og:title" content="Kelly Criterion Calculator: Optimal Stake Sizing at Stake">
+  <meta property="og:description" content="Calculate your optimal bet size using the Kelly criterion. Enter bankroll, odds and win probability. Supports full, half and quarter Kelly. Use NEWBONUS at Stake.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/images/og-default.png"><link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <style id="critical">*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg:#141415;--surface:#1d1e20;--elevated:#2e3035;--blue:#0075ff;--green:#00b24b;--gold:#FFD700;--red:#f44;--purple:#9b59b6;--white:#fff;--text:#e8e8e8;--text-dim:#9a9a9f;--text-muted:#6b6b70;--border:rgba(255,255,255,0.08);--font-body:'Inter',system-ui,-apple-system,sans-serif;--font-mono:'JetBrains Mono','Fira Code',monospace;--section-pad:120px;--container:1280px;--glow-blue:0 0 30px rgba(0,117,255,0.4),0 0 60px rgba(0,117,255,0.2);--glow-green:0 0 30px rgba(0,178,75,0.4),0 0 60px rgba(0,178,75,0.2);--glow-gold:0 0 30px rgba(255,215,0,0.4),0 0 60px rgba(255,215,0,0.2);--ease:cubic-bezier(0.16,1,0.3,1)}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none}button{cursor:pointer;border:none;background:none;font-family:inherit;color:inherit}.text-gradient{background:linear-gradient(135deg,var(--blue) 0,#00d4ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.text-gradient-gold{background:linear-gradient(135deg,var(--gold) 0,#fa0 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.text-green{color:var(--green);font-weight:700}.code-highlight{font-family:var(--font-mono);color:var(--gold);font-weight:700}.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:8px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.5px;transition:all .3s var(--ease);white-space:nowrap}.btn-primary{background:var(--green);color:var(--white);box-shadow:0 4px 15px rgba(0,178,75,0.3)}.btn-primary:hover{transform:translateY(-2px) scale(1.02);box-shadow:var(--glow-green);background:#00cc56}.btn-gold{background:linear-gradient(135deg,var(--gold),#fa0);color:#1a1a1a;box-shadow:0 4px 15px rgba(255,215,0,0.3)}.btn-gold:hover{transform:translateY(-2px) scale(1.02);box-shadow:var(--glow-gold)}.btn-signup{background:var(--green);color:var(--white);padding:10px 24px;border-radius:8px;font-size:13px;box-shadow:0 4px 15px rgba(0,178,75,0.3)}.btn-signup:hover{transform:translateY(-2px);box-shadow:var(--glow-green)}.btn-outline{border:2px solid var(--blue);color:var(--blue);background:transparent}.btn-outline:hover{background:var(--blue);color:var(--white);box-shadow:var(--glow-blue);transform:translateY(-2px)}.btn-lg{padding:16px 40px;font-size:16px;border-radius:10px}.btn-xl{padding:20px 56px;font-size:18px;border-radius:12px}.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(20,20,21,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:transform .35s var(--ease)}.header-inner{max-width:var(--container);margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between;gap:32px}.header-logo svg{display:block}.header-nav{display:flex;align-items:center;gap:8px}.nav-link{padding:8px 14px;font-size:13px;font-weight:600;color:var(--text-dim);border-radius:6px;transition:all .2s;white-space:nowrap}.nav-link:hover{color:var(--white);background:rgba(255,255,255,0.06)}.header-actions{display:flex;align-items:center;gap:16px}.lang-selector{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--text-dim);cursor:pointer}.hamburger{display:none;flex-direction:column;gap:5px;width:28px;padding:4px 0}.hamburger span{display:block;height:2px;background:var(--white);border-radius:2px;transition:all .3s var(--ease)}.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}</style>
+  <link rel="stylesheet" href="/style.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/style.min.css"></noscript>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WC-PLACEHOLDER"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WC-PLACEHOLDER', {anonymize_ip: true});
+</script>
+<script src="/exit-tracker.js" defer></script>
+<script src="/lang-redirect.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Kelly Criterion Calculator: Optimal Stake Sizing at Stake",
+  "description": "Calculate your optimal bet size using the Kelly criterion. Enter bankroll, odds and win probability. Supports full, half and quarter Kelly. Use NEWBONUS at Stake.",
+  "url": "https://winnersclub.com/kk/tools/kelly-criterion-calculator",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "winnersclub.com",
+    "url": "https://winnersclub.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://winnersclub.com/kk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://winnersclub.com/kk/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Kelly criterion calculator"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What is Full Kelly vs Half Kelly?","acceptedAnswer":{"@type":"Answer","text":"Full Kelly bets the optimal fraction. Half Kelly halves that fraction, reducing variance while retaining ~75% of growth rate."}},
+    {"@type":"Question","name":"What does a negative Kelly result mean?","acceptedAnswer":{"@type":"Answer","text":"A negative result means no edge. The bookmaker price implies a higher win probability than your own estimate."}},
+    {"@type":"Question","name":"How accurate must my probability estimate be?","acceptedAnswer":{"@type":"Answer","text":"Even 2-3% errors can materially change the recommended stake. Apply Half or Quarter Kelly as a safety buffer."}},
+    {"@type":"Question","name":"Can Kelly be used for Казино ойындары?","acceptedAnswer":{"@type":"Answer","text":"Kelly applies to any positive expected value bet. Most Казино ойындары have negative EV so Kelly recommends zero stake."}},
+    {"@type":"Question","name":"What is the edge in the Kelly formula?","acceptedAnswer":{"@type":"Answer","text":"Edge = (probability x decimal odds) - 1. It is the expected return per unit staked."}}
+  ]
+}
+</script>
+
+
+  <link rel="alternate" hreflang="ar" href="https://winnersclub.com/ar/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="bg" href="https://winnersclub.com/bg/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="bn" href="https://winnersclub.com/bn/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="ca" href="https://winnersclub.com/ca/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="cs" href="https://winnersclub.com/cs/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="da" href="https://winnersclub.com/da/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="de" href="https://winnersclub.com/de/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="el" href="https://winnersclub.com/el/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="en" href="https://winnersclub.com/en/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="es" href="https://winnersclub.com/es/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="et" href="https://winnersclub.com/et/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="fa" href="https://winnersclub.com/fa/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="fi" href="https://winnersclub.com/fi/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="fr" href="https://winnersclub.com/fr/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="gl" href="https://winnersclub.com/gl/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="he" href="https://winnersclub.com/he/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="hi" href="https://winnersclub.com/hi/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="hr" href="https://winnersclub.com/hr/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="hu" href="https://winnersclub.com/hu/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="id" href="https://winnersclub.com/id/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="it" href="https://winnersclub.com/it/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="ja" href="https://winnersclub.com/ja/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="kk" href="https://winnersclub.com/kk/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="ko" href="https://winnersclub.com/ko/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="lo" href="https://winnersclub.com/lo/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="lt" href="https://winnersclub.com/lt/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="lv" href="https://winnersclub.com/lv/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="mn" href="https://winnersclub.com/mn/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="ms" href="https://winnersclub.com/ms/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="mt" href="https://winnersclub.com/mt/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="nb" href="https://winnersclub.com/nb/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="pl" href="https://winnersclub.com/pl/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="pt" href="https://winnersclub.com/pt/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="ro" href="https://winnersclub.com/ro/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="ru" href="https://winnersclub.com/ru/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="sk" href="https://winnersclub.com/sk/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="sl" href="https://winnersclub.com/sl/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="sq" href="https://winnersclub.com/sq/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="sr" href="https://winnersclub.com/sr/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="sv" href="https://winnersclub.com/sv/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="th" href="https://winnersclub.com/th/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="tl" href="https://winnersclub.com/tl/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="tr" href="https://winnersclub.com/tr/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="uk" href="https://winnersclub.com/uk/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="ur" href="https://winnersclub.com/ur/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="uz" href="https://winnersclub.com/uz/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="vi" href="https://winnersclub.com/vi/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="zh" href="https://winnersclub.com/zh/tools/kelly-criterion-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://winnersclub.com/en/tools/kelly-criterion-calculator">
+  </head>
+<body>
+<body>
+  <!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="/kk/" class="header-logo" aria-label="Stake home">
+        <svg width="100" height="48" viewBox="0 0 74 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29.1115 10.208C30.1487 10.208 31.0356 10.842 31.0959 12.6963L31.4601 21.4219L35.4465 11.6406C35.8806 10.5914 36.6194 10.208 37.7228 10.208H40.6838C42.2819 10.208 42.6501 11.6798 42.0109 13.1904L36.1096 27.7871C35.5337 29.2101 34.9846 29.9971 33.6701 29.9971L29.0451 30C27.5587 29.9999 26.7382 29.0408 26.7111 27.4277L26.3976 20.1523L23.3039 27.7773C22.7823 29.0196 22.2671 30 20.9797 30L16.924 29.9941C15.3081 29.9941 14.3853 29.1437 14.343 27.2295L14.1144 21.8594L15.3625 15.1953C15.8237 12.3645 14.8889 11.1646 14.093 10.2148L17.5275 10.2109C18.872 10.211 19.4293 10.8084 19.4806 12.4844L19.84 21.4248L23.841 11.5889C24.2119 10.6845 24.906 10.208 26.0969 10.208H29.1115Z" fill="white"/>
+          <path d="M7.85174 10.6641C9.28687 9.94345 10.6554 10.0338 11.7619 10.7754C12.9287 11.6226 13.5922 12.9158 13.2336 14.6885L10.924 26.9912C10.5862 28.993 8.65369 30.3133 6.64276 29.9336C4.74922 29.5748 3.35277 27.7988 3.72967 25.6641L5.03826 18.5391L4.22479 18.9072C2.71416 19.5856 0.937298 18.9073 0.261897 17.3877C-0.413447 15.8681 0.262199 14.0858 1.77264 13.4043L7.85174 10.6641Z" fill="white"/>
+          <path d="M49.2443 10.2119C51.2703 10.212 51.7946 11.1853 51.3332 13.3047L48.8039 27.1504C48.5479 28.6639 48.1102 29.9969 46.3224 29.9971H43.1476C41.6276 29.9971 41.0944 28.8513 41.3537 27.3799L43.964 12.7324C44.2263 11.1736 44.899 10.212 46.8498 10.2119H49.2443Z" fill="white"/>
+          <path d="M67.5851 10.2051C69.5359 10.2051 70.4343 10.5584 71.5197 11.5322C73.3285 13.1514 73.6701 15.5666 73.2629 17.4873L71.466 27.1445C71.2158 28.6069 70.8296 29.9912 69.0656 29.9912L65.9572 29.9941C64.6034 29.9941 63.8884 29.0049 64.1535 27.3135L65.4142 19.7607C65.5949 18.3738 65.3328 17.3905 64.5793 16.7754C63.4065 15.8196 61.7479 16.2354 60.9064 17.2002C60.3638 17.7791 60.1169 18.5663 59.8273 20.1611L58.5607 27.1533C58.3225 28.5342 57.9366 29.9969 56.1037 29.9971H52.9797C51.035 29.9971 50.8989 28.3024 51.1193 27.3164L53.7512 12.7295C54.0076 11.3907 54.4814 10.208 56.6369 10.208L58.8771 10.2051C60.6138 10.2051 61.6483 10.8506 61.1027 13.2988L60.8703 14.5107C62.0672 12.0716 65.0013 10.2052 67.5851 10.2051Z" fill="white"/>
+          <path d="M48.5988 1C50.5736 1.00011 52.175 2.60414 52.175 4.58203C52.175 6.55993 50.5736 8.16395 48.5988 8.16406C46.6239 8.16406 45.0226 6.56 45.0226 4.58203C45.0226 2.60407 46.6239 1 48.5988 1Z" fill="white"/>
+        </svg>
+      </a>
+
+                        <nav class="header-nav" id="mainNav">
+        <a href="/kk/promo-code" class="nav-link">Промокод</a>
+        <div class="nav-item">
+          <a href="/kk/sports-betting" class="nav-link">Спорт <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/kk/sports-betting">Барлық спорт ставкалары</a>
+            <a href="/kk/sports/football">Футбол</a>
+            <a href="/kk/sports/cricket">Крикет</a>
+            <a href="/kk/sports/tennis">Теннис</a>
+            <a href="/kk/sports/basketball">Баскетбол</a>
+            <a href="/kk/sports/esports">Киберспорт</a>
+            <a href="/kk/live-streaming">Тікелей эфир</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/kk/casino" class="nav-link">Казино <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/kk/casino">Казино басты беті</a>
+            <a href="/kk/slots/">Слот шолулары</a>
+            <a href="/kk/providers/">Ойын провайдерлері</a>
+            <a href="/kk/aviator">Aviator</a>
+            <a href="/kk/crash/">Crash ойындары</a>
+            <a href="/kk/poker">Покер</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/kk/bonus/" class="nav-link">Бонустар <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/kk/bonus/">Барлық бонустар</a>
+            <a href="/kk/bonus/first-deposit-bonus">First deposit 200%</a>
+            <a href="/kk/bonus/second-deposit-bonus">Second deposit 150%</a>
+            <a href="/kk/bonus/third-deposit-bonus">Third deposit 150%</a>
+            <a href="/kk/bonus/fourth-deposit-bonus">Fourth deposit 100%</a>
+            <a href="/kk/bonus/wagering-requirements">Ставка ережелері</a>
+            <a href="/kk/bonus/free-spins-today">Бүгінгі тегін айналымдар</a>
+            <a href="/kk/bonus/cashback-bonus">Кэшбэк</a>
+            <a href="/kk/vip-club">VIP клуб</a>
+            <a href="/kk/lucky-drive">Lucky Drive</a>
+            <a href="/kk/promotions">Барлық акциялар</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/kk/tools/" class="nav-link">Құралдар <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/kk/tools/">Барлық калькуляторлар</a>
+            <a href="/kk/tools/odds-converter">Коэффициент конверторы</a>
+            <a href="/kk/tools/parlay-calculator">Парлай калькуляторы</a>
+            <a href="/kk/tools/kelly-criterion-calculator">Келли критерийі</a>
+            <a href="/kk/tools/arbitrage-calculator">Арбитраж</a>
+            <a href="/kk/tools/hedge-calculator">Хедж</a>
+            <a href="/kk/tools/each-way-calculator">Екі жақты</a>
+            <a href="/kk/tools/implied-probability-calculator">Жасырын ықтималдық</a>
+            <a href="/kk/tools/bankroll-calculator">Банкролл</a>
+            <a href="/kk/tools/surebet-calculator">Сенімді ставка</a>
+            <a href="/kk/tools/matched-bet-calculator">Сәйкесті ставка</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/kk/payments/" class="nav-link">Тағы <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="/kk/payments/">Төлем тәсілдері</a>
+            <a href="/kk/app">Мобильді қосымша</a>
+            <a href="/kk/india/">Үндістан нұсқаулықтары</a>
+            <a href="/kk/mirrors">Айналар</a>
+            <a href="/kk/access">Кіру</a>
+            <a href="/kk/register">Тіркелу</a>
+            <a href="/kk/review">Review</a>
+            <a href="/kk/website">About Stake</a>
+            <a href="/kk/faq">FAQ</a>
+          </div>
+        </div>
+        <a href="/kk/news" class="nav-link">Жаңалықтар</a>
+      </nav>
+
+      <div class="header-actions"><select class="lang-switcher" onchange="if(this.value)window.location.href=this.value" aria-label="Language"><option value="" selected>KK</option><option value="/ar/tools/kelly-criterion-calculator.html">AR</option><option value="/bg/tools/kelly-criterion-calculator.html">BG</option><option value="/bn/tools/kelly-criterion-calculator.html">BN</option><option value="/ca/tools/kelly-criterion-calculator.html">CA</option><option value="/cs/tools/kelly-criterion-calculator.html">CS</option><option value="/da/tools/kelly-criterion-calculator.html">DA</option><option value="/de/tools/kelly-criterion-calculator.html">DE</option><option value="/el/tools/kelly-criterion-calculator.html">EL</option><option value="/en/tools/kelly-criterion-calculator.html">EN</option><option value="/es/tools/kelly-criterion-calculator.html">ES</option><option value="/et/tools/kelly-criterion-calculator.html">ET</option><option value="/fa/tools/kelly-criterion-calculator.html">FA</option><option value="/fi/tools/kelly-criterion-calculator.html">FI</option><option value="/fr/tools/kelly-criterion-calculator.html">FR</option><option value="/gl/tools/kelly-criterion-calculator.html">GL</option><option value="/he/tools/kelly-criterion-calculator.html">HE</option><option value="/hi/tools/kelly-criterion-calculator.html">HI</option><option value="/hr/tools/kelly-criterion-calculator.html">HR</option><option value="/hu/tools/kelly-criterion-calculator.html">HU</option><option value="/id/tools/kelly-criterion-calculator.html">ID</option><option value="/it/tools/kelly-criterion-calculator.html">IT</option><option value="/ja/tools/kelly-criterion-calculator.html">JA</option><option value="/ko/tools/kelly-criterion-calculator.html">KO</option><option value="/lo/tools/kelly-criterion-calculator.html">LO</option><option value="/lt/tools/kelly-criterion-calculator.html">LT</option><option value="/lv/tools/kelly-criterion-calculator.html">LV</option><option value="/mn/tools/kelly-criterion-calculator.html">MN</option><option value="/ms/tools/kelly-criterion-calculator.html">MS</option><option value="/mt/tools/kelly-criterion-calculator.html">MT</option><option value="/nb/tools/kelly-criterion-calculator.html">NB</option><option value="/nl/">NL</option><option value="/pl/tools/kelly-criterion-calculator.html">PL</option><option value="/pt/tools/kelly-criterion-calculator.html">PT</option><option value="/ro/tools/kelly-criterion-calculator.html">RO</option><option value="/ru/tools/kelly-criterion-calculator.html">RU</option><option value="/sk/tools/kelly-criterion-calculator.html">SK</option><option value="/sl/tools/kelly-criterion-calculator.html">SL</option><option value="/sq/tools/kelly-criterion-calculator.html">SQ</option><option value="/sr/tools/kelly-criterion-calculator.html">SR</option><option value="/sv/tools/kelly-criterion-calculator.html">SV</option><option value="/th/tools/kelly-criterion-calculator.html">TH</option><option value="/tl/tools/kelly-criterion-calculator.html">TL</option><option value="/tr/tools/kelly-criterion-calculator.html">TR</option><option value="/uk/tools/kelly-criterion-calculator.html">UK</option><option value="/ur/tools/kelly-criterion-calculator.html">UR</option><option value="/uz/tools/kelly-criterion-calculator.html">UZ</option><option value="/vi/tools/kelly-criterion-calculator.html">VI</option><option value="/zh/tools/kelly-criterion-calculator.html">ZH</option></select>
+        <a href="https://playstake.io/landing?c=max3000&offer=max3000" target="_blank" rel="noopener" class="btn btn-signup" aria-label="Тіркелу">Тіркелу</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <a href="/kk/">Home</a>
+        <a href="/kk/tools/">Құралдар</a>
+        <span aria-current="page">Kelly критерийі калькуляторы</span>
+      </div>
+    </nav>
+    <article class="page-content">
+      <div class="container">
+        <h1>Kelly критерийі калькуляторы: optimal stake sizing</h1>
+        <style>
+.calc-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px 24px;margin:32px 0}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.calc-field label{display:block;font-size:13px;color:var(--text-dim);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.calc-field input{width:100%;background:var(--elevated);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-family:var(--font-mono);font-size:15px}
+.calc-field input:focus{outline:none;border-color:var(--blue)}
+.calc-output{background:var(--elevated);border-radius:10px;padding:20px;margin-top:20px}
+.calc-output-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:12px}
+.out-item{background:var(--bg);border-radius:8px;padding:14px 16px}
+.out-label{font-size:12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.out-val{font-family:var(--font-mono);font-size:18px;font-weight:700;color:var(--gold)}
+.out-val.green{color:var(--green)}
+.out-val.warn{color:var(--red)}
+.related-tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:16px}
+.related-tools a{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:14px;transition:border-color .2s}
+.related-tools a:hover{border-color:var(--blue)}
+.fraction-row{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.frac-btn{padding:6px 14px;border-radius:6px;background:var(--elevated);border:1px solid var(--border);font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;color:var(--text)}
+.frac-btn.active{background:var(--blue);border-color:var(--blue);color:#fff}
+</style>
+<section class="lede">
+  <p>Stake is licensed under Curaçao 1668/JAZ and offers 400,000+ registered players a sportsbook with 40,000+ нарық. This free Kelly критерийі калькуляторы shows you the optimal stake size for any edge you hold over the bookmaker. Apply code <span class="code-highlight">NEWBONUS</span> at registration and put your bankroll to work immediately.</p>
+</section>
+
+<section class="calc-box">
+  <h2>Kelly критерийі калькуляторы</h2>
+  <div class="calc-grid">
+    <div class="calc-field"><label>Банкролл</label><input type="number" id="k-bankroll" step="1" min="1" value="1000" placeholder="1000"></div>
+    <div class="calc-field"><label>Decimal odds</label><input type="number" id="k-odds" step="0.01" min="1.01" value="2.00" placeholder="2.00"></div>
+    <div class="calc-field"><label>Your estimated win probability (%)</label><input type="number" id="k-prob" step="0.1" min="1" max="99" value="55" placeholder="55"></div>
+  </div>
+  <div style="margin-top:16px">
+    <div style="font-size:13px;color:var(--text-dim);font-weight:600;margin-bottom:8px">Kelly fraction</div>
+    <div class="fraction-row">
+      <button class="frac-btn active" data-frac="1">Full Kelly</button>
+      <button class="frac-btn" data-frac="0.5">Half Kelly</button>
+      <button class="frac-btn" data-frac="0.25">Quarter Kelly</button>
+    </div>
+  </div>
+  <div class="calc-output">
+    <div style="font-size:13px;color:var(--text-dim);font-weight:600;text-transform:uppercase;letter-spacing:.5px">Kelly result</div>
+    <div class="calc-output-grid">
+      <div class="out-item"><div class="out-label">Kelly % of bankroll</div><div class="out-val" id="k-pct">--</div></div>
+      <div class="out-item"><div class="out-label">Recommended stake</div><div class="out-val green" id="k-stake">--</div></div>
+      <div class="out-item"><div class="out-label">Edge</div><div class="out-val" id="k-edge">--</div></div>
+      <div class="out-item"><div class="out-label">Expected value per unit</div><div class="out-val" id="k-ev">--</div></div>
+    </div>
+    <div id="k-warn" style="margin-top:12px;font-size:13px;color:var(--red);min-height:18px"></div>
+  </div>
+</section>
+
+<section>
+  <h2>Бұл калькулятор қалай жұмыс істейді</h2>
+  <p>The Kelly criterion is a mathematical formula developed by John L. Kelly Jr. in 1956 to determine the fraction of a bankroll that maximises the long-run logarithmic growth rate of wealth. It is the most rigorously derived bankroll management rule in existence.</p>
+  <p style="margin-top:12px">The full Kelly formula is: <strong>f* = (bp - q) / b</strong>, where b is the net decimal odds (decimal - 1), p is your estimated probability of winning, and q = 1 - p. For example, if the odds are 2.00 (b = 1.00) and you estimate a 55% win probability, f* = (1.00 x 0.55 - 0.45) / 1.00 = 0.10, meaning 10% of your bankroll.</p>
+  <p style="margin-top:12px">A negative Kelly result means the bet has no edge: the implied probability of the odds exceeds your estimated win probability. The calculator displays this as 0% and flags the negative edge.</p>
+  <p style="margin-top:12px">Many professional bettors use Half Kelly (0.5x) or Quarter Kelly (0.25x). These fractions reduce variance significantly at a modest cost to long-run growth rate. Full Kelly is mathematically optimal but carries substantial short-term drawdown risk. With Half Kelly, the standard deviation of outcomes roughly halves.</p>
+  <p style="margin-top:12px">Көрсетілген үстем сан (б х ондық) - 1, яғни қойылған бір бірлікке күтілетін кірісіңіз. 10 бірліктік ставкадағы 5% үстем орта есеппен əр ставкада 0.50 бірлік күтілетін мəн əкеледі.</p>
+  <p style="margin-top:12px">Accurately estimating win probability is the hardest part of applying Kelly. If your probability estimate is wrong by even a few percentage points, Kelly can recommend stakes that are too large. Many practitioners apply a further 50% haircut to their estimates as a safety margin, effectively running at Quarter Kelly even when they select Half Kelly mode.</p>
+</section>
+
+<section style="margin-top:40px">
+  <h2>Stake-де не үшін қолдану керек</h2>
+  <p>Stake 30+ спортты қамтиды with competitive odds across 40,000+ daily markets. If you have identified an edge, Kelly tells you exactly how much to stake. Register with <span class="code-highlight">NEWBONUS</span> to open an account and start applying systematic bankroll management from your first bet.</p>
+  <div style="margin-top:20px"><a class="btn btn-primary btn-lg" href="https://winnersclub.com/kk/register?promo=NEWBONUS">Register at Stake and NEWBONUS алу</a></div>
+</section>
+
+<section class="faq" style="margin-top:40px">
+  <h2>FAQ</h2>
+  <details><summary>What is Full Kelly vs Half Kelly?</summary><p>Толық Kelly теориялық жағынан оңтайлы үлесте ставка қояды, бірақ қысқа мерзімді жоғары дисперсияға ие. Жарты Kelly сол үлестің жартысына ставка қояды, бұл оңтайлы өсу жылдамдығының шамамен 75%-ін сақтай отырып дисперсияны шамамен жартылай азайтады. Төрттен бір Kelly одан да консервативті.</p></details>
+  <details><summary>What does a negative Kelly result mean?</summary><p>Теріс нәтиже ставканың үстемдіксіз екенін білдіреді: букмекер бағасы сіздің өз бағалауыңыздан гөрі жеңіс мүмкіндігінің жоғарырақ екенін болжайды. Келли теориясы бойынша бұл ставканы жасамаңыз.</p></details>
+  <details><summary>How accurate must my probability estimate be?</summary><p>Even a 2-3 percentage point error in probability can materially change the recommended stake. Always apply a margin of safety, and many professionals use Half or Quarter Kelly to account for estimation error.</p></details>
+  <details><summary>Can Kelly be used for Казино ойындары?</summary><p>Kelly applies to any bet with known odds and positive expected value. Most Казино ойындары have negative expected value, making Kelly recommend zero stake. It is most useful for Спорт ставкалары and trading.</p></details>
+  <details><summary>What is the "edge" in the Kelly formula?</summary><p>Edge = (probability x decimal odds) - 1. It represents expected return per unit staked. A 5% edge means you gain 0.05 units on average per unit bet over many repetitions.</p></details>
+</section>
+
+<section style="margin-top:40px">
+  <h2>Related tools</h2>
+  <div class="related-tools">
+    <a href="/kk/tools/bankroll-calculator">Bankroll calculator</a>
+    <a href="/kk/tools/implied-probability-calculator">Implied probability calculator</a>
+    <a href="/kk/tools/odds-converter">Коэффициент конверторы</a>
+    <a href="/kk/tools/arbitrage-calculator">Arbitrage calculator</a>
+    <a href="/kk/tools/parlay-calculator">Парлай калькуляторы</a>
+  </div>
+</section>
+
+      </div>
+    </article>
+  </main>
+<footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg width="80" height="38" viewBox="0 0 74 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29.1115 10.208C30.1487 10.208 31.0356 10.842 31.0959 12.6963L31.4601 21.4219L35.4465 11.6406C35.8806 10.5914 36.6194 10.208 37.7228 10.208H40.6838C42.2819 10.208 42.6501 11.6798 42.0109 13.1904L36.1096 27.7871C35.5337 29.2101 34.9846 29.9971 33.6701 29.9971L29.0451 30C27.5587 29.9999 26.7382 29.0408 26.7111 27.4277L26.3976 20.1523L23.3039 27.7773C22.7823 29.0196 22.2671 30 20.9797 30L16.924 29.9941C15.3081 29.9941 14.3853 29.1437 14.343 27.2295L14.1144 21.8594L15.3625 15.1953C15.8237 12.3645 14.8889 11.1646 14.093 10.2148L17.5275 10.2109C18.872 10.211 19.4293 10.8084 19.4806 12.4844L19.84 21.4248L23.841 11.5889C24.2119 10.6845 24.906 10.208 26.0969 10.208H29.1115Z" fill="white"/>
+          <path d="M7.85174 10.6641C9.28687 9.94345 10.6554 10.0338 11.7619 10.7754C12.9287 11.6226 13.5922 12.9158 13.2336 14.6885L10.924 26.9912C10.5862 28.993 8.65369 30.3133 6.64276 29.9336C4.74922 29.5748 3.35277 27.7988 3.72967 25.6641L5.03826 18.5391L4.22479 18.9072C2.71416 19.5856 0.937298 18.9073 0.261897 17.3877C-0.413447 15.8681 0.262199 14.0858 1.77264 13.4043L7.85174 10.6641Z" fill="white"/>
+          <path d="M49.2443 10.2119C51.2703 10.212 51.7946 11.1853 51.3332 13.3047L48.8039 27.1504C48.5479 28.6639 48.1102 29.9969 46.3224 29.9971H43.1476C41.6276 29.9971 41.0944 28.8513 41.3537 27.3799L43.964 12.7324C44.2263 11.1736 44.899 10.212 46.8498 10.2119H49.2443Z" fill="white"/>
+          <path d="M67.5851 10.2051C69.5359 10.2051 70.4343 10.5584 71.5197 11.5322C73.3285 13.1514 73.6701 15.5666 73.2629 17.4873L71.466 27.1445C71.2158 28.6069 70.8296 29.9912 69.0656 29.9912L65.9572 29.9941C64.6034 29.9941 63.8884 29.0049 64.1535 27.3135L65.4142 19.7607C65.5949 18.3738 65.3328 17.3905 64.5793 16.7754C63.4065 15.8196 61.7479 16.2354 60.9064 17.2002C60.3638 17.7791 60.1169 18.5663 59.8273 20.1611L58.5607 27.1533C58.3225 28.5342 57.9366 29.9969 56.1037 29.9971H52.9797C51.035 29.9971 50.8989 28.3024 51.1193 27.3164L53.7512 12.7295C54.0076 11.3907 54.4814 10.208 56.6369 10.208L58.8771 10.2051C60.6138 10.2051 61.6483 10.8506 61.1027 13.2988L60.8703 14.5107C62.0672 12.0716 65.0013 10.2052 67.5851 10.2051Z" fill="white"/>
+          <path d="M48.5988 1C50.5736 1.00011 52.175 2.60414 52.175 4.58203C52.175 6.55993 50.5736 8.16395 48.5988 8.16406C46.6239 8.16406 45.0226 6.56 45.0226 4.58203C45.0226 2.60407 46.6239 1 48.5988 1Z" fill="white"/>
+        </svg>
+          <p style="font-size:14px;font-weight:800;color:var(--text-dim);letter-spacing:2px;margin-bottom:16px;text-transform:uppercase;">winnersclub.com - independent affiliate review</p>
+          <div class="footer-badges">
+            <span class="age-badge">18+</span>
+            <span class="cert-badge">GamCare</span>
+            <span class="cert-badge">SSL</span>
+          </div>
+        </div>
+
+        <div class="footer-links-grid">
+          <div class="footer-col">
+            <h4>Products</h4>
+            <a href="/kk/sports-betting">Спорт ставкалары</a>
+            <a href="/kk/casino">Казино</a>
+            <a href="/kk/aviator">Aviator</a>
+            <a href="/kk/poker">Покер</a>
+          </div>
+          <div class="footer-col">
+            <h4>Promos</h4>
+            <a href="/kk/promo-code">Промокод</a>
+            <a href="/kk/vip-club">VIP клуб</a>
+            <a href="/kk/lucky-drive">Lucky Drive</a>
+            <a href="/kk/promotions">Free Money</a>
+            <a href="/kk/mirrors">Mirror</a>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <a href="/kk/register">Тіркелу</a>
+            <a href="/kk/access">Кіру</a>
+            <a href="/kk/review">Review</a>
+            <a href="/kk/website">Website</a>
+            <a href="/kk/live-streaming">Тікелей эфир</a>
+            <a href="/kk/payment-methods">Payments</a>
+            <a href="/kk/app">Download App</a>
+            <a href="/kk/news">Жаңалықтар</a>
+            <a href="/kk/faq">FAQ</a>
+            <a href="/kk/mirrors">Mirror</a>
+          </div>
+          <div class="footer-col">
+            <h4>Countries</h4>
+            <a href="/kk/country-bangladesh">Bangladesh</a>
+            <a href="/kk/country-india">India</a>
+            <a href="/kk/country-pakistan">Pakistan</a>
+            <a href="/kk/country-korea">Korea</a>
+            <a href="/kk/country-malaysia">Malaysia</a>
+            <a href="/kk/country-singapore">Singapore</a>
+            <a href="/kk/country-south-africa">South Africa</a>
+            <a href="/kk/country-tanzania">Tanzania</a>
+            <a href="/kk/country-malawi">Malawi</a>
+            <a href="/kk/country-kenya">Kenya</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">WinnersClub is the players' club for Stake. We're independent of Stake, and we share intel with members. This site is for informational purposes only. Gambling involves risk, please Жауапкершілікпен ойнаңыз. If you or someone you know has a gambling problem, please contact GamCare or a local support organization.</p>
+        <p class="footer-copyright">&copy; 2026 winnersclub.com. Барлық құқықтар сақталған.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/script.min.js" defer></script>
+  <script>
+(function(){
+  let kellyFrac=1;
+  document.querySelectorAll('.frac-btn').forEach(btn=>{
+    btn.onclick=function(){
+      document.querySelectorAll('.frac-btn').forEach(b=>b.classList.remove('active'));
+      this.classList.add('active');
+      kellyFrac=parseFloat(this.dataset.frac);
+      calc();
+    };
+  });
+
+  function calc(){
+    const bankroll=parseFloat(document.getElementById('k-bankroll').value)||0;
+    const dec=parseFloat(document.getElementById('k-odds').value)||0;
+    const probPct=parseFloat(document.getElementById('k-prob').value)||0;
+    const p=probPct/100;
+    const q=1-p;
+    const b=dec-1;
+    const warn=document.getElementById('k-warn');
+    if(bankroll<=0||dec<=1||p<=0||p>=1){
+      ['k-pct','k-stake','k-edge','k-ev'].forEach(id=>document.getElementById(id).textContent='--');
+      warn.textContent='';
+      return;
+    }
+    const raw=(b*p - q)/b;
+    const fKelly=Math.max(0,raw)*kellyFrac;
+    const edge=(p*dec)-1;
+    const ev=edge;
+    document.getElementById('k-pct').textContent=(fKelly*100).toFixed(2)+'%';
+    document.getElementById('k-stake').textContent=(fKelly*bankroll).toFixed(2);
+    document.getElementById('k-edge').textContent=(edge*100).toFixed(2)+'%';
+    document.getElementById('k-ev').textContent=ev.toFixed(4);
+    if(raw<=0){
+      warn.textContent='No edge detected. Kelly recommends 0% stake on this bet.';
+      document.getElementById('k-pct').className='out-val warn';
+    } else {
+      warn.textContent='';
+      document.getElementById('k-pct').className='out-val';
+    }
+  }
+
+  ['k-bankroll','k-odds','k-prob'].forEach(id=>document.getElementById(id).addEventListener('input',calc));
+  calc();
+})();
+</script>
+</body>
+</html>
