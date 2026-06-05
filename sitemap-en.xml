@@ -10072,4 +10072,53 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://winnersclub.com/live-odds/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://winnersclub.com/live-odds/"/>
   </url>
+  <url>
+    <loc>https://winnersclub.com/originals/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://winnersclub.com/originals/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://winnersclub.com/originals/"/>
+  </url>
+  <url>
+    <loc>https://winnersclub.com/stake-engine/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://winnersclub.com/stake-engine/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://winnersclub.com/stake-engine/"/>
+  </url>
+  <url>
+    <loc>https://winnersclub.com/vip/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://winnersclub.com/vip/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://winnersclub.com/vip/"/>
+  </url>
+  <url>
+    <loc>https://winnersclub.com/slots/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://winnersclub.com/slots/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://winnersclub.com/slots/"/>
+  </url>
+  <url>
+    <loc>https://winnersclub.com/live-casino/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://winnersclub.com/live-casino/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://winnersclub.com/live-casino/"/>
+  </url>
+  <url>
+    <loc>https://winnersclub.com/responsible-gambling/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://winnersclub.com/responsible-gambling/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://winnersclub.com/responsible-gambling/"/>
+  </url>
+  <url>
+    <loc>https://winnersclub.com/news/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://winnersclub.com/news/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://winnersclub.com/news/"/>
+  </url>
 </urlset>
