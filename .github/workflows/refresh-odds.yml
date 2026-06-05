@@ -1,0 +1,49 @@
+name: Refresh live odds
+
+# Pulls fresh Stake.com prices from odds-api.io every hour
+# and commits the result so /live-odds/ always serves current data.
+on:
+  schedule:
+    # Top of every hour, UTC
+    - cron: '5 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-odds
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Pull fresh odds
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          python3 _fetch_odds.py
+
+      - name: Commit + push if changed
+        run: |
+          git config user.name  "winnersclub-bot"
+          git config user.email "bot@winnersclub.com"
+          if git diff --quiet -- odds-data.json; then
+            echo "No odds change, skipping commit."
+            exit 0
+          fi
+          git add odds-data.json
+          git commit -m "chore(odds): hourly refresh $(date -u +%FT%TZ)"
+          git push origin HEAD:main
