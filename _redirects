@@ -1,0 +1,110 @@
+# WinnersClub redirects
+# Format: <source> <destination> <status>
+# 301 = permanent redirect (passes SEO equity)
+# 410 = gone (spam / dead, tell crawlers to drop it)
+
+# ------------------------------------------------------------
+# SPAM — kill with 410 (don't redirect, don't pass equity)
+# ------------------------------------------------------------
+/__media__/*  /404.html  410
+
+# ------------------------------------------------------------
+# Legacy /en/ tree — high-value, 301 to new home
+# (Based on GA traffic data, last 6 months)
+# ------------------------------------------------------------
+/en/                                                                                  /                       301
+/en                                                                                   /                       301
+/en/casino/                                                                           /casino/                301
+/en/casino                                                                            /casino/                301
+/en/poker/                                                                            /poker/                 301
+/en/poker                                                                             /poker/                 301
+/en/sportsbook/                                                                       /sports/                301
+/en/sportsbook                                                                        /sports/                301
+/en/mirror-sites/                                                                     /mirror/                301
+/en/mirror-sites                                                                      /mirror/                301
+/en/stake-promo-codes/                                                                /promo-code/            301
+/en/stake-promo-codes                                                                 /promo-code/            301
+/en/stake-promo-codes/stake-promo-code/                                               /promo-code/            301
+/en/register/                                                                         /promo-code/            301
+/en/register                                                                          /promo-code/            301
+/en/app/                                                                              /mirror/                301
+/en/app                                                                               /mirror/                301
+/en/stake-review/                                                                     /about-stake/           301
+/en/stake-review                                                                      /about-stake/           301
+
+# Specific high-traffic legacy articles
+/en/app/how-to-access-stake-com-on-mobile-20230627-0008/                              /mirror/                301
+/en/casino/stake-com-casino-player-wins-1-26million-jackpot-20230627-0008/            /casino/                301
+/en/casino/recent-stake-com-big-wins-20230627-0008/                                   /casino/                301
+/en/casino/mega-win-on-stake-plinko-20230627-0008/                                    /casino/                301
+/en/mirror-sites/access-stake-com-mirror-links-20230627-0008/                         /mirror/                301
+/en/sportsbook/how-to-bet-on-sports-at-stake-20230627-0008/                           /sports/                301
+/en/sportsbook/9100-won-from-10-sports-bet-on-stake-com-20230627-0008/                /sports/                301
+
+# Betwinner content (different brand, send to homepage)
+/en/betwinner-review/                                                                 /                       301
+/en/betwinner-review                                                                  /                       301
+/en/betwinner-promo-codes/*                                                           /                       301
+/en/sportsbook/betwinner-galaxy-wins-promo-20221220-0001/                             /                       301
+
+# Author / search
+/en/contributor/*                                                                     /                       301
+/en/searchresult/*                                                                    /                       301
+/en/error/404/                                                                        /404.html               301
+
+# Catch-all for /en/* (anything not specifically matched above) → homepage
+/en/*                                                                                 /                       301
+
+# ------------------------------------------------------------
+# Portuguese legacy URLs (low traffic but real)
+# ------------------------------------------------------------
+/cassino/principal     /casino/             301
+/cassino/*             /casino/             301
+/esportes/in-play      /sports/             301
+/esportes/*            /sports/             301
+/esportes              /sports/             301
+/clube-vip             /vip/                301
+/promocoes             /promo-code/         301
+/bem-vindo             /                    301
+/blog                  /news/               301
+/blog/*                /news/               301
+/faq                   /404.html            410
+/jogo-responsavel      /responsible-gambling/  301
+/fontes-apostas        /                    301
+/regras-apostas        /responsible-gambling/  301
+/afiliados-resumen     /                    301
+/termos                /                    301
+/privacidade           /                    301
+/Privacidade           /                    301
+/sk-privacy.php        /                    410
+/pldftp                /                    410
+
+# ------------------------------------------------------------
+# Old country pages (most got 0 traffic, redirect to mirror/)
+# ------------------------------------------------------------
+/country-*             /mirror/             301
+
+# ------------------------------------------------------------
+# Old root-level legacy HTML files (no traffic but block bots if they hit cached URLs)
+# ------------------------------------------------------------
+/casino.html           /casino/             301
+/poker.html            /poker/              301
+/sports-betting.html   /sports/             301
+/aviator.html          /aviator/            301
+/promo-code.html       /promo-code/         301
+/stake-promo-code.html /promo-code/         301
+/vip-club.html         /vip/                301
+/mirrors.html          /mirror/             301
+/alternative-link.html /mirror/             301
+/access.html           /mirror/             301
+/app.html              /mirror/             301
+/payment-methods.html  /payments/           301
+/news.html             /news/               301
+/news-*.html           /news/               301
+/promotions.html       /promo-code/         301
+/register.html         /promo-code/         301
+/review.html           /about-stake/        301
+/website.html          /                    301
+/live-streaming.html   /                    301
+/lucky-drive.html      /                    301
+/faq.html              /                    301
