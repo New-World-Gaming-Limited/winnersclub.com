@@ -1,22 +1,8 @@
 {
-  "generated_at": "2026-06-05T21:38:10+00:00",
+  "generated_at": "2026-06-05T22:34:47+00:00",
   "bookmaker": "Stake.com",
   "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet",
   "matches": [
-    {
-      "id": 71306982,
-      "league": "International - Int. Friendly Games",
-      "league_slug": "international-int-friendly-games",
-      "date": "2026-06-05T22:15:00Z",
-      "home": "Paraguay",
-      "away": "Nicaragua",
-      "home_odds": "1.110",
-      "draw_odds": "7.400",
-      "away_odds": "17.000",
-      "updated_at": "2026-06-05T21:35:38.955Z",
-      "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46573801-paraguay-nicaragua",
-      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
-    },
     {
       "id": 71916524,
       "league": "International - Int. Friendly Games",
@@ -24,10 +10,10 @@
       "date": "2026-06-05T23:00:00Z",
       "home": "Saudi Arabia",
       "away": "Puerto Rico",
-      "home_odds": "1.260",
+      "home_odds": "1.270",
       "draw_odds": "5.200",
-      "away_odds": "8.400",
-      "updated_at": "2026-06-05T21:03:00.766Z",
+      "away_odds": "8.200",
+      "updated_at": "2026-06-05T22:32:37.163Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46617054-saudi-arabia-puerto-rico",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
@@ -38,10 +24,10 @@
       "date": "2026-06-05T23:30:00Z",
       "home": "Canada",
       "away": "Ireland",
-      "home_odds": "1.620",
+      "home_odds": "1.690",
       "draw_odds": "3.350",
-      "away_odds": "4.900",
-      "updated_at": "2026-06-05T18:22:21.288Z",
+      "away_odds": "4.700",
+      "updated_at": "2026-06-05T22:34:38.933Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46572671-canada-ireland",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
@@ -54,8 +40,8 @@
       "away": "Peru",
       "home_odds": "2.600",
       "draw_odds": "3.050",
-      "away_odds": "2.550",
-      "updated_at": "2026-06-05T21:25:28.124Z",
+      "away_odds": "2.600",
+      "updated_at": "2026-06-05T22:18:23.895Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46553438-haiti-peru",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
