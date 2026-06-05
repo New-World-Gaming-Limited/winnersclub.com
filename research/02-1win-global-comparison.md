@@ -142,7 +142,7 @@ Both URL paths can rank simultaneously for different query variants. The `-0001/
 1win {Country} – How to {join|register} and get your bonus with {CODE} code
 ```
 Examples:
-- "1win Brazil - How to join and get your bonus with NEWBONUS code"
+- "1win Brazil - How to join and get your bonus with MAXBET code"
 - "1win Argentina - How to register and get your bonus with the XLBONUS code"
 - "1win Colombia - How to register and get your bonus with the XLBONUS code"
 
