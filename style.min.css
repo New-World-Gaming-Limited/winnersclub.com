@@ -50,3 +50,105 @@
 .vertical-card .vc-label{position:relative;z-index:2;padding:22px;color:var(--white);font-weight:800;font-size:20px}
 .club-body{color:#cfcfcf;line-height:1.8;font-size:16px;max-width:800px;margin:0 auto}
 .club-body p{margin-bottom:18px}
+
+/* === MOBILE FIX v2 (≤860 hamburger, sticky-cta stack) === */
+@media(max-width:860px){
+  .header-inner{padding:0 16px;gap:12px;height:64px}
+  .header-logo svg{width:160px;height:auto}
+  .header-nav{position:fixed;top:64px;left:0;right:0;max-height:calc(100vh - 64px);background:var(--bg);padding:16px;flex-direction:column;gap:4px;border-bottom:1px solid var(--border);transform:translateY(-120%);opacity:0;pointer-events:none;transition:all .35s var(--ease);z-index:999;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .header-nav.nav-open{transform:translateY(0);opacity:1;pointer-events:auto}
+  .nav-link{padding:14px 16px;font-size:15px;width:100%;text-align:left;border-radius:8px}
+  .hamburger{display:flex}
+  .lang-selector,.lang-switcher{display:none}
+  .header-actions .btn-signup{display:none}
+  .header-actions{gap:8px}
+  .site-header{transition:transform .35s var(--ease)}
+  body{padding-bottom:96px}
+  .sticky-cta{flex-direction:column;align-items:stretch;gap:10px;padding:14px 14px 12px;text-align:center}
+  .sticky-cta-text{font-size:13px;line-height:1.4;padding-right:24px}
+  .sticky-cta-actions{justify-content:center;width:100%}
+  .sticky-cta-actions .btn{width:100%;justify-content:center;padding:12px 20px;font-size:14px}
+  .sticky-cta-close{top:8px;right:10px;font-size:22px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%}
+}
+@media(max-width:480px){
+  .header-logo svg{width:140px}
+  .header-inner{padding:0 12px;gap:8px}
+  .sticky-cta-text{font-size:12px}
+}
+
+/* === HERO IMAGE/TEXT SEPARATION — mobile + tablet === */
+/* Club-hero (used on all sub-pages): stack image on top, text on solid panel below.
+   This keeps the hostess fully visible and the headline always legible. */
+@media(max-width:860px){
+  .club-hero{min-height:auto;display:block;padding:64px 0 0;background:var(--bg)}
+  .club-hero .ch-bg{position:relative;inset:auto;width:100%;height:340px;background-position:center 18%;background-size:cover;animation:none;box-shadow:none}
+  .club-hero .ch-overlay{position:absolute;left:0;right:0;top:64px;height:340px;background:linear-gradient(180deg,rgba(20,20,21,0) 0,rgba(20,20,21,0) 55%,var(--bg) 100%);pointer-events:none}
+  .club-hero .ch-content{padding:32px 20px 40px}
+  .club-hero .ch-text{max-width:100%}
+  .ch-title{font-size:38px;letter-spacing:-1px;line-height:1.05;margin-bottom:14px}
+  .ch-tease{font-size:14px;color:var(--gold);margin-bottom:10px}
+  .ch-sub{font-size:16px;line-height:1.55;margin-bottom:22px}
+  .ch-actions{display:flex;flex-direction:column;gap:10px}
+  .ch-actions .btn{width:100%;justify-content:center}
+}
+@media(max-width:480px){
+  .club-hero .ch-bg{height:280px;background-position:center 15%}
+  .club-hero .ch-overlay{height:280px}
+  .ch-title{font-size:34px}
+}
+
+/* Top hero (homepage) — ensure image upper portion shows face above title */
+@media(max-width:860px){
+  .hero{padding-top:0;min-height:auto;display:block;background:var(--bg)}
+  .hero-bg{position:relative;inset:auto;width:100%;height:360px;background-position:center 18%!important;min-height:0}
+  .hero-overlay{position:absolute;top:64px;left:0;right:0;height:360px;background:linear-gradient(180deg,rgba(20,20,21,0) 0,rgba(20,20,21,0) 60%,var(--bg) 100%)!important;pointer-events:none}
+  .hero-content{position:relative;z-index:2;padding:28px 20px 48px;text-align:left}
+  .hero-content{padding-top:28px}
+}
+
+/* Page-hero (used on /promo-code/, /about-stake/, etc.) — stack image then text */
+@media(max-width:860px){
+  .page-hero{min-height:auto;display:block;padding:64px 0 0;background:var(--bg)}
+  .page-hero .hero-bg,.page-hero-bg{position:relative;inset:auto;width:100%;height:320px;background-position:center 15%}
+  .page-hero .hero-overlay{position:absolute;left:0;right:0;top:64px;height:320px;background:linear-gradient(180deg,rgba(20,20,21,0) 0,rgba(20,20,21,0) 55%,var(--bg) 100%)}
+  .page-hero-content{padding:28px 20px 40px}
+  .page-hero-title{font-size:36px}
+  .page-hero-sub{font-size:16px}
+}
+
+/* Girl-break sections — already stack, but make sure image lands above text on mobile */
+@media(max-width:860px){
+  .girl-break{display:block;min-height:auto}
+  .girl-break-bg{position:relative;inset:auto;width:100%;height:280px;background-position:center 15%}
+  .girl-break.girl-right .girl-break-overlay,.girl-break.girl-left .girl-break-overlay{position:absolute;left:0;right:0;top:0;height:280px;background:linear-gradient(180deg,rgba(20,20,21,0) 0,rgba(20,20,21,0) 55%,var(--bg) 100%)!important}
+  .girl-break-content{padding:32px 20px 40px;text-align:left!important}
+  .girl-break-sub{max-width:100%!important;margin:0 0 20px!important}
+}
+
+/* === LIVE-ODDS WIDGET === */
+.odds-meta{font-size:13px;color:var(--text-dim);margin-bottom:16px;text-align:center;font-family:var(--font-mono)}
+.odds-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--border);border-radius:12px}
+.odds-table{width:100%;border-collapse:collapse;font-size:14px;background:var(--surface)}
+.odds-table th{background:#0d0d0e;color:var(--text-dim);font-size:11px;text-transform:uppercase;letter-spacing:1px;padding:14px 12px;text-align:left;border-bottom:1px solid var(--border);font-weight:700}
+.odds-table th:nth-child(n+3){text-align:center;width:64px}
+.odds-table td{padding:14px 12px;border-bottom:1px solid var(--border);vertical-align:middle}
+.odds-table tr:last-child td{border-bottom:none}
+.odds-table .oh-match{min-width:220px}
+.odds-table .oh-match strong{color:var(--white)}
+.odds-table .vs{color:var(--text-muted);font-size:12px;margin:0 4px}
+.odds-table .oh-league{font-size:11px;color:var(--text-muted);margin-top:4px;text-transform:uppercase;letter-spacing:.5px}
+.odds-table .oh-kick{font-family:var(--font-mono);font-size:13px;color:var(--gold);white-space:nowrap;min-width:90px}
+.odds-table .o{text-align:center;padding:8px 6px}
+.odds-table .o-price{display:inline-block;min-width:54px;padding:10px 8px;border-radius:8px;background:rgba(255,215,0,.08);border:1px solid rgba(255,215,0,.25);color:var(--gold);font-family:var(--font-mono);font-weight:700;font-size:14px;transition:all .2s var(--ease)}
+.odds-table .o-price:hover{background:var(--gold);color:#1a1a1a;transform:translateY(-1px);box-shadow:var(--glow-gold)}
+.odds-table .oh-bet .btn{padding:8px 18px;font-size:12px}
+.odds-foot{margin-top:18px;text-align:center;font-size:13px;color:var(--text-dim)}
+.odds-empty{padding:48px 24px;text-align:center;color:var(--text-dim);background:var(--surface);border:1px dashed var(--border);border-radius:12px}
+@media(max-width:680px){
+  .odds-table{font-size:13px}
+  .odds-table th,.odds-table td{padding:10px 8px}
+  .odds-table .oh-match{min-width:160px}
+  .odds-table .oh-bet{display:none}
+  .odds-table th:last-child,.odds-table td:last-child:not(.o){display:none}
+  .odds-table .o-price{min-width:44px;padding:8px 6px;font-size:13px}
+}

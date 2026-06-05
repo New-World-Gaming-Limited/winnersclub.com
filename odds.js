@@ -1,32 +1,63 @@
-(function(){
+/* Live odds widget — pulls /odds-data.json (refreshed server-side from odds-api.io)
+   Every outbound click routes through the WinnersClub affiliate redirect. */
+(function () {
   var w = document.getElementById('odds-widget');
   if (!w) return;
-  var endpoint = w.getAttribute('data-endpoint');
-  var poll = parseInt(w.getAttribute('data-poll') || '30000', 10);
-  var stub = [
-    {h:'Manchester Utd', a:'Arsenal', league:'EPL', odds:[2.10,3.40,3.20], kick:'Sat 17:30'},
-    {h:'Real Madrid', a:'Barcelona', league:'La Liga', odds:[2.55,3.30,2.65], kick:'Sun 21:00'},
-    {h:'Bayern', a:'Dortmund', league:'Bundesliga', odds:[1.65,3.90,4.80], kick:'Sat 18:30'},
-    {h:'Inter', a:'Juventus', league:'Serie A', odds:[1.95,3.45,3.80], kick:'Sun 20:45'},
-    {h:'PSG', a:'Marseille', league:'Ligue 1', odds:[1.55,4.20,5.50], kick:'Sun 21:00'},
-    {h:'Liverpool', a:'Chelsea', league:'EPL', odds:[1.85,3.70,4.10], kick:'Sun 16:30'}
-  ];
-  function render(data){
-    var aff='https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet';
-    w.innerHTML='<table class="odds-table"><thead><tr><th>Match</th><th>League</th><th>Kick</th><th>1</th><th>X</th><th>2</th><th></th></tr></thead><tbody>'+
-      data.map(function(m){
-        return '<tr><td><strong>'+m.h+'</strong> vs <strong>'+m.a+'</strong></td><td>'+m.league+'</td><td>'+m.kick+'</td>'+
-          m.odds.map(function(o){return '<td class="o">'+o.toFixed(2)+'</td>';}).join('')+
-          '<td><a href="'+aff+'" target="_blank" rel="noopener" class="btn btn-signup">Bet</a></td></tr>';
-      }).join('')+'</tbody></table>';
+  var endpoint = w.getAttribute('data-endpoint') || '/odds-data.json';
+  var poll = parseInt(w.getAttribute('data-poll') || '60000', 10);
+  var AFF = 'https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet';
+
+  function fmtKick(iso) {
+    try {
+      var d = new Date(iso);
+      var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      var hh = String(d.getHours()).padStart(2, '0');
+      var mm = String(d.getMinutes()).padStart(2, '0');
+      return days[d.getDay()] + ' ' + hh + ':' + mm;
+    } catch (e) { return iso || ''; }
   }
-  function load(){
-    if (!endpoint) { render(stub); return; }
-    fetch(endpoint).then(function(r){return r.json();}).then(function(d){
-      var items = Array.isArray(d) ? d : (d.matches || d.events || stub);
-      render(items.length ? items : stub);
-    }).catch(function(){ render(stub); });
+
+  function leagueShort(name) {
+    if (!name) return '';
+    return name.replace(/^International\s*-\s*/i, '').replace(/^[A-Z][a-z]+\s*-\s*/, function (m) { return m; });
+  }
+
+  function render(matches, meta) {
+    if (!matches || !matches.length) {
+      w.innerHTML = '<div class="odds-empty">No fixtures with live Stake prices right now. Tap the button above to open the sportsbook.</div>';
+      return;
+    }
+    var rows = matches.map(function (m) {
+      var aff = AFF; // every row routes through the same affiliate URL per club rules
+      return '<tr>' +
+        '<td class="oh-match"><strong>' + m.home + '</strong> <span class="vs">vs</span> <strong>' + m.away + '</strong><div class="oh-league">' + leagueShort(m.league) + '</div></td>' +
+        '<td class="oh-kick">' + fmtKick(m.date) + '</td>' +
+        '<td class="o"><a href="' + aff + '" target="_blank" rel="noopener" class="o-price">' + (m.home_odds || '-') + '</a></td>' +
+        '<td class="o"><a href="' + aff + '" target="_blank" rel="noopener" class="o-price">' + (m.draw_odds || '-') + '</a></td>' +
+        '<td class="o"><a href="' + aff + '" target="_blank" rel="noopener" class="o-price">' + (m.away_odds || '-') + '</a></td>' +
+        '<td class="oh-bet"><a href="' + aff + '" target="_blank" rel="noopener" class="btn btn-gold-grad">Bet</a></td>' +
+        '</tr>';
+    }).join('');
+    var stamp = meta && meta.generated_at ? new Date(meta.generated_at).toUTCString() : '';
+    w.innerHTML =
+      '<div class="odds-meta">Stake.com prices, refreshed ' + stamp + '. Click any price to take it.</div>' +
+      '<div class="odds-scroll"><table class="odds-table">' +
+      '<thead><tr><th>Match</th><th>Kick</th><th>1</th><th>X</th><th>2</th><th></th></tr></thead>' +
+      '<tbody>' + rows + '</tbody></table></div>' +
+      '<div class="odds-foot">Prices via Stake.com via odds-api.io. Use code <span class="code-highlight">MAXBET</span> on signup for the 200% welcome up to $3,000.</div>';
+  }
+
+  function load() {
+    fetch(endpoint, { cache: 'no-store' })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        var matches = Array.isArray(d) ? d : (d.matches || []);
+        render(matches, d);
+      })
+      .catch(function () {
+        w.innerHTML = '<div class="odds-empty">Couldn\'t load the live board. Open Stake.com to see the markets.</div>';
+      });
   }
   load();
-  if (endpoint) setInterval(load, poll);
+  setInterval(load, poll);
 })();
