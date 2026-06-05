@@ -192,19 +192,41 @@
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
       <a href="./" class="header-logo" aria-label="WinnersClub home">
-        <svg width="170" height="36" viewBox="0 0 170 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="200" height="38" viewBox="0 0 200 38" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="wc-gold" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#FFD700"/>
-              <stop offset="0.5" stop-color="#FFAA00"/>
-              <stop offset="1" stop-color="#FFD700"/>
+            <linearGradient id="wc-crest" x1="4" y1="2" x2="36" y2="38" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#FFEFAE"/>
+              <stop offset="0.45" stop-color="#E8B736"/>
+              <stop offset="1" stop-color="#7A5512"/>
             </linearGradient>
+            <linearGradient id="wc-text-gold" x1="0" y1="10" x2="0" y2="30" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#FFE57A"/>
+              <stop offset="1" stop-color="#D6A21E"/>
+            </linearGradient>
+            <linearGradient id="wc-bar" x1="0" y1="0" x2="120" y2="0" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#D6A21E" stop-opacity="0"/>
+              <stop offset="0.5" stop-color="#FFE57A"/>
+              <stop offset="1" stop-color="#D6A21E" stop-opacity="0"/>
+            </linearGradient>
+            <radialGradient id="wc-crest-inner" cx="20" cy="14" r="18" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#FFE9A8" stop-opacity="0.8"/>
+              <stop offset="1" stop-color="#FFE9A8" stop-opacity="0"/>
+            </radialGradient>
           </defs>
-          <!-- monogram badge -->
-          <rect x="0" y="0" width="36" height="36" rx="8" fill="url(#wc-gold)"/>
-          <text x="18" y="25" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="900" text-anchor="middle" fill="#141415" letter-spacing="-0.5">WC</text>
-          <!-- wordmark -->
-          <text x="46" y="24" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="800" fill="#ffffff" letter-spacing="-0.3">Winners<tspan fill="#FFD700">Club</tspan></text>
+          <!-- Crest shield -->
+          <g>
+            <path d="M4 6.5 L20 2.5 L36 6.5 L36 22 C36 30.2 28.5 35.8 20 38 C11.5 35.8 4 30.2 4 22 Z" fill="url(#wc-crest)"/>
+            <path d="M4 6.5 L20 2.5 L36 6.5 L36 22 C36 30.2 28.5 35.8 20 38 C11.5 35.8 4 30.2 4 22 Z" fill="url(#wc-crest-inner)"/>
+            <path d="M5.4 7.4 L20 3.7 L34.6 7.4 L34.6 21.8 C34.6 29 27.6 34.3 20 36.4 C12.4 34.3 5.4 29 5.4 21.8 Z" fill="none" stroke="#5A3F0E" stroke-width="0.4" opacity="0.55"/>
+            <!-- Monogram W with stylised C beneath -->
+            <text x="20" y="22" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" font-style="italic" text-anchor="middle" fill="#1A1308" letter-spacing="-0.8">W</text>
+            <text x="20" y="32" font-family="Georgia, 'Times New Roman', serif" font-size="9" font-weight="700" font-style="italic" text-anchor="middle" fill="#1A1308" letter-spacing="2">CLUB</text>
+          </g>
+          <!-- Wordmark -->
+          <g transform="translate(46, 0)">
+            <text x="0" y="22" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF" letter-spacing="-0.4">Winners<tspan fill="url(#wc-text-gold)">Club</tspan></text>
+            <rect x="0" y="28" width="150" height="1.2" fill="url(#wc-bar)"/>
+          </g>
         </svg>
       </a>
 
