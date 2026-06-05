@@ -127,6 +127,8 @@
 
 /* === LIVE-ODDS WIDGET === */
 .odds-meta{font-size:13px;color:var(--text-dim);margin-bottom:16px;text-align:center;font-family:var(--font-mono)}.odds-stale{color:#d9a441;font-style:italic}
+.mirror-domain-link{color:inherit;text-decoration:none;border-bottom:1px dotted transparent;transition:border-color .15s,color .15s}.mirror-domain-link:hover{color:var(--gold,#FFD700);border-bottom-color:var(--gold,#FFD700)}
+.mirror-domain-inline{color:var(--gold,#FFD700);text-decoration:none;border-bottom:1px dotted rgba(255,215,0,.4);transition:border-color .15s}.mirror-domain-inline:hover{border-bottom-color:var(--gold,#FFD700)}
 .odds-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--border);border-radius:12px}
 .odds-table{width:100%;border-collapse:collapse;font-size:14px;background:var(--surface)}
 .odds-table th{background:#0d0d0e;color:var(--text-dim);font-size:11px;text-transform:uppercase;letter-spacing:1px;padding:14px 12px;text-align:left;border-bottom:1px solid var(--border);font-weight:700}
