@@ -1,53 +1,46 @@
 User-agent: *
 Allow: /
+Disallow: /__media__/
+Disallow: /uploaded_attachments/
 
-Disallow: /ar/
-Disallow: /bg/
-Disallow: /bn/
-Disallow: /ca/
-Disallow: /cs/
-Disallow: /da/
-Disallow: /de/
-Disallow: /el/
-Disallow: /es/
-Disallow: /et/
-Disallow: /fa/
-Disallow: /fi/
-Disallow: /fr/
-Disallow: /gl/
-Disallow: /he/
-Disallow: /hi/
-Disallow: /hr/
-Disallow: /hu/
-Disallow: /id/
-Disallow: /it/
-Disallow: /ja/
-Disallow: /kk/
-Disallow: /ko/
-Disallow: /lo/
-Disallow: /lt/
-Disallow: /lv/
-Disallow: /mn/
-Disallow: /ms/
-Disallow: /mt/
-Disallow: /nb/
-Disallow: /nl/
-Disallow: /pl/
-Disallow: /pt/
-Disallow: /ro/
-Disallow: /ru/
-Disallow: /sk/
-Disallow: /sl/
-Disallow: /sq/
-Disallow: /sr/
-Disallow: /sv/
-Disallow: /th/
-Disallow: /tl/
-Disallow: /tr/
-Disallow: /uk/
-Disallow: /ur/
-Disallow: /uz/
-Disallow: /vi/
-Disallow: /zh/
+# LLM and AI crawlers — explicitly welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
 
 Sitemap: https://winnersclub.com/sitemap.xml
