@@ -11,11 +11,19 @@
   </url>
   <url>
     <loc>https://winnersclub.com/promo-code/</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-06-06</lastmod>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://winnersclub.com/promo-code/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://winnersclub.com/ko/promo-code/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://winnersclub.com/promo-code/"/>
+  </url>
+  <url>
+    <loc>https://winnersclub.com/stake-us-bonus/</loc>
+    <lastmod>2026-06-06</lastmod>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://winnersclub.com/stake-us-bonus/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://winnersclub.com/ko/stake-us-bonus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://winnersclub.com/stake-us-bonus/"/>
   </url>
   <url>
     <loc>https://winnersclub.com/casino/</loc>
@@ -155,11 +163,19 @@
   </url>
   <url>
     <loc>https://winnersclub.com/ko/promo-code/</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-06-06</lastmod>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://winnersclub.com/promo-code/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://winnersclub.com/ko/promo-code/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://winnersclub.com/promo-code/"/>
+  </url>
+  <url>
+    <loc>https://winnersclub.com/ko/stake-us-bonus/</loc>
+    <lastmod>2026-06-06</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://winnersclub.com/stake-us-bonus/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://winnersclub.com/ko/stake-us-bonus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://winnersclub.com/stake-us-bonus/"/>
   </url>
   <url>
     <loc>https://winnersclub.com/ko/casino/</loc>

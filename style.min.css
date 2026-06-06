@@ -241,3 +241,35 @@
 /* Promo code MAXBET chip gets a subtle pulse on hover */
 .code-highlight{position:relative;display:inline-block;transition:text-shadow .3s var(--ease),transform .3s var(--ease)}
 .code-highlight:hover{text-shadow:0 0 24px rgba(255,215,0,.55),0 0 8px rgba(255,215,0,.85);transform:scale(1.04)}
+
+/* Verified stamp */
+.verified-stamp{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.2);border-radius:999px;padding:6px 14px;margin:8px 0}
+.verified-stamp::before{content:"✓ ";color:var(--gold);font-weight:700}
+
+/* Bonus calculator */
+.bonus-calc{background:linear-gradient(180deg,rgba(20,20,21,.85),rgba(139,10,26,.18));border:1px solid rgba(255,215,0,.25);border-radius:14px;padding:28px;margin:32px 0;box-shadow:0 8px 30px rgba(0,0,0,.4)}
+.bonus-calc h3{font-family:var(--font-display);color:var(--gold);font-size:1.6rem;margin:0 0 16px}
+.bonus-calc-input{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+.bonus-calc-input label{font-size:14px;color:var(--text-muted);letter-spacing:.04em}
+.bonus-calc-input input[type=range]{width:100%;accent-color:var(--gold)}
+.bonus-calc-input input[type=number]{background:rgba(0,0,0,.4);border:1px solid rgba(255,215,0,.3);color:var(--text);font-size:18px;padding:10px 14px;border-radius:8px;font-family:var(--font-display);width:100%;max-width:200px}
+.bonus-calc-input input[type=number]:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(255,215,0,.15)}
+.bonus-calc-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.bonus-calc-row .stat{background:rgba(0,0,0,.35);border:1px solid rgba(255,215,0,.18);border-radius:10px;padding:14px}
+.bonus-calc-row .stat-label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);margin:0 0 6px}
+.bonus-calc-row .stat-value{font-family:var(--font-display);font-size:1.8rem;color:var(--gold);margin:0;line-height:1.1}
+.bonus-calc-row .stat-sub{font-size:12px;color:var(--text-muted);margin:4px 0 0}
+.bonus-calc-footer{font-size:13px;color:var(--text-muted);margin-top:14px;line-height:1.5}
+.bonus-calc-cta{display:inline-block;margin-top:18px;background:linear-gradient(135deg,#FFD700,#b8860b);color:#141415;font-family:var(--font-display);font-weight:700;letter-spacing:.06em;padding:14px 28px;border-radius:8px;text-decoration:none;text-transform:uppercase;font-size:14px;transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
+.bonus-calc-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,215,0,.35)}
+@media (max-width:640px){.bonus-calc-row{grid-template-columns:1fr}}
+
+/* Eligibility callout */
+.eligibility-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:18px 0}
+.eligibility-grid .item{background:rgba(0,0,0,.3);border-left:3px solid var(--gold);padding:12px 16px;border-radius:6px}
+.eligibility-grid .item strong{color:var(--gold);font-size:13px;letter-spacing:.05em;text-transform:uppercase;display:block;margin-bottom:4px}
+.eligibility-grid .item span{font-size:14px;color:var(--text)}
+
+/* Restricted states list */
+.restricted-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin:14px 0;font-size:14px}
+.restricted-list span{background:rgba(139,10,26,.25);border:1px solid rgba(139,10,26,.4);padding:6px 12px;border-radius:6px;text-align:center;color:#f0a6b0}
