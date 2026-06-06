@@ -273,3 +273,26 @@
 /* Restricted states list */
 .restricted-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin:14px 0;font-size:14px}
 .restricted-list span{background:rgba(139,10,26,.25);border:1px solid rgba(139,10,26,.4);padding:6px 12px;border-radius:6px;text-align:center;color:#f0a6b0}
+
+/* === 2026-06-06 UX hot-fix ============================================= */
+/* 1. Lang switcher compact - prevent native names widening the header row */
+.lang-switcher{width:64px;max-width:64px;font-size:13px;min-height:38px;padding:8px 28px 8px 10px;overflow:hidden;text-overflow:clip;white-space:nowrap}
+.lang-switcher option{text-indent:0}
+/* 2. Hero H1 not eaten by 70px sticky header on shorter viewports */
+.club-hero{padding-top:80px}
+.club-hero .ch-bg{top:0}
+.page-hero{padding-top:160px}
+/* 3. Earlier nav collapse so 8-locale switcher + STEP INSIDE button fit */
+@media(max-width:1100px){
+  .header-nav{position:fixed;top:70px;left:0;right:0;max-height:calc(100vh - 70px);background:var(--bg);padding:16px 24px;flex-direction:column;gap:4px;border-bottom:1px solid var(--border);transform:translateY(-120%);opacity:0;pointer-events:none;transition:all .35s var(--ease);z-index:999;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .header-nav.nav-open{transform:translateY(0);opacity:1;pointer-events:auto}
+  .nav-link{padding:12px 16px;font-size:15px;width:100%;text-align:left}
+  .hamburger{display:flex}
+  .header-actions{gap:10px}
+}
+/* 4. Mobile reset still hides switcher on tiny screens? Override - keep visible always */
+@media(max-width:768px){
+  .lang-selector{display:none}
+  .lang-switcher{display:inline-block!important}
+  .header-actions .btn-signup{display:inline-flex}
+}
