@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T05:28:08+00:00",
+  "generated_at": "2026-06-06T07:17:56+00:00",
   "bookmaker": "Stake.com",
   "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet",
   "matches": [
@@ -10,10 +10,10 @@
       "date": "2026-06-06T13:00:00Z",
       "home": "Belgium",
       "away": "Tunisia",
-      "home_odds": "1.320",
-      "draw_odds": "4.700",
-      "away_odds": "7.600",
-      "updated_at": "2026-06-06T04:30:38.201Z",
+      "home_odds": "1.310",
+      "draw_odds": "4.800",
+      "away_odds": "8.000",
+      "updated_at": "2026-06-06T06:02:08.928Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46549191-belgium-tunisia",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
@@ -85,6 +85,20 @@
       "away_odds": "3.850",
       "updated_at": "2026-06-04T07:58:13.64Z",
       "stake_url": "https://stake.com/sports/soccer/international/world-cup/46082019-usa-paraguay",
+      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
+    },
+    {
+      "id": 67126608,
+      "league": "Sweden - Allsvenskan",
+      "league_slug": "sweden-allsvenskan",
+      "date": "2026-07-03T17:00:00Z",
+      "home": "IK Sirius",
+      "away": "Mjallby AIF",
+      "home_odds": "1.590",
+      "draw_odds": "4.100",
+      "away_odds": "5.000",
+      "updated_at": "2026-06-06T05:33:42.227Z",
+      "stake_url": "https://stake.com/sports/soccer/sweden/allsvenskan/46589501-sirius-mjallby",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
     {
