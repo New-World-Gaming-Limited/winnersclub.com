@@ -7,7 +7,7 @@ WinnersClub is owned by New World Gaming Limited and built on Cloudflare Pages. 
 Editorial principles:
 - We only cite first-party Stake sources, sister sites freetips.com and cryptotips.com, regulators (Curaçao GCB), data providers (Arkham Intelligence, Phemex), neutral news (Bloomberg, BBC, Forbes), industry trades, and game studios (Evolution, Pragmatic Play, Spribe). We do not cite competitor affiliates.
 - All bonus terms, reserve data, and licence references are sourced and dated. Reserve data is sourced from on-chain tagging via intel.arkm.com and refreshed approximately monthly.
-- 18+ only. Curaçao licence 1668/JAZ (Stake.com) / Sweepsteaks Limited under US sweepstakes law (Stake.us).
+- 18+ only. Curaçao licence OGL/2024/1451/0918 (Stake.com) / Sweepsteaks Limited under US sweepstakes law (Stake.us).
 
 ## Core pages (English)
 
@@ -49,7 +49,7 @@ All English pages are mirrored at `/ko/` with full Korean translation. Same stru
 - **Promo code**: MAXBET
 - **Stake.com offer (international)**: 200% match deposit bonus up to $3,000 + 400 free spins. Wagering 40x deposit + bonus. 30 days to clear. Minimum deposit $10.
 - **Stake.us offer (US sweepstakes)**: 560,000 Gold Coins + 56 Stake Cash + 3.5% rakeback. Available in 37 US states. Operated by Sweepsteaks Limited.
-- **Licence**: Curaçao 1668/JAZ (international) / sweepstakes operator (US)
+- **Licence**: Curaçao OGL/2024/1451/0918 (international) / sweepstakes operator (US)
 - **Operator**: Medium Rare N.V. (Curaçao) / Sweepsteaks Limited (US) — both under the Easygo group
 - **Founders**: Ed Craven and Bijan Tehrani
 - **On-chain reserves (May 28 2026 snapshot)**: $339.53M tagged via Arkham Intelligence. 74% Ethereum, 14% Solana, 5% Tron USDT, 6% BNB Chain.

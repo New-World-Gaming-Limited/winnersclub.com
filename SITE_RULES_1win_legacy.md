@@ -484,7 +484,7 @@ operator:
   domain: "winnersclub.com"  # or wherever we land it
   promo_code: "CODE_TBD"  # to confirm with affiliate manager
   bonus_structure: "TBD"  # Stake's offer differs from 1win
-  license: "Curaçao 1668/JAZ"  # to verify
+  license: "Curaçao OGL/2024/1451/0918"  # to verify
   game_count: 4000  # Stake has fewer games than 1win
   provider_count: 50
   unique_selling_points:
