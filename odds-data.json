@@ -1,36 +1,8 @@
 {
-  "generated_at": "2026-06-06T21:30:28+00:00",
+  "generated_at": "2026-06-06T22:30:57+00:00",
   "bookmaker": "Stake.com",
   "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet",
   "matches": [
-    {
-      "id": 69548860,
-      "league": "International - Int. Friendly Games",
-      "league_slug": "international-int-friendly-games",
-      "date": "2026-06-06T22:00:00Z",
-      "home": "Brazil",
-      "away": "Egypt",
-      "home_odds": "1.270",
-      "draw_odds": "5.200",
-      "away_odds": "8.400",
-      "updated_at": "2026-06-06T21:09:38.604Z",
-      "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46608459-brazil-egypt",
-      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
-    },
-    {
-      "id": 71301314,
-      "league": "International - Int. Friendly Games",
-      "league_slug": "international-int-friendly-games",
-      "date": "2026-06-06T22:00:00Z",
-      "home": "Venezuela",
-      "away": "Turkiye",
-      "home_odds": "5.600",
-      "draw_odds": "4.100",
-      "away_odds": "1.470",
-      "updated_at": "2026-06-06T21:11:39.911Z",
-      "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46549200-venezuela-turkiye",
-      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
-    },
     {
       "id": 71170364,
       "league": "International - Int. Friendly Games",
@@ -38,11 +10,25 @@
       "date": "2026-06-07T00:00:00Z",
       "home": "Argentina",
       "away": "Honduras",
-      "home_odds": "1.100",
-      "draw_odds": "7.600",
-      "away_odds": "18.000",
-      "updated_at": "2026-06-06T21:07:37.365Z",
+      "home_odds": "1.090",
+      "draw_odds": "8.000",
+      "away_odds": "19.000",
+      "updated_at": "2026-06-06T22:30:36.704Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46511818-argentina-honduras",
+      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
+    },
+    {
+      "id": 71782704,
+      "league": "International - Int. Friendly Games",
+      "league_slug": "international-int-friendly-games",
+      "date": "2026-06-07T11:00:00Z",
+      "home": "Afghanistan",
+      "away": "Pakistan",
+      "home_odds": "2.180",
+      "draw_odds": "3.050",
+      "away_odds": "3.200",
+      "updated_at": "2026-06-06T15:08:05.79Z",
+      "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46610765-afghanistan-pakistan",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
     {
