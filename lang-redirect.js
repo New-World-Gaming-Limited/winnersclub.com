@@ -29,13 +29,15 @@
     // Korean
     'KR':'ko',
     // Chinese (Simplified target; we ship zh-Hans)
-    'CN':'zh','SG':'zh','MY':'zh','HK':'zh','MO':'zh',
+    'CN':'zh','HK':'zh','MO':'zh','TW':'zh',
     // Vietnamese
     'VN':'vi',
     // Thai
     'TH':'th',
-    // Malay
-    'BN':'ms',
+    // Malay (Malaysia, Brunei, Singapore - Malay is the primary or co-official language)
+    'MY':'ms','BN':'ms','SG':'ms',
+    // Indonesia speakers also read Malay well
+    'ID':'ms',
     // Portuguese (Brazil-first, also Portugal + lusophone Africa)
     'BR':'pt','PT':'pt','AO':'pt','MZ':'pt','CV':'pt','GW':'pt','ST':'pt','TL':'pt',
     // Japanese
