@@ -20,7 +20,7 @@
 .club-hero .ch-content{position:relative;z-index:2;max-width:var(--container);margin:0 auto;padding:0 24px;width:100%}
 .club-hero .ch-text{max-width:640px}
 .ch-tease{font-style:italic;font-size:14px;color:var(--gold);letter-spacing:.5px;margin-bottom:18px;opacity:.9}
-.ch-title{font-size:72px;font-weight:900;letter-spacing:-2px;line-height:1.02;margin-bottom:20px}
+.ch-title{font-size:72px;font-weight:900;letter-spacing:-2px;line-height:1.02;margin-bottom:20px}.h1-sub{display:block;font-size:0.42em;font-weight:400;letter-spacing:-0.5px;line-height:1.1;margin-top:14px;color:var(--text-dim);-webkit-text-fill-color:var(--text-dim);background:none;text-transform:lowercase;font-style:italic;opacity:.85}@media(max-width:760px){.h1-sub{font-size:0.5em;margin-top:10px}}
 .ch-sub{font-style:italic;font-size:22px;line-height:1.5;color:rgba(255,255,255,.85);margin-bottom:28px}
 .ch-actions{display:flex;gap:14px;flex-wrap:wrap}
 @media(max-width:760px){.ch-title{font-size:44px;letter-spacing:-1px}.ch-sub{font-size:18px}.club-hero{min-height:auto;padding:120px 0 60px}.club-hero .ch-bg{background-position:center 8%}}

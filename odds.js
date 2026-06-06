@@ -7,7 +7,7 @@
   var endpoint = w.getAttribute('data-endpoint') || '/odds-data.json';
   var poll = parseInt(w.getAttribute('data-poll') || '60000', 10);
   var STALE_MS = 2 * 60 * 60 * 1000; // 2h — flag the feed as stale beyond this
-  var AFF = 'https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet';
+  var AFF = 'https://www.getstake.it/i/Maxbet/io/maxbet/u/e0b1a52c69/uo/newbonus';
 
   function fmtKick(iso) {
     try {
