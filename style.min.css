@@ -531,3 +531,22 @@ section.section h2{
 /* Body italic lockdown */
 body p{font-style:normal}
 .hero-subtitle,.ch-sub,.page-hero-sub,.section-subtitle{font-style:italic}
+
+/* === 2026-06-07 polish-pass v3.1 cascade-fix === */
+.site-header .header-actions a.btn.btn-signup,
+.site-header .header-actions a.btn-signup,
+header.site-header a.btn-signup{
+  background:linear-gradient(135deg,#FFD700 0%,#ff9d00 100%)!important;
+  background-image:linear-gradient(135deg,#FFD700 0%,#ff9d00 100%)!important;
+  background-color:#FFD700!important;
+  color:#1a1308!important;
+  box-shadow:0 4px 18px rgba(255,215,0,.30)!important;
+  border:1px solid rgba(255,215,0,.55)!important;
+}
+.site-header .header-actions a.btn.btn-signup:hover,
+.site-header .header-actions a.btn-signup:hover,
+header.site-header a.btn-signup:hover{
+  transform:translateY(-2px)!important;
+  box-shadow:0 6px 28px rgba(255,215,0,.5)!important;
+  background:linear-gradient(135deg,#ffe65a 0%,#ffb33a 100%)!important;
+}
