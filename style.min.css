@@ -273,16 +273,54 @@
 /* Restricted states list */
 .restricted-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin:14px 0;font-size:14px}
 .restricted-list span{background:rgba(139,10,26,.25);border:1px solid rgba(139,10,26,.4);padding:6px 12px;border-radius:6px;text-align:center;color:#f0a6b0}
-
-/* === 2026-06-06 UX hot-fix ============================================= */
-/* 1. Lang switcher compact - prevent native names widening the header row */
-.lang-switcher{width:64px;max-width:64px;font-size:13px;min-height:38px;padding:8px 28px 8px 10px;overflow:hidden;text-overflow:clip;white-space:nowrap}
-.lang-switcher option{text-indent:0}
-/* 2. Hero H1 not eaten by 70px sticky header on shorter viewports */
+/* === 2026-06-07 UX hot-fix v2 ========================================== */
+/* Lang switcher: visually distinct as a language picker - gold border + globe SVG */
+.lang-switcher{
+  width:auto!important;
+  max-width:none!important;
+  min-width:78px;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.5px;
+  min-height:38px;
+  padding:8px 30px 8px 34px;
+  background-color:rgba(255,215,0,.06);
+  border:1.5px solid rgba(255,215,0,.45);
+  color:#FFD700;
+  border-radius:8px;
+  cursor:pointer;
+  appearance:none;
+  -webkit-appearance:none;
+  /* Globe SVG on the LEFT, chevron on the RIGHT */
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23FFD700' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cline x1='2' y1='12' x2='22' y2='12'/%3E%3Cpath d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23FFD700' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat:no-repeat,no-repeat;
+  background-position:10px center, right 10px center;
+  transition:all .2s ease;
+}
+.lang-switcher:hover{
+  background-color:rgba(255,215,0,.12);
+  border-color:#FFD700;
+  box-shadow:0 0 0 3px rgba(255,215,0,.15);
+}
+.lang-switcher:focus{
+  outline:none;
+  border-color:#FFD700;
+  box-shadow:0 0 0 3px rgba(255,215,0,.2);
+}
+.lang-switcher option{
+  text-indent:0;
+  background:#1a1a1a;
+  color:#fff;
+  font-weight:600;
+  padding:8px;
+}
+/* Hero H1 not eaten by 70px sticky header on shorter viewports */
 .club-hero{padding-top:80px}
 .club-hero .ch-bg{top:0}
 .page-hero{padding-top:160px}
-/* 3. Earlier nav collapse so 8-locale switcher + STEP INSIDE button fit */
+/* Earlier nav collapse so 8-locale switcher + STEP INSIDE button fit */
 @media(max-width:1100px){
   .header-nav{position:fixed;top:70px;left:0;right:0;max-height:calc(100vh - 70px);background:var(--bg);padding:16px 24px;flex-direction:column;gap:4px;border-bottom:1px solid var(--border);transform:translateY(-120%);opacity:0;pointer-events:none;transition:all .35s var(--ease);z-index:999;overflow-y:auto;-webkit-overflow-scrolling:touch}
   .header-nav.nav-open{transform:translateY(0);opacity:1;pointer-events:auto}
@@ -290,9 +328,8 @@
   .hamburger{display:flex}
   .header-actions{gap:10px}
 }
-/* 4. Mobile reset still hides switcher on tiny screens? Override - keep visible always */
 @media(max-width:768px){
   .lang-selector{display:none}
-  .lang-switcher{display:inline-block!important}
+  .lang-switcher{display:inline-flex!important;align-items:center}
   .header-actions .btn-signup{display:inline-flex}
 }
