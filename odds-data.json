@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T09:14:15+00:00",
+  "generated_at": "2026-06-07T10:53:15+00:00",
   "bookmaker": "Stake.com",
   "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet",
   "matches": [
@@ -10,10 +10,10 @@
       "date": "2026-06-07T11:00:00Z",
       "home": "Afghanistan",
       "away": "Pakistan",
-      "home_odds": "2.120",
-      "draw_odds": "2.950",
-      "away_odds": "3.250",
-      "updated_at": "2026-06-07T08:10:18.895Z",
+      "home_odds": "1.990",
+      "draw_odds": "2.750",
+      "away_odds": "3.950",
+      "updated_at": "2026-06-07T10:52:17.255Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46610765-afghanistan-pakistan",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
@@ -27,7 +27,7 @@
       "home_odds": "9.000",
       "draw_odds": "4.900",
       "away_odds": "1.240",
-      "updated_at": "2026-06-07T09:00:56.751Z",
+      "updated_at": "2026-06-07T10:40:08.665Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46549597-liechtenstein-cyprus",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
