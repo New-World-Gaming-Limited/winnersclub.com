@@ -59,7 +59,7 @@
   .header-nav.nav-open{transform:translateY(0);opacity:1;pointer-events:auto}
   .nav-link{padding:14px 16px;font-size:15px;width:100%;text-align:left;border-radius:8px}
   .hamburger{display:flex}
-  .lang-selector,.lang-switcher{display:none}
+  .lang-selector{display:none}
   .header-actions .btn-signup{display:none}
   .header-actions{gap:8px}
   .site-header{transition:transform .35s var(--ease)}
