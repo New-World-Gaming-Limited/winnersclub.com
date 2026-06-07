@@ -1,0 +1,37 @@
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-site
+  X-DNS-Prefetch-Control: on
+
+# Long cache for static assets (already immutable via hash/version param)
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+# Short cache for HTML so updates ship fast
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Sitemaps/robots: refresh daily
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+
+/robots.txt
+  Cache-Control: public, max-age=86400
