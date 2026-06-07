@@ -378,9 +378,9 @@
 .club-hero .ch-bg,
 .page-hero .hero-bg,
 .page-hero-bg,
-.hero-bg{background-position:center 28%!important}
+.hero-bg{background-position:center 12%!important}
 @media(max-width:760px){
-  .club-hero .ch-bg,.page-hero .hero-bg,.page-hero-bg,.hero-bg{background-position:center 18%!important}
+  .club-hero .ch-bg,.page-hero .hero-bg,.page-hero-bg,.hero-bg{background-position:center 8%!important}
 }
 
 /* (5) About page — center the 2-card row so it doesn't look abandoned */
