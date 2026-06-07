@@ -26,7 +26,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,.95
 .btn-nav{background:var(--gold);color:#000;padding:8px 18px;border-radius:8px;font-size:.85rem;font-weight:700;transition:background .2s}
 .btn-nav:hover{background:var(--gold-light);color:#000}
 .hero{min-height:90vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;margin-top:64px;background:linear-gradient(135deg,#0a0a0a 0%,#0a0a20 50%,#0a0a0a 100%)}
-.hero-bg{position:absolute;inset:0;background:url('/images/girl-promo-2.webp') center/cover no-repeat;opacity:.35}
+.hero-bg{position:absolute;inset:0;background:image-set(url('/images/girl-promo-2.avif') type('image/avif'), url('/images/girl-promo-2.webp') type('image/webp')) center/cover no-repeat;opacity:.35}
 .hero-content{position:relative;z-index:2;text-align:center;padding:60px 20px}
 .hero-tease{font-size:.9rem;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:16px;opacity:.8}
 h1{font-size:clamp(2rem,5vw,4rem);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin-bottom:24px}
@@ -85,7 +85,7 @@ tr:hover td{background:rgba(201,168,76,.05)}
 .states-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;margin-bottom:32px}
 .state-badge{background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.2);color:#f87171;padding:8px 12px;border-radius:8px;font-size:.8rem;text-align:center}
 /* GIRL BREAK */
-.girl-break{background:url('/images/girl-promo-3.webp') center/cover no-repeat;position:relative;padding:100px 5%;overflow:hidden}
+.girl-break{background:image-set(url('/images/girl-promo-3.avif') type('image/avif'), url('/images/girl-promo-3.webp') type('image/webp')) center/cover no-repeat;position:relative;padding:100px 5%;overflow:hidden}
 .girl-break::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.65)}
 .girl-break .section-inner{position:relative;z-index:2;text-align:center}
 .girl-break h2{color:#fff;font-size:clamp(2rem,4vw,3.5rem)}
@@ -130,7 +130,7 @@ footer{background:#050505;border-top:1px solid rgba(201,168,76,.15);padding:40px
   <link rel="alternate" hreflang="ja" href="https://winnersclub.com/ja/stake-us-bonus/">
   <link rel="alternate" hreflang="x-default" href="https://winnersclub.com/stake-us-bonus/">
   <script src="/lang-redirect.js" defer></script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&display=swap"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"></head>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&display=swap"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><script type="application/ld+json" data-ld="org">{"@context":"https://schema.org","@type":"Organization","name":"WinnersClub","url":"https://winnersclub.com/","logo":"https://winnersclub.com/images/favicon.svg","sameAs":["https://winnersclub.com/"],"description":"The players' back room for Stake. Promo code MAXBET unlocks a 200% match up to $3,000 with 40x wagering."}</script><script type="application/ld+json" data-ld="website">{"@context":"https://schema.org","@type":"WebSite","url":"https://winnersclub.com/","name":"WinnersClub","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://winnersclub.com/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script><script type="application/ld+json" data-ld="bc">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://winnersclub.com/"}, {"@type": "ListItem", "position": 2, "name": "Ja", "item": "https://winnersclub.com/ja/"}, {"@type": "ListItem", "position": 3, "name": "Stake Us Bonus", "item": "https://winnersclub.com/ja/stake-us-bonus/"}]}</script></head>
 <body>
 
 <nav>
@@ -430,5 +430,5 @@ function calcUpdate(){
 calcUpdate();
 </script>
 
-</body>
+<script src="/ga-events.js" defer></script><aside class="rooms-grid" aria-label="Other rooms at WinnersClub" style="margin:60px 0 40px;padding:32px 24px;background:rgba(20,20,20,.5);border:1px solid rgba(255,215,0,.12);border-radius:14px;"><h3 style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#737378;margin:0 0 18px;font-weight:700;">Other rooms in the club</h3><ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px 22px;"><li><a href="/promo-code/">Stake promo code</a></li><li><a href="/casino/">Casino at Stake</a></li><li><a href="/sports/">Sportsbook at Stake</a></li><li><a href="/poker/">Poker at Stake</a></li><li><a href="/aviator/">Aviator at Stake</a></li><li><a href="/reserves/">Audited reserves</a></li><li><a href="/about-stake/">About Stake.com</a></li><li><a href="/payments/">Crypto payments</a></li><li><a href="/mirror/">Mirror sites</a></li><li><a href="/live-odds/">Live odds</a></li><li><a href="/originals/">Stake Originals</a></li><li><a href="/vip/">VIP program</a></li><li><a href="/slots/">Slots library</a></li><li><a href="/live-casino/">Live casino</a></li></ul></aside></body>
 </html>
