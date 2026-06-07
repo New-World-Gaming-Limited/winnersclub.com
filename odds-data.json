@@ -1,8 +1,22 @@
 {
-  "generated_at": "2026-06-07T07:38:49+00:00",
+  "generated_at": "2026-06-07T09:14:15+00:00",
   "bookmaker": "Stake.com",
   "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet",
   "matches": [
+    {
+      "id": 71782704,
+      "league": "International - Int. Friendly Games",
+      "league_slug": "international-int-friendly-games",
+      "date": "2026-06-07T11:00:00Z",
+      "home": "Afghanistan",
+      "away": "Pakistan",
+      "home_odds": "2.120",
+      "draw_odds": "2.950",
+      "away_odds": "3.250",
+      "updated_at": "2026-06-07T08:10:18.895Z",
+      "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46610765-afghanistan-pakistan",
+      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
+    },
     {
       "id": 71445288,
       "league": "International - Int. Friendly Games",
@@ -10,10 +24,10 @@
       "date": "2026-06-07T13:00:00Z",
       "home": "Liechtenstein",
       "away": "Cyprus",
-      "home_odds": "8.600",
-      "draw_odds": "4.800",
-      "away_odds": "1.250",
-      "updated_at": "2026-06-07T07:27:48.006Z",
+      "home_odds": "9.000",
+      "draw_odds": "4.900",
+      "away_odds": "1.240",
+      "updated_at": "2026-06-07T09:00:56.751Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46549597-liechtenstein-cyprus",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
