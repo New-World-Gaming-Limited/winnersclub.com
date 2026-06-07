@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T05:42:40+00:00",
+  "generated_at": "2026-06-07T07:38:49+00:00",
   "bookmaker": "Stake.com",
   "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet",
   "matches": [
@@ -10,10 +10,10 @@
       "date": "2026-06-07T13:00:00Z",
       "home": "Liechtenstein",
       "away": "Cyprus",
-      "home_odds": "9.000",
-      "draw_odds": "4.900",
-      "away_odds": "1.240",
-      "updated_at": "2026-06-07T01:46:56.747Z",
+      "home_odds": "8.600",
+      "draw_odds": "4.800",
+      "away_odds": "1.250",
+      "updated_at": "2026-06-07T07:27:48.006Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46549597-liechtenstein-cyprus",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
@@ -24,10 +24,10 @@
       "date": "2026-06-11T19:00:00Z",
       "home": "Mexico",
       "away": "South Africa",
-      "home_odds": "1.450",
-      "draw_odds": "4.400",
-      "away_odds": "8.000",
-      "updated_at": "2026-06-05T15:51:41.791Z",
+      "home_odds": "1.430",
+      "draw_odds": "4.500",
+      "away_odds": "8.200",
+      "updated_at": "2026-06-07T06:19:00.576Z",
       "stake_url": "https://stake.com/sports/soccer/international/world-cup/46081991-mexico-south-africa",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
