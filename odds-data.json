@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T16:39:37+00:00",
+  "generated_at": "2026-06-07T17:36:55+00:00",
   "bookmaker": "Stake.com",
   "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet",
   "matches": [
@@ -10,10 +10,10 @@
       "date": "2026-06-07T18:00:00Z",
       "home": "Kosovo",
       "away": "Andorra",
-      "home_odds": "1.150",
-      "draw_odds": "5.600",
+      "home_odds": "1.140",
+      "draw_odds": "5.800",
       "away_odds": "14.000",
-      "updated_at": "2026-06-07T16:30:20.573Z",
+      "updated_at": "2026-06-07T17:25:10.398Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46572520-kosovo-andorra",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
@@ -43,6 +43,20 @@
       "away_odds": "2.390",
       "updated_at": "2026-06-07T16:01:59.531Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46512018-morocco-norway",
+      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
+    },
+    {
+      "id": 71422646,
+      "league": "International - Int. Friendly Games",
+      "league_slug": "international-int-friendly-games",
+      "date": "2026-06-07T19:00:00Z",
+      "home": "Greece",
+      "away": "Italy",
+      "home_odds": "2.320",
+      "draw_odds": "3.200",
+      "away_odds": "2.800",
+      "updated_at": "2026-06-07T14:20:49.86Z",
+      "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46549213-greece-italy",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
     {
