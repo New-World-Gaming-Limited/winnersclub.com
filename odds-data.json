@@ -1,22 +1,8 @@
 {
-  "generated_at": "2026-06-08T19:02:20+00:00",
+  "generated_at": "2026-06-08T19:50:46+00:00",
   "bookmaker": "Stake.com",
   "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet",
   "matches": [
-    {
-      "id": 71307342,
-      "league": "International - Int. Friendly Games",
-      "league_slug": "international-int-friendly-games",
-      "date": "2026-06-08T19:10:00Z",
-      "home": "France",
-      "away": "Northern Ireland",
-      "home_odds": "1.060",
-      "draw_odds": "8.600",
-      "away_odds": "22.000",
-      "updated_at": "2026-06-08T19:00:00.135Z",
-      "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46549202-france-northern-ireland",
-      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
-    },
     {
       "id": 71270522,
       "league": "International - Int. Friendly Games",
@@ -29,6 +15,20 @@
       "away_odds": "13.000",
       "updated_at": "2026-06-08T17:31:00.715Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46549197-spain-peru",
+      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
+    },
+    {
+      "id": 71814424,
+      "league": "International - Int. Friendly Games",
+      "league_slug": "international-int-friendly-games",
+      "date": "2026-06-09T11:35:00Z",
+      "home": "China PR",
+      "away": "Thailand",
+      "home_odds": "1.920",
+      "draw_odds": "3.100",
+      "away_odds": "3.600",
+      "updated_at": "2026-06-08T12:47:10.601Z",
+      "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46617385-china-pr-thailand",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
     {
