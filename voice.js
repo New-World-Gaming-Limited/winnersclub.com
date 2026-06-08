@@ -19,7 +19,7 @@
   // Copy buttons
   document.querySelectorAll('.copy-btn').forEach(function(b){
     b.addEventListener('click', function(){
-      var t = b.getAttribute('data-copy') || 'MAXBET';
+      var t = b.getAttribute('data-copy') || 'MAX3000';
       navigator.clipboard.writeText(t).then(function(){
         b.classList.add('copied'); b.textContent='COPIED \u2713';
         setTimeout(function(){ b.classList.remove('copied'); b.textContent='Copy code'; }, 2000);

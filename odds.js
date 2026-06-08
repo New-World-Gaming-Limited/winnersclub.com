@@ -7,7 +7,7 @@
   var endpoint = w.getAttribute('data-endpoint') || '/odds-data.json';
   var poll = parseInt(w.getAttribute('data-poll') || '60000', 10);
   var STALE_MS = 2 * 60 * 60 * 1000; // 2h — flag the feed as stale beyond this
-  var AFF = 'https://www.getstake.it/i/Maxbet/io/maxbet/u/e0b1a52c69/uo/newbonus';
+  var AFF = 'https://www.getstake.it/i/MAX3000/io/max3000/u/MAX3000/uo/max3000';
 
   function fmtKick(iso) {
     try {
@@ -69,7 +69,7 @@
       '<div class="odds-scroll"><table class="odds-table">' +
       '<thead><tr><th>Match</th><th>Kick</th><th>1</th><th>X</th><th>2</th><th></th></tr></thead>' +
       '<tbody>' + rows + '</tbody></table></div>' +
-      '<div class="odds-foot">Prices via Stake.com (sourced through odds-api.io), refreshed hourly. Use code <span class="code-highlight">MAXBET</span> on signup for the 200% welcome up to $3,000.</div>';
+      '<div class="odds-foot">Prices via Stake.com (sourced through odds-api.io), refreshed hourly. Use code <span class="code-highlight">MAX3000</span> on signup for the 200% welcome up to $3,000.</div>';
   }
 
   function load() {

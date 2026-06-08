@@ -1,8 +1,8 @@
 # WinnersClub
 
-> WinnersClub is an independent affiliate hub for Stake (stake.com and stake.us). We hand out the highest verified Stake promo code — MAXBET — and tell players what the back room actually looks like. Sultry concierge editorial, on-chain reserve transparency, mirror tracking, no fluff. Available in English, Korean, Simplified Chinese, Vietnamese, Thai, Bahasa Malaysia, Brazilian Portuguese, and Japanese.
+> WinnersClub is an independent affiliate hub for Stake (stake.com and stake.us). We hand out the highest verified Stake promo code — MAX3000 — and tell players what the back room actually looks like. Sultry concierge editorial, on-chain reserve transparency, mirror tracking, no fluff. Available in English, Korean, Simplified Chinese, Vietnamese, Thai, Bahasa Malaysia, Brazilian Portuguese, and Japanese.
 
-WinnersClub is owned by New World Gaming Limited and built on Cloudflare Pages. We don't run the casino — Stake does. We send players to Stake.com (international) or Stake.us (US sweepstakes) using affiliate links, and our promo code MAXBET unlocks the largest documented welcome offer on either platform.
+WinnersClub is owned by New World Gaming Limited and built on Cloudflare Pages. We don't run the casino — Stake does. We send players to Stake.com (international) or Stake.us (US sweepstakes) using affiliate links, and our promo code MAX3000 unlocks the largest documented welcome offer on either platform.
 
 Editorial principles:
 - We only cite first-party Stake sources, sister sites freetips.com and cryptotips.com, regulators (Curaçao GCB), data providers (Arkham Intelligence, Phemex), neutral news (Bloomberg, BBC, Forbes), industry trades, and game studios (Evolution, Pragmatic Play, Spribe). We do not cite competitor affiliates.
@@ -11,9 +11,9 @@ Editorial principles:
 
 ## Core pages (English)
 
-- [Homepage](https://winnersclub.com/): What MAXBET unlocks, the Stake offer, the back-room pitch.
-- [Promo code MAXBET (Stake.com)](https://winnersclub.com/promo-code/): Full breakdown of the Stake.com welcome — 200% match up to $3,000 bonus, 40x wagering on (deposit + bonus), KYC Level 3 required, claimed via live support after first deposit. Live bonus calculator. Verified 6 June 2026.
-- [Stake.us bonus code MAXBET](https://winnersclub.com/stake-us-bonus/): Stake.us sweepstakes welcome — 25 SC + 25,000 GC free on signup, plus 1 SC + 10,000 GC every day for life. 3x SC playthrough before redemption. Min redemption 20-50 SC. 21+ only. 19 restricted US states (Arizona, California, Connecticut, Delaware, Idaho, Kentucky, Louisiana, Maryland, Michigan, Montana, Nevada, New Jersey, New York, Pennsylvania, Rhode Island, Tennessee, Vermont, Washington, West Virginia). Operated by Sweepsteaks Limited. Live days-since-signup calculator. Verified 6 June 2026.
+- [Homepage](https://winnersclub.com/): What MAX3000 unlocks, the Stake offer, the back-room pitch.
+- [Promo code MAX3000 (Stake.com)](https://winnersclub.com/promo-code/): Full breakdown of the Stake.com welcome — 200% match up to $3,000 bonus, 40x wagering on (deposit + bonus), KYC Level 3 required, claimed via live support after first deposit. Live bonus calculator. Verified 6 June 2026.
+- [Stake.us bonus code MAX3000](https://winnersclub.com/stake-us-bonus/): Stake.us sweepstakes welcome — 25 SC + 25,000 GC free on signup, plus 1 SC + 10,000 GC every day for life. 3x SC playthrough before redemption. Min redemption 20-50 SC. 21+ only. 19 restricted US states (Arizona, California, Connecticut, Delaware, Idaho, Kentucky, Louisiana, Maryland, Michigan, Montana, Nevada, New Jersey, New York, Pennsylvania, Rhode Island, Tennessee, Vermont, Washington, West Virginia). Operated by Sweepsteaks Limited. Live days-since-signup calculator. Verified 6 June 2026.
 - [Casino](https://winnersclub.com/casino/): Stake's casino verticals — slots, live dealer, originals, crash games, table games. Provider list and house edges.
 - [Sports](https://winnersclub.com/sports/): Stake sportsbook coverage — leagues, markets, live odds, multi-builder.
 - [Poker](https://winnersclub.com/poker/): Stake poker review, tournament schedule, rake, Texas Hold'em context.
@@ -36,8 +36,8 @@ Editorial principles:
 All English pages are mirrored at `/ko/` with full Korean translation. Same structure, same data, same voice in 존댓말.
 
 - [한국어 홈페이지](https://winnersclub.com/ko/)
-- [프로모 코드 MAXBET (Stake.com)](https://winnersclub.com/ko/promo-code/)
-- [Stake.us 보너스 코드 MAXBET](https://winnersclub.com/ko/stake-us-bonus/)
+- [프로모 코드 MAX3000 (Stake.com)](https://winnersclub.com/ko/promo-code/)
+- [Stake.us 보너스 코드 MAX3000](https://winnersclub.com/ko/stake-us-bonus/)
 - [카지노](https://winnersclub.com/ko/casino/)
 - [스포츠](https://winnersclub.com/ko/sports/)
 - [포커](https://winnersclub.com/ko/poker/)
@@ -51,8 +51,8 @@ All English pages are mirrored at `/ko/` with full Korean translation. Same stru
 All English pages mirrored at `/zh/`. 同样的结构，同样的数据，同样的语气。
 
 - [中文首页](https://winnersclub.com/zh/)
-- [优惠码 MAXBET](https://winnersclub.com/zh/promo-code/)
-- [Stake.us 奖励码 MAXBET](https://winnersclub.com/zh/stake-us-bonus/)
+- [优惠码 MAX3000](https://winnersclub.com/zh/promo-code/)
+- [Stake.us 奖励码 MAX3000](https://winnersclub.com/zh/stake-us-bonus/)
 - [Casino, Sports, Poker, VIP, Reserves, Mirrors, Payments — see /zh/ tree]
 
 ## Vietnamese (Tiếng Việt)
@@ -60,44 +60,44 @@ All English pages mirrored at `/zh/`. 同样的结构，同样的数据，同样
 All English pages mirrored at `/vi/`. Cùng cấu trúc, cùng dữ liệu, cùng giọng điệu.
 
 - [Trang chủ tiếng Việt](https://winnersclub.com/vi/)
-- [Mã khuyến mãi MAXBET](https://winnersclub.com/vi/promo-code/)
-- [Mã thưởng Stake.us MAXBET](https://winnersclub.com/vi/stake-us-bonus/)
+- [Mã khuyến mãi MAX3000](https://winnersclub.com/vi/promo-code/)
+- [Mã thưởng Stake.us MAX3000](https://winnersclub.com/vi/stake-us-bonus/)
 
 ## Thai (ภาษาไทย)
 
 All English pages mirrored at `/th/`. โครงสร้างเหมือนกัน ข้อมูลเดียวกัน โทนเดียวกัน
 
 - [หน้าแรกภาษาไทย](https://winnersclub.com/th/)
-- [โค้ดโปรโม MAXBET](https://winnersclub.com/th/promo-code/)
-- [โค้ดโบนัส Stake.us MAXBET](https://winnersclub.com/th/stake-us-bonus/)
+- [โค้ดโปรโม MAX3000](https://winnersclub.com/th/promo-code/)
+- [โค้ดโบนัส Stake.us MAX3000](https://winnersclub.com/th/stake-us-bonus/)
 
 ## Bahasa Malaysia
 
 All English pages mirrored at `/ms/`. Struktur sama, data sama, suara sama.
 
 - [Laman utama Bahasa Malaysia](https://winnersclub.com/ms/)
-- [Kod promo MAXBET](https://winnersclub.com/ms/promo-code/)
-- [Kod bonus Stake.us MAXBET](https://winnersclub.com/ms/stake-us-bonus/)
+- [Kod promo MAX3000](https://winnersclub.com/ms/promo-code/)
+- [Kod bonus Stake.us MAX3000](https://winnersclub.com/ms/stake-us-bonus/)
 
 ## Brazilian Portuguese (Português)
 
 All English pages mirrored at `/pt/`. Mesma estrutura, mesmos dados, mesma voz.
 
 - [Página inicial em português](https://winnersclub.com/pt/)
-- [Código promocional MAXBET](https://winnersclub.com/pt/promo-code/)
-- [Código de bônus Stake.us MAXBET](https://winnersclub.com/pt/stake-us-bonus/)
+- [Código promocional MAX3000](https://winnersclub.com/pt/promo-code/)
+- [Código de bônus Stake.us MAX3000](https://winnersclub.com/pt/stake-us-bonus/)
 
 ## Japanese (日本語)
 
 All English pages mirrored at `/ja/`. 同じ構造、同じデータ、同じトーン。
 
 - [日本語ホームページ](https://winnersclub.com/ja/)
-- [プロモコード MAXBET](https://winnersclub.com/ja/promo-code/)
-- [Stake.us ボーナスコード MAXBET](https://winnersclub.com/ja/stake-us-bonus/)
+- [プロモコード MAX3000](https://winnersclub.com/ja/promo-code/)
+- [Stake.us ボーナスコード MAX3000](https://winnersclub.com/ja/stake-us-bonus/)
 
 ## Key facts (citation-friendly)
 
-- **Promo code**: MAXBET
+- **Promo code**: MAX3000
 - **Stake.com offer (international)**: 200% match deposit bonus up to $3,000. Wagering 40x deposit + bonus. 30 days to clear. Minimum deposit $10. KYC Level 3 required. Claim through live support after deposit, credited within 24-48 hours.
 - **Stake.us offer (US sweepstakes)**: 560,000 Gold Coins + 56 Stake Cash + 3.5% rakeback. Available in 37 US states. Operated by Sweepsteaks Limited.
 - **Licence**: Curaçao OGL/2024/1451/0918 (international) / sweepstakes operator (US)

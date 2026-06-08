@@ -42,17 +42,17 @@ Owner: Devendra Damani · Last revised: 6 June 2026
 - KYC Level 3 required, claim through live support after deposit
 - 200% credited within 24-48 hours
 - 18+, new customers only, first deposit
-- Code MAXBET
+- Code MAX3000
 - Sports contributes 75% to rollover; casino games above 4% house edge contribute 100%
 
 ### Stake.us (`/stake-us-bonus/`)
 - 25 SC + 25,000 GC on signup + verification (no deposit)
-- 1 SC + 10,000 GC free daily for life with MAXBET
+- 1 SC + 10,000 GC free daily for life with MAX3000
 - 3x playthrough on SC before redemption
 - 21+ (stricter than Stake.com)
 - 19 restricted US states (Arizona, California, Connecticut, Delaware, Idaho, Kentucky, Louisiana, Maryland, Michigan, Montana, Nevada, New Jersey, New York, Pennsylvania, Rhode Island, Tennessee, Vermont, Washington, West Virginia)
 - Sweepsteaks Limited operates
-- Code MAXBET
+- Code MAX3000
 
 **Never claim "400 free spins" anywhere.** That offer is retired; if you find a residual reference, replace it with the 40x wagering on deposit+bonus story.
 
@@ -72,8 +72,8 @@ Cite only:
 
 ## Outbound links
 
-- Stake.com affiliate URL: `https://www.getstake.it/i/Maxbet/io/maxbet/u/e0b1a52c69/uo/newbonus` (capital M).
-- Stake.us affiliate URL: `https://stake.us/?c=maxbet`.
+- Stake.com affiliate URL: `https://www.getstake.it/i/MAX3000/io/max3000/u/MAX3000/uo/max3000 (capital M).
+- Stake.us affiliate URL: `https://stake.us/?c=MAX3000`.
 - All affiliate clicks must fire the GA4 `affiliate_click` (ONCE_PER_SESSION) and `outbound_click` (ONCE_PER_EVENT) events. GA4 property `391326200`.
 
 ## Page furniture

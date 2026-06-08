@@ -240,7 +240,7 @@
   body.nav-locked{overflow:hidden}
 }
 
-/* Promo code MAXBET chip gets a subtle pulse on hover */
+/* Promo code MAX3000 chip gets a subtle pulse on hover */
 .code-highlight{position:relative;display:inline-block;transition:text-shadow .3s var(--ease),transform .3s var(--ease)}
 .code-highlight:hover{text-shadow:0 0 24px rgba(255,215,0,.55),0 0 8px rgba(255,215,0,.85);transform:scale(1.04)}
 
@@ -338,7 +338,7 @@
 
 /* === 2026-06-07 polish-pass v3 — 18-item punch-list ==================== */
 
-/* (1) Mobile H1 — guarantee subtitle blocks below MAXBET, never inline */
+/* (1) Mobile H1 — guarantee subtitle blocks below MAX3000, never inline */
 @media(max-width:760px){
   .ch-title{font-size:38px!important;line-height:1.08!important;letter-spacing:-1px!important;word-break:break-word}
   .ch-title .h1-sub{display:block!important;margin-top:14px!important;font-size:18px!important;font-style:italic;color:var(--text-dim);-webkit-text-fill-color:var(--text-dim);font-weight:400;letter-spacing:0;text-transform:lowercase;opacity:.9}
