@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T08:04:23+00:00",
+  "generated_at": "2026-06-08T09:50:29+00:00",
   "bookmaker": "Stake.com",
   "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet",
   "matches": [
@@ -10,10 +10,10 @@
       "date": "2026-06-08T18:45:00Z",
       "home": "Netherlands",
       "away": "Uzbekistan",
-      "home_odds": "1.220",
+      "home_odds": "1.210",
       "draw_odds": "5.600",
-      "away_odds": "9.800",
-      "updated_at": "2026-06-08T05:42:00.857Z",
+      "away_odds": "10.000",
+      "updated_at": "2026-06-08T08:35:57.006Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46574510-netherlands-uzbekistan",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
@@ -38,10 +38,10 @@
       "date": "2026-06-09T02:00:00Z",
       "home": "Spain",
       "away": "Peru",
-      "home_odds": "1.140",
+      "home_odds": "1.150",
       "draw_odds": "6.400",
       "away_odds": "14.000",
-      "updated_at": "2026-06-08T06:34:32.566Z",
+      "updated_at": "2026-06-08T08:58:12.252Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46549197-spain-peru",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
