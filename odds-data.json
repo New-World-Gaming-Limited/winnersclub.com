@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T01:22:38+00:00",
+  "generated_at": "2026-06-08T03:24:32+00:00",
   "bookmaker": "Stake.com",
   "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet",
   "matches": [
@@ -10,10 +10,10 @@
       "date": "2026-06-08T18:45:00Z",
       "home": "Netherlands",
       "away": "Uzbekistan",
-      "home_odds": "1.250",
+      "home_odds": "1.240",
       "draw_odds": "5.400",
-      "away_odds": "8.600",
-      "updated_at": "2026-06-07T15:23:35.233Z",
+      "away_odds": "9.000",
+      "updated_at": "2026-06-08T02:34:25.448Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46574510-netherlands-uzbekistan",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
@@ -26,8 +26,8 @@
       "away": "Northern Ireland",
       "home_odds": "1.110",
       "draw_odds": "7.200",
-      "away_odds": "16.000",
-      "updated_at": "2026-06-08T01:21:47.987Z",
+      "away_odds": "17.000",
+      "updated_at": "2026-06-08T02:42:29.442Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46549202-france-northern-ireland",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
@@ -41,7 +41,7 @@
       "home_odds": "1.140",
       "draw_odds": "6.400",
       "away_odds": "14.000",
-      "updated_at": "2026-06-07T10:21:55.194Z",
+      "updated_at": "2026-06-08T02:12:12.167Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46549197-spain-peru",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
@@ -52,10 +52,10 @@
       "date": "2026-06-09T11:30:00Z",
       "home": "Philippines",
       "away": "Myanmar",
-      "home_odds": "1.520",
-      "draw_odds": "3.800",
-      "away_odds": "5.600",
-      "updated_at": "2026-06-07T11:37:55.13Z",
+      "home_odds": "1.500",
+      "draw_odds": "3.950",
+      "away_odds": "5.400",
+      "updated_at": "2026-06-08T02:26:19.208Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46610771-philippines-myanmar",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
