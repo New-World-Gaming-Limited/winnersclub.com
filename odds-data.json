@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T19:50:46+00:00",
+  "generated_at": "2026-06-08T21:01:43+00:00",
   "bookmaker": "Stake.com",
   "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet",
   "matches": [
@@ -10,10 +10,10 @@
       "date": "2026-06-09T02:00:00Z",
       "home": "Spain",
       "away": "Peru",
-      "home_odds": "1.170",
-      "draw_odds": "6.000",
+      "home_odds": "1.160",
+      "draw_odds": "6.200",
       "away_odds": "13.000",
-      "updated_at": "2026-06-08T17:31:00.715Z",
+      "updated_at": "2026-06-08T20:56:24.555Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46549197-spain-peru",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
