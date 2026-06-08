@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T15:18:27+00:00",
+  "generated_at": "2026-06-08T17:16:41+00:00",
   "bookmaker": "Stake.com",
   "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet",
   "matches": [
@@ -10,10 +10,10 @@
       "date": "2026-06-08T18:45:00Z",
       "home": "Netherlands",
       "away": "Uzbekistan",
-      "home_odds": "1.190",
-      "draw_odds": "5.800",
-      "away_odds": "11.000",
-      "updated_at": "2026-06-08T15:11:21.776Z",
+      "home_odds": "1.180",
+      "draw_odds": "6.000",
+      "away_odds": "12.000",
+      "updated_at": "2026-06-08T16:40:19.826Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46574510-netherlands-uzbekistan",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
@@ -26,8 +26,8 @@
       "away": "Northern Ireland",
       "home_odds": "1.110",
       "draw_odds": "7.400",
-      "away_odds": "16.000",
-      "updated_at": "2026-06-08T15:13:22.963Z",
+      "away_odds": "15.000",
+      "updated_at": "2026-06-08T17:04:41.191Z",
       "stake_url": "https://stake.com/sports/soccer/international/int-friendly-games/46549202-france-northern-ireland",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
