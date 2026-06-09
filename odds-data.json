@@ -1,6 +1,105 @@
 {
-  "generated_at": "2026-06-09T09:22:40+00:00",
+  "generated_at": "2026-06-09T11:13:28+00:00",
   "bookmaker": "Stake.com",
   "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet",
-  "matches": []
+  "matches": [
+    {
+      "id": 67126608,
+      "league": "Sweden - Allsvenskan",
+      "league_slug": "sweden-allsvenskan",
+      "date": "2026-07-03T17:00:00Z",
+      "home": "Sirius",
+      "away": "Mjallby",
+      "home_odds": "1.620",
+      "draw_odds": "4.000",
+      "away_odds": "4.800",
+      "updated_at": "2026-06-09T09:35:54.028Z",
+      "stake_url": "https://stake.com/sports/soccer/sweden/allsvenskan/46589501-sirius-mjallby",
+      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
+    },
+    {
+      "id": 67126606,
+      "league": "Sweden - Allsvenskan",
+      "league_slug": "sweden-allsvenskan",
+      "date": "2026-07-04T13:00:00Z",
+      "home": "Degerfors",
+      "away": "Malmo",
+      "home_odds": "2.700",
+      "draw_odds": "3.450",
+      "away_odds": "2.380",
+      "updated_at": "2026-06-02T11:23:39.847Z",
+      "stake_url": "https://stake.com/sports/soccer/sweden/allsvenskan/46587384-degerfors-malmo",
+      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
+    },
+    {
+      "id": 67126612,
+      "league": "Sweden - Allsvenskan",
+      "league_slug": "sweden-allsvenskan",
+      "date": "2026-07-04T13:00:00Z",
+      "home": "Halmstad",
+      "away": "Vasteraas",
+      "home_odds": "2.550",
+      "draw_odds": "3.300",
+      "away_odds": "2.600",
+      "updated_at": "2026-06-02T11:23:39.847Z",
+      "stake_url": "https://stake.com/sports/soccer/sweden/allsvenskan/46587385-halmstads-vasteras",
+      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
+    },
+    {
+      "id": 67126598,
+      "league": "Sweden - Allsvenskan",
+      "league_slug": "sweden-allsvenskan",
+      "date": "2026-07-05T12:00:00Z",
+      "home": "Goteborg",
+      "away": "AIK",
+      "home_odds": "2.490",
+      "draw_odds": "3.350",
+      "away_odds": "2.600",
+      "updated_at": "2026-06-02T11:25:41.84Z",
+      "stake_url": "https://stake.com/sports/soccer/sweden/allsvenskan/46589497-goteborg-aik",
+      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
+    },
+    {
+      "id": 66886840,
+      "league": "Brazil - Brasileiro Serie A",
+      "league_slug": "brazil-brasileiro-serie-a",
+      "date": "2026-07-22T18:00:00Z",
+      "home": "Botafogo",
+      "away": "Santos",
+      "home_odds": "1.940",
+      "draw_odds": "3.350",
+      "away_odds": "4.100",
+      "updated_at": "2026-06-02T11:23:39.847Z",
+      "stake_url": "https://stake.com/sports/soccer/brazil/brasileiro-serie-a/46609453-botafogo-santos",
+      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
+    },
+    {
+      "id": 66886842,
+      "league": "Brazil - Brasileiro Serie A",
+      "league_slug": "brazil-brasileiro-serie-a",
+      "date": "2026-07-22T18:00:00Z",
+      "home": "Sao Paulo",
+      "away": "Paranaense",
+      "home_odds": "1.900",
+      "draw_odds": "3.400",
+      "away_odds": "4.200",
+      "updated_at": "2026-06-02T11:25:41.84Z",
+      "stake_url": "https://stake.com/sports/soccer/brazil/brasileiro-serie-a/46609475-sao-paulo-paranaense",
+      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
+    },
+    {
+      "id": 66886844,
+      "league": "Brazil - Brasileiro Serie A",
+      "league_slug": "brazil-brasileiro-serie-a",
+      "date": "2026-07-22T18:00:00Z",
+      "home": "Corinthians",
+      "away": "Remo",
+      "home_odds": "1.550",
+      "draw_odds": "3.900",
+      "away_odds": "6.200",
+      "updated_at": "2026-06-03T13:07:29.716Z",
+      "stake_url": "https://stake.com/sports/soccer/brazil/brasileiro-serie-a/46609454-corinthians-remo",
+      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
+    }
+  ]
 }
