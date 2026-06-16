@@ -601,3 +601,20 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
 .page-toc ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px 18px}
 .page-toc a{color:var(--gold);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid transparent;transition:border-color .15s}
 .page-toc a:hover{border-bottom-color:var(--gold)}
+
+/* Promo strip banner (GSC funnel CTA, KO/MS) */
+.promo-strip{background:linear-gradient(90deg,#1a0a0e 0%,#3a0a14 50%,#1a0a0e 100%);border-bottom:1px solid rgba(255,215,0,.25);padding:14px 16px}
+.promo-strip .ps-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;flex-wrap:wrap;gap:14px;justify-content:center;font-family:var(--font-body)}
+.promo-strip .ps-label{color:rgba(255,255,255,.7);font-size:13px;text-transform:uppercase;letter-spacing:.12em}
+.promo-strip .ps-code{color:var(--gold);font-weight:700;font-size:18px;letter-spacing:.05em;font-variant-numeric:tabular-nums;background:rgba(255,215,0,.08);padding:4px 10px;border:1px solid rgba(255,215,0,.4);border-radius:4px}
+.promo-strip .ps-bonus{color:#fff;font-size:14px;font-weight:500}
+.promo-strip .ps-cta{color:#0b0b0b;background:linear-gradient(180deg,#FFE680,#FFD700 60%,#C9A227);padding:8px 16px;border-radius:4px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
+.promo-strip .ps-cta:hover{filter:brightness(1.08)}
+@media(max-width:640px){
+  .promo-strip{padding:12px 12px}
+  .promo-strip .ps-inner{gap:10px}
+  .promo-strip .ps-label{font-size:11px}
+  .promo-strip .ps-code{font-size:16px}
+  .promo-strip .ps-bonus{font-size:12px;text-align:center;width:100%}
+  .promo-strip .ps-cta{width:100%;text-align:center;padding:10px}
+}
