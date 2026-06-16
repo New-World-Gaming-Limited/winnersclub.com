@@ -1,6 +1,6 @@
 // Language detection and redirect for winnersclub.com
 // Strategy: First-visit only. Cloudflare IP geolocation + browser language tiebreaker.
-// Only redirects to languages the site actually ships: en, ko, zh, vi, th, ms, pt, ja.
+// Only redirects to languages the site actually ships.
 (function() {
   'use strict';
 
@@ -10,8 +10,8 @@
 
   var path = window.location.pathname;
 
-  // The 8 locales we actually have on disk.
-  var supportedLangs = ['en','ko','zh','vi','th','ms','pt','ja'];
+  // The 15 locales we actually have on disk.
+  var supportedLangs = ['en','ko','zh','vi','th','ms','pt','ja','es','pt-br','tr','id','fr','ru','hi'];
 
   // If user is already on a language path, remember it and exit
   var pathLang = path.split('/')[1];
@@ -24,7 +24,7 @@
   if (path.match(/\.(xml|txt|json|html)$/) || path.indexOf('google') !== -1) return;
 
   // Country -> language mapping. Only languages we ship.
-  // Countries that map to languages we don't have stay null → fall through to English.
+  // Countries that map to languages we don't have stay null -> fall through to English.
   var countryToLang = {
     // Korean
     'KR':'ko',
@@ -34,14 +34,30 @@
     'VN':'vi',
     // Thai
     'TH':'th',
-    // Malay (Malaysia, Brunei, Singapore - Malay is the primary or co-official language)
+    // Malay (Malaysia, Brunei, Singapore)
     'MY':'ms','BN':'ms','SG':'ms',
-    // Indonesia speakers also read Malay well
-    'ID':'ms',
-    // Portuguese (Brazil-first, also Portugal + lusophone Africa)
-    'BR':'pt','PT':'pt','AO':'pt','MZ':'pt','CV':'pt','GW':'pt','ST':'pt','TL':'pt',
+    // Portuguese (Portugal + lusophone Africa - NOT Brazil, which gets pt-br)
+    'PT':'pt','AO':'pt','MZ':'pt','CV':'pt','GW':'pt','ST':'pt','TL':'pt',
     // Japanese
-    'JP':'ja'
+    'JP':'ja',
+    // Spanish (LATAM)
+    'MX':'es','AR':'es','CO':'es','CL':'es','PE':'es','BO':'es','EC':'es',
+    'GT':'es','HN':'es','NI':'es','PA':'es','PY':'es','UY':'es','VE':'es',
+    'CR':'es','DO':'es','SV':'es','CU':'es','PR':'es',
+    // Brazilian Portuguese
+    'BR':'pt-br',
+    // Turkish
+    'TR':'tr',
+    // Indonesian (now gets id instead of ms)
+    'ID':'id',
+    // French (France + Francophone countries)
+    'FR':'fr','BE':'fr','SN':'fr','CI':'fr','ML':'fr','BF':'fr','NE':'fr',
+    'CD':'fr','GA':'fr','CM':'fr','TG':'fr','BJ':'fr','MG':'fr','GN':'fr',
+    'CF':'fr','CG':'fr','DJ':'fr','KM':'fr','RE':'fr','MQ':'fr','GP':'fr',
+    // Russian (CIS region)
+    'RU':'ru','BY':'ru','KZ':'ru','KG':'ru','AM':'ru','AZ':'ru','TJ':'ru','UZ':'ru',
+    // Hindi (India)
+    'IN':'hi'
   };
 
   function setLangCookie(lang) {
@@ -54,7 +70,11 @@
   function browserLangToSupported() {
     var langs = navigator.languages || [navigator.language || navigator.userLanguage || 'en'];
     for (var i = 0; i < langs.length; i++) {
-      var l = langs[i].toLowerCase().split('-')[0];
+      var l = langs[i].toLowerCase();
+      // Handle pt-BR specifically
+      if (l === 'pt-br' || l === 'pt_br') return 'pt-br';
+      var base = l.split('-')[0];
+      if (supportedLangs.indexOf(base) !== -1) return base;
       if (supportedLangs.indexOf(l) !== -1) return l;
     }
     return 'en';
