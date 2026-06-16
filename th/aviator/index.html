@@ -122,7 +122,7 @@
   <link rel="alternate" hreflang="hi" href="https://winnersclub.com/hi/aviator/">
   <link rel="alternate" hreflang="x-default" href="https://winnersclub.com/aviator/">
   <script src="/lang-redirect.js" defer></script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&display=swap"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><script type="application/ld+json" data-ld="org">{"@context":"https://schema.org","@type":"Organization","name":"WinnersClub","url":"https://winnersclub.com/","logo":"https://winnersclub.com/images/favicon.svg","sameAs":["https://winnersclub.com/"],"description":"The players' back room for Stake. Promo code MAX3000 unlocks a 200% match up to $3,000 with 40x wagering."}</script><script type="application/ld+json" data-ld="website">{"@context":"https://schema.org","@type":"WebSite","url":"https://winnersclub.com/","name":"WinnersClub","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://winnersclub.com/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script><script type="application/ld+json" data-ld="bc">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://winnersclub.com/"}, {"@type": "ListItem", "position": 2, "name": "Th", "item": "https://winnersclub.com/th/"}, {"@type": "ListItem", "position": 3, "name": "Aviator", "item": "https://winnersclub.com/th/aviator/"}]}</script></head>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&display=swap"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><script type="application/ld+json" data-ld="org">{"@context":"https://schema.org","@type":"Organization","name":"WinnersClub","url":"https://winnersclub.com/","logo":"https://winnersclub.com/images/favicon.svg","sameAs":["https://winnersclub.com/"],"description":"The players' back room for Stake. Promo code MAX3000 unlocks a 200% match up to $3,000 with 40x wagering."}</script><script type="application/ld+json" data-ld="website">{"@context":"https://schema.org","@type":"WebSite","url":"https://winnersclub.com/","name":"WinnersClub","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://winnersclub.com/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script><script type="application/ld+json" data-ld="bc">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://winnersclub.com/"}, {"@type": "ListItem", "position": 2, "name": "Th", "item": "https://winnersclub.com/th/"}, {"@type": "ListItem", "position": 3, "name": "Aviator", "item": "https://winnersclub.com/th/aviator/"}]}</script>  <link rel="stylesheet" href="/style.min.css?v=20260616d"></head>
 <body>
 
 <div class="sticky-cta" id="stickyCta">
@@ -131,22 +131,27 @@
   <button class="dismiss" onclick="document.getElementById('stickyCta').style.display='none'" aria-label="ปิด">×</button>
 </div>
 
-<nav>
-  <a href="/th/" class="nav-logo">WinnersClub</a>
-  <div class="nav-links" id="navLinks">
-    <a href="/th/casino/">คาสิโน</a>
-    <a href="/th/sports/">สปอร์ต</a>
-    <a href="/th/poker/">โป๊กเกอร์</a>
-    <a href="/th/aviator/" class="active">Aviator</a>
-    <a href="/th/promo-code/">โปรโมโค้ด</a>
-    <a href="/th/originals/">Originals</a>
-  </div>
-  <div class="nav-right">
-    <select class="lang-select" onchange="if(this.value)window.location.href=this.value" aria-label="Language"><option value="https://winnersclub.com/aviator/">English</option><option value="https://winnersclub.com/ko/aviator/">한국어</option><option value="https://winnersclub.com/zh/aviator/">中文</option><option value="https://winnersclub.com/vi/aviator/">Tiếng Việt</option><option value="" selected>TH</option><option value="https://winnersclub.com/ms/aviator/">Bahasa Melayu</option><option value="https://winnersclub.com/pt/aviator/">Português</option><option value="https://winnersclub.com/ja/aviator/">日本語</option></select>
-    <a href="https://www.getstake.it/i/MAX3000/io/max3000/u/MAX3000/uo/max3000" class="nav-cta" target="_blank" rel="noopener sponsored">เข้ามาเลย</a>
-    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="เปิด/ปิดเมนู">☰</button>
-  </div>
-</nav>
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="/th/" class="header-logo" aria-label="WinnersClub home">
+        <img src="/images/winners-club-logo.svg" alt="WinnersClub" width="200" height="38" style="display:block;height:38px;width:auto;">
+      </a>
+      <nav class="header-nav" id="mainNav">
+        <a href="/th/casino/" class="nav-link">คาสิโน</a>
+        <a href="/th/sports/" class="nav-link">สปอร์ต</a>
+        <a href="/th/poker/" class="nav-link">โป๊กเกอร์</a>
+        <a href="/th/aviator/" class="nav-link">เอเวียเตอร์</a>
+        <a href="/th/promo-code/" class="nav-link">โปรโมโค้ด</a>
+        <a href="/th/reserves/" class="nav-link">ทุนสำรอง</a>
+        <a href="/th/about-stake/" class="nav-link">เกี่ยวกับ</a>
+      <div class="mobile-lang-block"><label>ภาษา</label><select onchange="if(this.value)window.location.href=this.value" aria-label="ภาษา"><option value="">English</option><option value="/ko/">한국어 (Korean)</option><option value="/zh/">中文 (Chinese)</option><option value="/vi/">Tiếng Việt (Vietnamese)</option><option value="/th/">ไทย (Thai)</option><option value="/ms/">Bahasa Melayu (Malay)</option><option value="/pt/">Português (Portuguese)</option><option value="/ja/">日本語 (Japanese)</option><option value="/es/">Español (Spanish)</option><option value="/pt-br/">Português do Brasil (Portuguese - Brazil)</option><option value="/tr/">Türkçe (Turkish)</option><option value="/id/">Bahasa Indonesia (Indonesian)</option><option value="/fr/">Français (French)</option><option value="/ru/">Русский (Russian)</option><option value="/hi/">हिन्दी (Hindi)</option></select></div></nav>
+      <div class="header-actions"><select class="lang-switcher" onchange="if(this.value)window.location.href=this.value" aria-label="ภาษา"><option value="https://winnersclub.com/">English</option><option value="https://winnersclub.com/ko/">한국어</option><option value="https://winnersclub.com/zh/">中文</option><option value="https://winnersclub.com/vi/">Tiếng Việt</option><option value="https://winnersclub.com/th/">ไทย</option><option value="https://winnersclub.com/ms/">Bahasa Melayu</option><option value="https://winnersclub.com/pt/">Português</option><option value="https://winnersclub.com/ja/">日本語</option><option value="https://winnersclub.com/es/">Español</option><option value="https://winnersclub.com/pt-br/">Português (BR)</option><option value="https://winnersclub.com/tr/">Türkçe</option><option value="https://winnersclub.com/id/">Bahasa Indonesia</option><option value="https://winnersclub.com/fr/">Français</option><option value="https://winnersclub.com/ru/">Русский</option><option value="https://winnersclub.com/hi/">हिन्दी</option></select>
+        <a href="https://www.getstake.it/i/MAX3000/io/max3000/u/MAX3000/uo/max3000" target="_blank" rel="noopener" class="btn btn-signup" aria-label="เข้ามาเลย">เข้ามาเลย</a>
+        <button class="hamburger" id="hamburger" aria-label="เปิด/ปิดเมนู"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
 
 <section class="hero">
   <div class="hero-badge">Aviator โดย Spribe</div>
