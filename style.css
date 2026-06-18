@@ -618,3 +618,23 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
   .promo-strip .ps-bonus{font-size:12px;text-align:center;width:100%}
   .promo-strip .ps-cta{width:100%;text-align:center;padding:10px}
 }
+
+/* === RTL overrides for /ar/ locale === */
+[dir="rtl"] .header-nav { flex-direction: row-reverse; }
+[dir="rtl"] .header-inner { direction: rtl; }
+[dir="rtl"] .header-actions { flex-direction: row-reverse; }
+[dir="rtl"] body, [dir="rtl"] .hero-text, [dir="rtl"] main, [dir="rtl"] footer { text-align: right; }
+[dir="rtl"] .breadcrumb { direction: rtl; }
+[dir="rtl"] .rooms-grid { direction: rtl; }
+[dir="rtl"] .code-highlight, [dir="rtl"] [dir="ltr"] { direction: ltr; display: inline-block; unicode-bidi: isolate; }
+[dir="rtl"] .footer-cols, [dir="rtl"] .footer-bottom { direction: rtl; text-align: right; }
+[dir="rtl"] .promo-strip { direction: rtl; }
+[dir="rtl"] .hero-cta, [dir="rtl"] .cta-row { flex-direction: row-reverse; }
+[dir="rtl"] table { direction: rtl; }
+[dir="rtl"] table th, [dir="rtl"] table td { text-align: right; }
+[dir="rtl"] ul, [dir="rtl"] ol { padding-right: 1.5em; padding-left: 0; }
+[dir="rtl"] blockquote { border-right: 3px solid var(--gold); border-left: none; padding-right: 1em; padding-left: 0; }
+[dir="rtl"] .card { text-align: right; }
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4 { text-align: right; }
+/* Number tokens always LTR */
+[dir="rtl"] .code-highlight, [dir="rtl"] .num, [dir="rtl"] bdi { direction: ltr; unicode-bidi: bidi-override; }

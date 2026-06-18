@@ -11,7 +11,7 @@
   var path = window.location.pathname;
 
   // The 15 locales we actually have on disk.
-  var supportedLangs = ['en','ko','zh','vi','th','ms','pt','ja','es','pt-br','tr','id','fr','ru','hi'];
+  var supportedLangs = ['en','ko','zh','vi','th','ms','pt','ja','es','pt-br','tr','id','fr','ru','hi','ar'];
 
   // If user is already on a language path, remember it and exit
   var pathLang = path.split('/')[1];
@@ -57,7 +57,11 @@
     // Russian (CIS region)
     'RU':'ru','BY':'ru','KZ':'ru','KG':'ru','AM':'ru','AZ':'ru','TJ':'ru','UZ':'ru',
     // Hindi (India)
-    'IN':'hi'
+    'IN':'hi',
+    // Arabic (Arab world)
+    'SA':'ar','AE':'ar','EG':'ar','IQ':'ar','JO':'ar','KW':'ar','LB':'ar',
+    'LY':'ar','MA':'ar','OM':'ar','PS':'ar','QA':'ar','SY':'ar','TN':'ar',
+    'YE':'ar','BH':'ar','DZ':'ar','SD':'ar','MR':'ar',
   };
 
   function setLangCookie(lang) {
