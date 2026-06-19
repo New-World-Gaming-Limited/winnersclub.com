@@ -11,7 +11,7 @@
   var path = window.location.pathname;
 
   // The 15 locales we actually have on disk.
-  var supportedLangs = ['en','ko','zh','vi','th','ms','pt','ja','es','pt-br','tr','id','fr','ru','hi','ar','pl','nl'];
+  var supportedLangs = ['en','ko','zh','vi','th','ms','pt','ja','es','pt-br','tr','id','fr','ru','hi','ar','pl'];
 
   // If user is already on a language path, remember it and exit
   var pathLang = path.split('/')[1];
@@ -64,8 +64,7 @@
     'YE':'ar','BH':'ar','DZ':'ar','SD':'ar','MR':'ar',
     // Polish
     'PL':'pl',
-    // Dutch (Netherlands + Belgium routes to nl since fr/ already exists)
-    'NL':'nl','BE':'nl',
+    
   };
 
   function setLangCookie(lang) {
