@@ -11,7 +11,7 @@
   var path = window.location.pathname;
 
   // The 15 locales we actually have on disk.
-  var supportedLangs = ['en','ko','zh','vi','th','ms','pt','ja','es','pt-br','tr','id','fr','ru','hi','ar'];
+  var supportedLangs = ['en','ko','zh','vi','th','ms','pt','ja','es','pt-br','tr','id','fr','ru','hi','ar','pl','nl'];
 
   // If user is already on a language path, remember it and exit
   var pathLang = path.split('/')[1];
@@ -51,7 +51,7 @@
     // Indonesian (now gets id instead of ms)
     'ID':'id',
     // French (France + Francophone countries)
-    'FR':'fr','BE':'fr','SN':'fr','CI':'fr','ML':'fr','BF':'fr','NE':'fr',
+    'FR':'fr','SN':'fr','CI':'fr','ML':'fr','BF':'fr','NE':'fr',
     'CD':'fr','GA':'fr','CM':'fr','TG':'fr','BJ':'fr','MG':'fr','GN':'fr',
     'CF':'fr','CG':'fr','DJ':'fr','KM':'fr','RE':'fr','MQ':'fr','GP':'fr',
     // Russian (CIS region)
@@ -62,6 +62,10 @@
     'SA':'ar','AE':'ar','EG':'ar','IQ':'ar','JO':'ar','KW':'ar','LB':'ar',
     'LY':'ar','MA':'ar','OM':'ar','PS':'ar','QA':'ar','SY':'ar','TN':'ar',
     'YE':'ar','BH':'ar','DZ':'ar','SD':'ar','MR':'ar',
+    // Polish
+    'PL':'pl',
+    // Dutch (Netherlands + Belgium routes to nl since fr/ already exists)
+    'NL':'nl','BE':'nl',
   };
 
   function setLangCookie(lang) {
