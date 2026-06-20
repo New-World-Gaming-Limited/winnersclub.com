@@ -11,7 +11,7 @@
   var path = window.location.pathname;
 
   // The 15 locales we actually have on disk.
-  var supportedLangs = ['en','ko','zh','vi','th','ms','pt','ja','es','pt-br','tr','id','fr','ru','hi','ar','pl'];
+  var supportedLangs = ['en','ko','zh','vi','th','ms','pt','ja','es','pt-br','tr','id','fr','ru','hi','ar','pl','uz'];
 
   // If user is already on a language path, remember it and exit
   var pathLang = path.split('/')[1];
@@ -55,7 +55,7 @@
     'CD':'fr','GA':'fr','CM':'fr','TG':'fr','BJ':'fr','MG':'fr','GN':'fr',
     'CF':'fr','CG':'fr','DJ':'fr','KM':'fr','RE':'fr','MQ':'fr','GP':'fr',
     // Russian (CIS region)
-    'RU':'ru','BY':'ru','KZ':'ru','KG':'ru','AM':'ru','AZ':'ru','TJ':'ru','UZ':'ru',
+    'RU':'ru','BY':'ru','KZ':'ru','KG':'ru','AM':'ru','AZ':'ru','TJ':'ru','UZ':'uz',
     // Hindi (India)
     'IN':'hi',
     // Arabic (Arab world)
