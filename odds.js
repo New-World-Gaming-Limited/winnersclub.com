@@ -7,7 +7,7 @@
   var endpoint = w.getAttribute('data-endpoint') || '/odds-data.json';
   var poll = parseInt(w.getAttribute('data-poll') || '60000', 10);
   var STALE_MS = 2 * 60 * 60 * 1000; // 2h — flag the feed as stale beyond this
-  var AFF = 'https://www.getstake.it/i/MAX3000/io/max3000/u/MAX3000/uo/max3000';
+  var AFF = 'https://www.winnersclub.com/link/e489d763260610214223/72/';
 
   function fmtKick(iso) {
     try {

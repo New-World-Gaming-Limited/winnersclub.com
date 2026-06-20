@@ -72,7 +72,7 @@ Cite only:
 
 ## Outbound links
 
-- Stake.com affiliate URL: `https://www.getstake.it/i/MAX3000/io/max3000/u/MAX3000/uo/max3000 (capital M).
+- Stake.com affiliate URL: `https://www.winnersclub.com/link/e489d763260610214223/72/ (capital M).
 - Stake.us affiliate URL: `https://stake.us/?c=MAX3000`.
 - All affiliate clicks must fire the GA4 `affiliate_click` (ONCE_PER_SESSION) and `outbound_click` (ONCE_PER_EVENT) events. GA4 property `391326200`.
 
