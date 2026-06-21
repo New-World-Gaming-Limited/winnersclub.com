@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T11:10:36+00:00",
+  "generated_at": "2026-06-21T12:54:57+00:00",
   "bookmaker": "Stake.com",
   "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet",
   "matches": [
@@ -57,6 +57,62 @@
       "away_odds": "2.6",
       "updated_at": "2026-06-14T10:38:40.265Z",
       "stake_url": "https://stake.com/sports/46589497-goteborg-aik",
+      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
+    },
+    {
+      "id": 67015244,
+      "league": "Norway - Eliteserien",
+      "league_slug": "norway-eliteserien",
+      "date": "2026-07-11T12:00:00Z",
+      "home": "Fredrikstad",
+      "away": "Lillestroem",
+      "home_odds": "2.7",
+      "draw_odds": "3.4",
+      "away_odds": "2.39",
+      "updated_at": "2026-06-21T09:37:20.766Z",
+      "stake_url": "https://stake.com/sports/46608145-fredrikstad-lillestrom",
+      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
+    },
+    {
+      "id": 67015256,
+      "league": "Norway - Eliteserien",
+      "league_slug": "norway-eliteserien",
+      "date": "2026-07-11T14:00:00Z",
+      "home": "Aalesund",
+      "away": "Molde",
+      "home_odds": "3.5",
+      "draw_odds": "3.75",
+      "away_odds": "1.91",
+      "updated_at": "2026-06-21T09:37:20.766Z",
+      "stake_url": "https://stake.com/sports/46608151-aalesunds-molde",
+      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
+    },
+    {
+      "id": 67015254,
+      "league": "Norway - Eliteserien",
+      "league_slug": "norway-eliteserien",
+      "date": "2026-07-11T16:00:00Z",
+      "home": "Tromsoe",
+      "away": "Valerenga",
+      "home_odds": "1.83",
+      "draw_odds": "3.55",
+      "away_odds": "4.1",
+      "updated_at": "2026-06-21T09:37:20.766Z",
+      "stake_url": "https://stake.com/sports/46608150-tromso-valerenga",
+      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
+    },
+    {
+      "id": 67015242,
+      "league": "Norway - Eliteserien",
+      "league_slug": "norway-eliteserien",
+      "date": "2026-07-12T15:00:00Z",
+      "home": "Brann",
+      "away": "Start",
+      "home_odds": "1.34",
+      "draw_odds": "5.2",
+      "away_odds": "7.2",
+      "updated_at": "2026-06-21T10:35:09.928Z",
+      "stake_url": "https://stake.com/sports/46608144-brann-start",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
     {
