@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T23:37:49+00:00",
+  "generated_at": "2026-06-23T01:11:49+00:00",
   "bookmaker": "Stake.com",
   "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet",
   "matches": [
@@ -116,6 +116,20 @@
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
     {
+      "id": 66886848,
+      "league": "Brazil - Brasileiro Serie A",
+      "league_slug": "brazil-brasileiro-serie-a",
+      "date": "2026-07-21T22:30:00Z",
+      "home": "Atletico Mineiro",
+      "away": "Bahia",
+      "home_odds": "2.12",
+      "draw_odds": "3.35",
+      "away_odds": "3.5",
+      "updated_at": "2026-06-14T10:38:40.265Z",
+      "stake_url": "https://stake.com/sports/46609452-atletico-mineiro-bahia",
+      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
+    },
+    {
       "id": 66886838,
       "league": "Brazil - Brasileiro Serie A",
       "league_slug": "brazil-brasileiro-serie-a",
@@ -144,31 +158,17 @@
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
     {
-      "id": 66886842,
+      "id": 66886846,
       "league": "Brazil - Brasileiro Serie A",
       "league_slug": "brazil-brasileiro-serie-a",
       "date": "2026-07-22T18:00:00Z",
-      "home": "Sao Paulo",
-      "away": "Paranaense",
-      "home_odds": "1.9",
-      "draw_odds": "3.4",
-      "away_odds": "4.2",
+      "home": "Mirassol",
+      "away": "Gremio",
+      "home_odds": "2.08",
+      "draw_odds": "3.35",
+      "away_odds": "3.6",
       "updated_at": "2026-06-14T10:38:40.265Z",
-      "stake_url": "https://stake.com/sports/46609475-sao-paulo-paranaense",
-      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
-    },
-    {
-      "id": 66886844,
-      "league": "Brazil - Brasileiro Serie A",
-      "league_slug": "brazil-brasileiro-serie-a",
-      "date": "2026-07-22T18:00:00Z",
-      "home": "Corinthians",
-      "away": "Remo",
-      "home_odds": "1.55",
-      "draw_odds": "3.9",
-      "away_odds": "6.2",
-      "updated_at": "2026-06-14T10:38:40.265Z",
-      "stake_url": "https://stake.com/sports/46609454-corinthians-remo",
+      "stake_url": "https://stake.com/sports/46609474-mirassol-gremio",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     }
   ]
