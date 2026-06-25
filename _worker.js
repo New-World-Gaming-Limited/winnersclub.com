@@ -23,10 +23,30 @@ export default {
 
     // Only redirect on root, and only if no cookie set, and not a bot/crawler
     const ua = request.headers.get("user-agent") || "";
-    const isBot = /googlebot|bingbot|slurp|duckduckbot|baiduspider|yandexbot|sogou|exabot|facebot|ia_archiver|applebot|petalbot/i.test(ua);
+    const isBot = /googlebot|bingbot|slurp|duckduckbot|baiduspider|yandexbot|sogou|exabot|facebot|ia_archiver|applebot|petalbot|ahrefsbot|semrushbot|mj12bot|seznambot|dotbot/i.test(ua);
+    const country = (request.cf && request.cf.country) || request.headers.get("cf-ipcountry") || "";
+    const asn = (request.cf && request.cf.asn) || 0;
+    // Signature of the silent SG crawler that has been hammering every locale:
+    //   - Country = SG
+    //   - UA = Chrome on Windows (no mobile token)
+    //   - No Accept-Language header OR very short value
+    //   - No referrer
+    // Block at the edge before assets are served.
+    const accLang = request.headers.get("accept-language") || "";
+    const referer = request.headers.get("referer") || "";
+    const looksLikeSgCrawler =
+      country === "SG" &&
+      /Windows NT/i.test(ua) &&
+      /Chrome\//i.test(ua) &&
+      !/Mobile|Android|iPhone|iPad/i.test(ua) &&
+      !/Edg\/|OPR\/|Vivaldi/i.test(ua) &&
+      !referer &&
+      accLang.length < 5;
+    if (looksLikeSgCrawler) {
+      return new Response("forbidden", { status: 403, headers: { "X-WC-Block": "sg-crawler", "Cache-Control": "private, no-store" } });
+    }
 
     if (path === "/" && !cookie.includes("wc_locale=") && !isBot) {
-      const country = (request.cf && request.cf.country) || request.headers.get("cf-ipcountry") || "";
       const locale = COUNTRY_LOCALE[country];
       if (locale && KNOWN_LOCALES.has(locale) && locale !== "en") {
         const target = "/" + locale + "/";
