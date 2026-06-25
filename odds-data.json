@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T11:06:21+00:00",
+  "generated_at": "2026-06-25T13:01:15+00:00",
   "bookmaker": "Stake.com",
   "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet",
   "matches": [
@@ -155,20 +155,6 @@
       "away_odds": "3.6",
       "updated_at": "2026-06-14T10:38:40.265Z",
       "stake_url": "https://stake.com/sports/46609474-mirassol-gremio",
-      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
-    },
-    {
-      "id": 66886838,
-      "league": "Brazil - Brasileiro Serie A",
-      "league_slug": "brazil-brasileiro-serie-a",
-      "date": "2026-07-18T00:30:00Z",
-      "home": "Fluminense",
-      "away": "Bragantino",
-      "home_odds": "1.75",
-      "draw_odds": "3.55",
-      "away_odds": "4.8",
-      "updated_at": "2026-06-14T10:38:40.265Z",
-      "stake_url": "https://stake.com/sports/46609456-fluminense-rb-bragantino",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     }
   ]
