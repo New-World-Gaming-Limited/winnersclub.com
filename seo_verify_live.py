@@ -26,7 +26,7 @@ BASE = "https://winnersclub.com"
 TRAP_HEADER = "x-winnersclub-trap"
 
 TRAP_URLS = [
-    # Compound-URL traps the middleware MUST 410
+    # Compound-URL traps the worker MUST 410
     "/promo-code/index.html/casino/stake/foo",
     "/mirror/index.html/anywhere",
     "/casino/stake/foo/bar/baz",
@@ -34,7 +34,12 @@ TRAP_URLS = [
     "/ko/promo-code/foo/bar/baz",
     "/ar/casino/x/y/z",
     "/__media__/anything/here",
-    "/link/abc/123/extra-segment",
+]
+
+# Traps where 410 OR a 301/302 to a real page is acceptable (anything that
+# is not a soft-404 200 with garbage path).
+SOFT_TRAP_URLS = [
+    "/link/abc/123/extra-segment",  # Cloudflare /link/ rewrite to home
 ]
 
 RANDOM_404_URLS = [
@@ -116,9 +121,17 @@ def check_traps() -> None:
         if status != 410:
             fail(f"trap {u}: expected 410, got {status}")
         elif trap != "1":
-            fail(f"trap {u}: got 410 but no {TRAP_HEADER} header (middleware did not fire)")
+            fail(f"trap {u}: got 410 but no {TRAP_HEADER} header (worker did not fire)")
         else:
             ok(f"trap {u} -> 410 with trap header")
+
+    # Soft traps: anything except a 200 with the home/garbage body is fine
+    for u in SOFT_TRAP_URLS:
+        status, hdr, _ = fetch(u, follow_redirects=False)
+        if status == 200:
+            fail(f"soft trap {u}: returned 200 (soft-404 risk); expected 3xx or 4xx")
+        else:
+            ok(f"soft trap {u} -> {status} (acceptable)")
 
 
 def check_random_404() -> None:
