@@ -15,6 +15,41 @@ const COUNTRY_LOCALE = {
 
 const KNOWN_LOCALES = new Set(["ko","zh","vi","th","ms","pt","ja","en"]);
 
+// SEO compound-URL trap patterns. Any request whose path matches one of these
+// returns 410 (Gone) with header x-winnersclub-trap: 1, telling Google to
+// drop it from the index. See functions/_middleware.js and seo_guard.py.
+//
+// IMPORTANT: this site uses Advanced-mode _worker.js. That mode disables
+// functions/_middleware.js entirely, so the trap logic must live here.
+const TRAP_PATTERNS = [
+  /^\/__media__\//i,
+  /^\/uploaded_attachments\//i,
+  /\.html\/[^?#]+/i,
+  /^\/(about-stake|aviator|live-casino|live-odds|mirror|originals|payments|poker|promo-code|reserves|responsible-gambling|slots|sports|stake-engine|stake-us-bonus|vip|news|casino)\/[^/]+\/[^/]+\/[^/]+/i,
+  /^\/(ar|es|fr|hi|id|ja|ko|ms|pl|pt|pt-br|ru|th|tr|uz|vi)\/(about-stake|aviator|live-casino|live-odds|mirror|originals|payments|poker|promo-code|reserves|responsible-gambling|slots|sports|stake-engine|stake-us-bonus|vip|news|casino)\/[^/]+\/[^/]+/i,
+  /^\/link\/[^/]+\/[^/]+\/[^/]+/i,
+];
+
+async function serveTrap410(request, env) {
+  // Reuse the existing /404.html body for nice UX, but return 410.
+  const trapUrl = new URL("/404.html", request.url);
+  let body = "";
+  try {
+    const r = await env.ASSETS.fetch(new Request(trapUrl.toString(), { method: "GET" }));
+    body = await r.text();
+  } catch (e) {
+    body = "<!doctype html><title>Gone</title><h1>410 Gone</h1>";
+  }
+  return new Response(body, {
+    status: 410,
+    headers: {
+      "content-type": "text/html; charset=utf-8",
+      "cache-control": "public, max-age=3600",
+      "x-winnersclub-trap": "1",
+    },
+  });
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -44,6 +79,15 @@ export default {
       accLang.length < 5;
     if (looksLikeSgCrawler) {
       return new Response("forbidden", { status: 403, headers: { "X-WC-Block": "sg-crawler", "Cache-Control": "private, no-store" } });
+    }
+
+    // SEO trap: return 410 for known compound-URL garbage paths so Google deindexes them.
+    // Must run BEFORE locale handling so /ko/casino/foo/bar/baz traps even when the
+    // user has a ko cookie. Bots benefit from the explicit Gone signal regardless.
+    for (const re of TRAP_PATTERNS) {
+      if (re.test(path)) {
+        return serveTrap410(request, env);
+      }
     }
 
     if (path === "/" && !cookie.includes("wc_locale=") && !isBot) {
