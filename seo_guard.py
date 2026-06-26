@@ -149,15 +149,34 @@ def check_404_robots() -> None:
 
 
 def check_middleware_traps() -> None:
-    path = ROOT / "functions" / "_middleware.js"
-    if not path.exists():
+    # winnersclub.com runs Advanced Mode (_worker.js). When _worker.js is
+    # present, Cloudflare Pages disables functions/_middleware.js entirely.
+    # So we check the trap logic lives in _worker.js (primary), and verify
+    # functions/_middleware.js stays in sync as a fallback / documentation.
+    worker_path = ROOT / "_worker.js"
+    func_path = ROOT / "functions" / "_middleware.js"
+
+    if not worker_path.exists() and not func_path.exists():
+        fail("neither _worker.js nor functions/_middleware.js exists — no trap layer at all")
         return
-    text = path.read_text(encoding="utf-8")
-    for label, pat in MIDDLEWARE_MUST_HAVE:
-        if not re.search(pat, text, re.IGNORECASE):
-            fail(f"functions/_middleware.js missing: {label} (no match for /{pat}/)")
+
+    # Primary: _worker.js (Advanced Mode wins on this site)
+    if worker_path.exists():
+        text = worker_path.read_text(encoding="utf-8")
+        for label, pat in MIDDLEWARE_MUST_HAVE:
+            if not re.search(pat, text, re.IGNORECASE):
+                fail(f"_worker.js missing trap logic: {label} (no match for /{pat}/)")
+            else:
+                ok(f"_worker.js has {label}")
+    # Secondary: functions/_middleware.js (only runs if _worker.js is removed)
+    if func_path.exists():
+        text = func_path.read_text(encoding="utf-8")
+        missing = [label for label, pat in MIDDLEWARE_MUST_HAVE if not re.search(pat, text, re.IGNORECASE)]
+        if missing:
+            warn(f"functions/_middleware.js out of sync with _worker.js (missing: {missing}). "
+                 "It's a fallback only — fix when convenient.")
         else:
-            ok(f"middleware has {label}")
+            ok("functions/_middleware.js fallback in sync")
 
 
 def check_sitemap_leaks() -> None:
