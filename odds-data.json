@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T01:14:21+00:00",
+  "generated_at": "2026-07-02T03:18:45+00:00",
   "bookmaker": "Stake.com",
   "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet",
   "matches": [
@@ -38,10 +38,10 @@
       "date": "2026-07-04T13:00:00Z",
       "home": "Halmstad",
       "away": "Vasteraas",
-      "home_odds": "2.65",
+      "home_odds": "2.75",
       "draw_odds": "3.3",
-      "away_odds": "2.5",
-      "updated_at": "2026-06-28T20:04:44.88Z",
+      "away_odds": "2.44",
+      "updated_at": "2026-07-02T01:44:15.838Z",
       "stake_url": "https://stake.com/sports/46587385-halmstads-vasteras",
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
@@ -144,24 +144,10 @@
       "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
     },
     {
-      "id": 66886838,
-      "league": "Brazil - Brasileiro Serie A",
-      "league_slug": "brazil-brasileiro-serie-a",
-      "date": "2026-07-17T23:00:00Z",
-      "home": "Fluminense",
-      "away": "Bragantino",
-      "home_odds": "1.9",
-      "draw_odds": "3.45",
-      "away_odds": "4.1",
-      "updated_at": "2026-06-26T05:02:42.177Z",
-      "stake_url": "https://stake.com/sports/46609456-fluminense-rb-bragantino",
-      "affiliate_url": "https://www.getstake.it/i/maxbet/io/maxbet/u/maxbet/uo/maxbet"
-    },
-    {
       "id": 66886846,
       "league": "Brazil - Brasileiro Serie A",
       "league_slug": "brazil-brasileiro-serie-a",
-      "date": "2026-07-17T23:00:00Z",
+      "date": "2026-07-17T00:30:00Z",
       "home": "Mirassol",
       "away": "Gremio",
       "home_odds": "2.08",
